@@ -1,0 +1,6332 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="syxb2的主站">
+      
+      
+        <meta name="author" content="syxb2">
+      
+      
+        <link rel="canonical" href="https://syxb2.github.io/myblog/%E5%8D%9A%E5%AE%A2/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML%20%26%20CSS/">
+      
+      
+        <link rel="prev" href="../Python/">
+      
+      
+        <link rel="next" href="../LaTeX/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>HTML & CSS - syxb2的主站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#html-css" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="syxb2的主站" class="md-header__button md-logo" aria-label="syxb2的主站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            syxb2的主站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HTML & CSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/syxb2/myblog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    syxb2.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  欢迎
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../C/" class="md-tabs__link">
+          
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/Notes%20of%20Crash%20Course%20Computer%20Science/" class="md-tabs__link">
+          
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="syxb2的主站" class="md-nav__button md-logo" aria-label="syxb2的主站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    syxb2的主站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/syxb2/myblog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    syxb2.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    欢迎
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    博客
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            博客
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    编程语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            编程语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    HTML & CSS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    HTML & CSS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="前言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是网页
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      网页是怎么来的？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用的浏览器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      浏览器内核（渲染引擎）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web标准
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web标准">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么需要Web标准？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web标准的构成
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是html
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是html">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      超文本
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      html语法规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="html语法规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本语法概述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签关系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签属性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      html基本结构标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="html基本结构标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一个html网页
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscodehtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      用vscode开发html
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="用vscode开发html">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vscodehtml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      vscode中html相关插件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      解释vscode工具生成骨架中的新增代码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解释vscode工具生成骨架中的新增代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doctypedoc-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;!DOCTYPE&gt;标签（doc type）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lang" class="md-nav__link">
+    <span class="md-ellipsis">
+      lang语言种类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符集（字符编码格式）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      html常用标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="html常用标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、标题标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、段落标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、换行标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、文本格式化标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5divspan" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、&lt;div&gt;和&lt;span&gt;标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、图像标签和路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6、图像标签和路径">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="图像标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像标签的属性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="图像路径">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录文件夹和根目录：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      路径
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 超链接标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 超链接标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      语法规范
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      链接分类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      html语言中的注释和特殊字符
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="html语言中的注释和特殊字符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      注释
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      特殊字符
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      表格
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="表格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      表格的基本语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      表头单元格标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      表格属性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      表格结构标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      合并单元格
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="合并单元格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、合并单元格的方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、目标单元格
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、合并单元格的代码格式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      列表
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="列表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      无序列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      有序列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义列表
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="表单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单的组成：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单元素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="表单元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;input&gt;标签（单标签） - 输入表单元素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<input>标签（单标签） - 输入表单元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;label&gt;标签
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;select&gt;标签（双标签） - 下拉表单元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textarea-" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;textarea&gt;标签（双标签） - 文本域元素
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      html的局限性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS简介
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS语法规范（体验）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS代码风格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      类选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      类选择器的多类名
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      id选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      通配符选择器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      复合选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="复合选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      后代选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      子选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      并集选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      伪类选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="伪类选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      链接伪类选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      :focus 伪类选择器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      字体属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="字体属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      字体样式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字大小
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      字体粗细
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字样式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字的复合属性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文本属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本颜色
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本对齐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      装饰文本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本首行缩进
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      行间距（行高）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      引入方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="引入方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS的三种样式表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      内部样式表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      行内样式表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部样式表
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="外部样式表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    <span class="md-ellipsis">
+      link标签属性：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emmet" class="md-nav__link">
+    <span class="md-ellipsis">
+      emmet语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="emmet语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      快速生成html结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      快速生成CSS样式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      元素显示模式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="元素显示模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是元素显示模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      块元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      行内元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      行内块元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      元素显示模式的转换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="元素显示模式的转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      转换为块元素：display: block;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-inline" class="md-nav__link">
+    <span class="md-ellipsis">
+      转换为行内元素：display: inline;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-inline-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      转换为行内块元素：display: inline-block;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="背景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景颜色
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景图片
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景平铺
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景图片的位置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="背景图片的位置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1rightleftcentertop" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、参数是方位名词。如right，left，center，top等
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、参数是精确单位
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、参数是混合单位
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景图像固定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景属性的复合写法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景颜色半透明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS三大特性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS三大特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    <span class="md-ellipsis">
+      层叠性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="继承性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    <span class="md-ellipsis">
+      行高的继承性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    <span class="md-ellipsis">
+      优先级
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS盒子模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS盒子模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_85" class="md-nav__link">
+    <span class="md-ellipsis">
+      看透网页布局的本质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_86" class="md-nav__link">
+    <span class="md-ellipsis">
+      盒子模型的组成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border" class="md-nav__link">
+    <span class="md-ellipsis">
+      边框（border）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_87" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      内边距（padding）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margin" class="md-nav__link">
+    <span class="md-ellipsis">
+      外边距（margin）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="外边距（margin）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_88" class="md-nav__link">
+    <span class="md-ellipsis">
+      外边距的典型应用：让块级盒子水平居中
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_89" class="md-nav__link">
+    <span class="md-ellipsis">
+      外边距的合并
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="外边距的合并">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_90" class="md-nav__link">
+    <span class="md-ellipsis">
+      嵌套块元素垂直外边距的塌陷
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_91" class="md-nav__link">
+    <span class="md-ellipsis">
+      清除网页元素自带的边距
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_92" class="md-nav__link">
+    <span class="md-ellipsis">
+      圆角边框
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_93" class="md-nav__link">
+    <span class="md-ellipsis">
+      阴影
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="阴影">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_94" class="md-nav__link">
+    <span class="md-ellipsis">
+      盒子阴影
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_95" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字阴影
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_96" class="md-nav__link">
+    <span class="md-ellipsis">
+      浮动
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="浮动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_97" class="md-nav__link">
+    <span class="md-ellipsis">
+      传统网页布局的三种方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_98" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么需要浮动？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_99" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是浮动？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_100" class="md-nav__link">
+    <span class="md-ellipsis">
+      浮动的特性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_101" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_102" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见的网页布局
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见的网页布局">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_103" class="md-nav__link">
+    <span class="md-ellipsis">
+      浮动布局注意点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_104" class="md-nav__link">
+    <span class="md-ellipsis">
+      清除浮动
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="清除浮动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_105" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要清除浮动？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_106" class="md-nav__link">
+    <span class="md-ellipsis">
+      清除浮动的本质：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      语法：选择器{clear:属性值;}
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_107" class="md-nav__link">
+    <span class="md-ellipsis">
+      清除浮动的方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="清除浮动的方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、额外标签法(不常用)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      父级添加 overflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    <span class="md-ellipsis">
+      :after 伪元素法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_108" class="md-nav__link">
+    <span class="md-ellipsis">
+      双伪元素清除浮动
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_109" class="md-nav__link">
+    <span class="md-ellipsis">
+      学习中遇到的问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="学习中遇到的问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1vscodehtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、使用vscode编辑后的html文件打开后中文出现乱码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2macvscodehtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、如何在mac端的vscode中快速打开html界面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、让文字水平居中显示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4span" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、两个span标签再同一行，高度不一样的解决办法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LaTeX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTeX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mathematica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operating%20System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operating System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Multipass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multipass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Obsidian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsidian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%A9%E7%94%A8Mkdocs%E4%B8%8EGitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    利用Mkdocs与GitHub搭建个人博客
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A9%BE%E8%80%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    驾考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习工作流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Others
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    课程笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            课程笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    线上课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            线上课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/Notes%20of%20Crash%20Course%20Computer%20Science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes of Crash Course Computer Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/Notes%20of%20MIT-Missing-Semester/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes of MIT-Missing-Semester
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E8%82%B2%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    中国计算机教育中缺失的一课 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/BIT-0-C%E8%AF%AD%E8%A8%80%E8%AF%BE%E7%A8%8B%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIT-0-C语言课程 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BDC%E8%AF%AD%E8%A8%80%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何学好C语言 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/%E5%85%B3%E4%BA%8E%E5%A4%A7%E5%AD%A6%E7%9A%84%E4%B8%80%E5%88%87%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于大学的一切 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    线下课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            线下课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8B%E8%AF%BE%E7%A8%8B/%E6%9C%AC%E7%A7%91%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80I%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    程序设计与算法基础I 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8B%E8%AF%BE%E7%A8%8B/%E6%9C%AC%E7%A7%91%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5%EF%BC%88PBLF%EF%BC%89%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    程序设计与项目实践 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="前言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是网页
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      网页是怎么来的？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用的浏览器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      浏览器内核（渲染引擎）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web标准
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web标准">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么需要Web标准？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web标准的构成
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是html
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是html">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      超文本
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      html语法规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="html语法规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本语法概述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签关系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签属性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      html基本结构标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="html基本结构标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一个html网页
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscodehtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      用vscode开发html
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="用vscode开发html">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vscodehtml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      vscode中html相关插件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      解释vscode工具生成骨架中的新增代码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解释vscode工具生成骨架中的新增代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doctypedoc-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;!DOCTYPE&gt;标签（doc type）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lang" class="md-nav__link">
+    <span class="md-ellipsis">
+      lang语言种类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符集（字符编码格式）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      html常用标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="html常用标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、标题标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、段落标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、换行标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、文本格式化标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5divspan" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、&lt;div&gt;和&lt;span&gt;标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、图像标签和路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6、图像标签和路径">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="图像标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像标签的属性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="图像路径">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录文件夹和根目录：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      路径
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 超链接标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 超链接标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      语法规范
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      链接分类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      html语言中的注释和特殊字符
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="html语言中的注释和特殊字符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      注释
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      特殊字符
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      表格
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="表格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      表格的基本语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      表头单元格标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      表格属性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      表格结构标签
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      合并单元格
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="合并单元格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、合并单元格的方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、目标单元格
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、合并单元格的代码格式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      列表
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="列表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      无序列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      有序列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义列表
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="表单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单的组成：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      表单元素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="表单元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;input&gt;标签（单标签） - 输入表单元素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="<input>标签（单标签） - 输入表单元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;label&gt;标签
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;select&gt;标签（双标签） - 下拉表单元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textarea-" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;textarea&gt;标签（双标签） - 文本域元素
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      html的局限性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS简介
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS语法规范（体验）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS代码风格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      类选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      类选择器的多类名
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      id选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      通配符选择器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      复合选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="复合选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      后代选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      子选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      并集选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      伪类选择器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="伪类选择器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      链接伪类选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      :focus 伪类选择器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      字体属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="字体属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      字体样式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字大小
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      字体粗细
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字样式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字的复合属性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本属性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文本属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本颜色
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本对齐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      装饰文本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      文本首行缩进
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      行间距（行高）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      引入方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="引入方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS的三种样式表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      内部样式表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      行内样式表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      外部样式表
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="外部样式表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    <span class="md-ellipsis">
+      link标签属性：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emmet" class="md-nav__link">
+    <span class="md-ellipsis">
+      emmet语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="emmet语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      快速生成html结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      快速生成CSS样式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      元素显示模式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="元素显示模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是元素显示模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      块元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      行内元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      行内块元素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      元素显示模式的转换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="元素显示模式的转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      转换为块元素：display: block;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-inline" class="md-nav__link">
+    <span class="md-ellipsis">
+      转换为行内元素：display: inline;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-inline-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      转换为行内块元素：display: inline-block;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="背景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景颜色
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景图片
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景平铺
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景图片的位置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="背景图片的位置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1rightleftcentertop" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、参数是方位名词。如right，left，center，top等
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、参数是精确单位
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、参数是混合单位
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景图像固定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景属性的复合写法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景颜色半透明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS三大特性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS三大特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    <span class="md-ellipsis">
+      层叠性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="继承性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    <span class="md-ellipsis">
+      行高的继承性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    <span class="md-ellipsis">
+      优先级
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS盒子模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS盒子模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_85" class="md-nav__link">
+    <span class="md-ellipsis">
+      看透网页布局的本质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_86" class="md-nav__link">
+    <span class="md-ellipsis">
+      盒子模型的组成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border" class="md-nav__link">
+    <span class="md-ellipsis">
+      边框（border）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_87" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      内边距（padding）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margin" class="md-nav__link">
+    <span class="md-ellipsis">
+      外边距（margin）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="外边距（margin）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_88" class="md-nav__link">
+    <span class="md-ellipsis">
+      外边距的典型应用：让块级盒子水平居中
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_89" class="md-nav__link">
+    <span class="md-ellipsis">
+      外边距的合并
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="外边距的合并">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_90" class="md-nav__link">
+    <span class="md-ellipsis">
+      嵌套块元素垂直外边距的塌陷
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_91" class="md-nav__link">
+    <span class="md-ellipsis">
+      清除网页元素自带的边距
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_92" class="md-nav__link">
+    <span class="md-ellipsis">
+      圆角边框
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_93" class="md-nav__link">
+    <span class="md-ellipsis">
+      阴影
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="阴影">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_94" class="md-nav__link">
+    <span class="md-ellipsis">
+      盒子阴影
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_95" class="md-nav__link">
+    <span class="md-ellipsis">
+      文字阴影
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_96" class="md-nav__link">
+    <span class="md-ellipsis">
+      浮动
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="浮动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_97" class="md-nav__link">
+    <span class="md-ellipsis">
+      传统网页布局的三种方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_98" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么需要浮动？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_99" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是浮动？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_100" class="md-nav__link">
+    <span class="md-ellipsis">
+      浮动的特性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_101" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_102" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见的网页布局
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见的网页布局">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_103" class="md-nav__link">
+    <span class="md-ellipsis">
+      浮动布局注意点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_104" class="md-nav__link">
+    <span class="md-ellipsis">
+      清除浮动
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="清除浮动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_105" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要清除浮动？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_106" class="md-nav__link">
+    <span class="md-ellipsis">
+      清除浮动的本质：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      语法：选择器{clear:属性值;}
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_107" class="md-nav__link">
+    <span class="md-ellipsis">
+      清除浮动的方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="清除浮动的方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、额外标签法(不常用)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      父级添加 overflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    <span class="md-ellipsis">
+      :after 伪元素法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_108" class="md-nav__link">
+    <span class="md-ellipsis">
+      双伪元素清除浮动
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_109" class="md-nav__link">
+    <span class="md-ellipsis">
+      学习中遇到的问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="学习中遇到的问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1vscodehtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、使用vscode编辑后的html文件打开后中文出现乱码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2macvscodehtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、如何在mac端的vscode中快速打开html界面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、让文字水平居中显示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4span" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、两个span标签再同一行，高度不一样的解决办法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="html-css">HTML &amp; CSS</h1>
+<h2 id="_1">前言</h2>
+<p>一定要动手实践</p>
+<h3 id="_2">什么是网页</h3>
+<p>网站是多个网页的集合</p>
+<p>网页是网站中的一页，通常是HTML格式的文件，它通过浏览器来阅读</p>
+<p>通常网页的格式是.html或.htm</p>
+<h3 id="_3">网页是怎么来的？</h3>
+<p>网页由网页元素组成，这些元素是利用html标签描述出来的，然后通过浏览器解析给用户</p>
+<h3 id="_4">常用的浏览器</h3>
+<p>浏览器是网页显示，运行的平台</p>
+<p>如：IE，火狐，chrome，Safari，opera等</p>
+<h3 id="_5">浏览器内核（渲染引擎）</h3>
+<p>常用的浏览器内核：</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-09-24%20%E4%B8%8B%E5%8D%887.51.46.png" /></p>
+<p>浏览器内核负责读取网页内容，整理讯息，计算网页的显示方式并显示页面。</p>
+<h3 id="web">Web标准</h3>
+<p>Web标准是由W3C组织和其他标准化组织制定的一系列标准的集合，W3C（万维网联盟）是国际最著名的标准化组织。</p>
+<h4 id="web_1">为什么需要Web标准？</h4>
+<p>为了让不同浏览器面对一个html文件时显示出的内容相同</p>
+<h4 id="web_2">Web标准的构成</h4>
+<p>包括<code>结构</code>，<code>表现</code>，<code>行为</code>三个方面</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-09-24%20%E4%B8%8B%E5%8D%887.58.11.png" /></p>
+<p><code>html</code>属于<code>结构</code></p>
+<p><code>CSS</code>属于<code>表现</code>，<code>表现</code>可以让页面看起来更漂亮</p>
+<p><code>javascript</code>（即<code>js</code>）属于<code>行为</code>，可以让网页有交互效果</p>
+<p><em><code>结构</code>会更重要一些</em></p>
+<p>Web标准提出的最佳体验方案：结构，样式，行为相分离</p>
+<p>简单理解：结构写到HTML文件中，表现写到CSS文件中，行为写到JavaScript文件中</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-09-24%20%E4%B8%8B%E5%8D%888.05.20.png" /></p>
+<h2 id="html">HTML</h2>
+<h3 id="html_1">什么是html</h3>
+<p>HTMl指的是超文本标记语言，用来描述网页的</p>
+<p>它是一种<code>标记语言</code>，标记语言是一套<code>标记标签</code></p>
+<p><em>html页面也叫html文档</em></p>
+<h4 id="_6">超文本</h4>
+<ul>
+<li>可以加入图片，声音，动画等内容（超越文本的限制）</li>
+<li>它还可以从一个文件跳转到另一个文件，与世界各地主机的文件连接（超级链接文本）</li>
+</ul>
+<h3 id="html_2">html语法规范</h3>
+<h4 id="_7">基本语法概述</h4>
+<ul>
+<li>所有的标签都需要写在<code>&lt;&gt;</code>中。</li>
+<li>标签大部分都是成对出现的，如<code>&lt;html&gt;和&lt;/html&gt;</code>，其中<code>&lt;html&gt;</code>叫做开始标签，<code>&lt;/html&gt;</code>叫做结束标签，整体叫做双标签。</li>
+<li>也有单标签，如<code>&lt;br /&gt;</code>，注意其中会有一个空格。</li>
+</ul>
+<h4 id="_8">标签关系</h4>
+<ol>
+<li>包含关系</li>
+</ol>
+<pre><code class="language-html">&lt;head&gt;
+    &lt;title&gt; &lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
+<p>也叫父子关系（head是title的爸爸，title是head的儿子）</p>
+<ol>
+<li>并列关系</li>
+</ol>
+<pre><code class="language-html">&lt;head&gt; &lt;/head&gt;
+&lt;body&gt; &lt;/body&gt;
+</code></pre>
+<p>也叫兄弟关系</p>
+<h4 id="_9">标签属性</h4>
+<p>标签的属性必须用<code>""</code>包围</p>
+<h3 id="html_3">html基本结构标签</h3>
+<h4 id="html_4">第一个html网页</h4>
+<p>每个网页都会有一个基本的结构标签（也称为骨架标签），页面内容也是在这些基本标签上书写。</p>
+<pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;我的第一个页面&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        我是body
+    &lt;/body&gt;
+&lt;html&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li><code>html</code>是页面中最大的标签，也叫<code>根标签</code></li>
+<li><code>head</code>是页面中的头部标签</li>
+<li><code>title</code>是网页的标题，也叫做文档标题，显示在浏览器最上方的的标签页中</li>
+<li><code>body</code>是网页的主体，包含了文档的主要内容，网页的主要内容就是放到body标签里</li>
+<li><code>body</code>和<code>head</code>是并列关系</li>
+</ul>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-09-24%20%E4%B8%8B%E5%8D%888.52.07.png" /></p>
+<h3 id="vscodehtml">用vscode开发html</h3>
+<p>生成页面骨架结构：输入<code>!</code></p>
+<h4 id="vscodehtml_1">vscode中html相关插件</h4>
+<ul>
+<li><code>Auto Rename tag</code> - 当我们修改标签的名字时，与之配对的标签也会一同修改 - vscode已经内置</li>
+<li><code>One Dark Pro</code> - 主题插件</li>
+<li><code>open in brower</code> - 快捷在浏览器中打开html页面 - 已安装</li>
+<li><code>Live Server</code> - 实时刷新浏览器页面 - 已安装 - 注意：要用vscode打开文件所在的目录文件夹</li>
+<li><code>Easy LESS</code> - 自动将less文件生成css文件</li>
+<li><code>会了吧</code> - 打开源码可以自动翻译其中的英语单词</li>
+</ul>
+<h4 id="vscode">解释vscode工具生成骨架中的新增代码</h4>
+<h5 id="doctypedoc-type">&lt;!DOCTYPE&gt;标签（doc type）</h5>
+<!DOCTYPE>
+<p>是文档类型声明标签，作用就是告诉浏览器使用哪种html版本来显示网页</p>
+<p><code>&lt;!DOCTYPE html&gt;</code>的意思就是当前页面采取的是HTML5版本来显示网页</p>
+<ul>
+<li>此标签必须写到html文件的最前面</li>
+<li>此标签不属于html标签，它叫做文档声明标签</li>
+</ul>
+<h5 id="lang">lang语言种类</h5>
+<p>用来定义当前文档显示的语言</p>
+<pre><code>&lt;html lang = "en" &gt;
+</code></pre>
+<ul>
+<li><code>en</code>定义语言为英语</li>
+<li><code>zh-CN</code>定义语言为中文</li>
+<li>其主要作用是<code>提醒</code>，<code>通知</code>作用</li>
+</ul>
+<h5 id="_10">字符集（字符编码格式）</h5>
+<p>字符集（Characterset）是多个字符的集合。以便计算机能够识别和存储各种文字。</p>
+<p>在<code>&lt;head&gt;</code>标签内，可以通过<code>&lt;meta&gt;</code>标签的<code>charset属性</code>来规定HTML文档应该使用哪种字符编码。</p>
+<pre><code>&lt;meta charset="UTF-8" /&gt;
+</code></pre>
+<p>charset常用的值有：<code>GB2312</code>、<code>BIG5</code>、<code>GBK</code>和<code>UTF-8</code>，其中<code>UTF-8</code>也被称为万国码，基本包含了全世界所有国家需要用到的字符.</p>
+<h3 id="html_5">html常用标签</h3>
+<p>标签语义：</p>
+<p>简单来说就是标签的含义，即这个标签是用来干什么的</p>
+<p><strong>根据标签的语义，在合适的地方给一个最为合理的标签，可以让页面结构更加清晰</strong></p>
+<p>标签种类：</p>
+<h4 id="1">1、标题标签</h4>
+<p>为了使网页更具有语义化，我们经常会在页面中用到标题 标签。HTML提供了<code>6</code>个等级的网页标题，即<code>&lt;h1&gt; - &lt;h6&gt;</code>。</p>
+<p>语义：作为标题使用，并且依据重要性递减</p>
+<p>如：</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;h1&gt;标题一共六级选，&lt;/h1&gt;
+    &lt;h2&gt;文字加粗一行显。&lt;/h2&gt; 
+    &lt;h3&gt;由大到小依次减，&lt;/h3&gt;
+    &lt;h4&gt;从重到轻随之变。&lt;/h4&gt;
+    &lt;h5&gt;语法规范书写后，&lt;/h5&gt;
+    &lt;h6&gt;具体效果刷新见。&lt;/h6&gt;
+&lt;/body&gt;
+</code></pre>
+<p>其中，h是head的缩写</p>
+<p>特点：</p>
+<ul>
+<li>加了标题的文字会变的加粗，字号也会依次变大。</li>
+<li>一个标题独占一行。</li>
+</ul>
+<h4 id="2">2、段落标签</h4>
+<p>在网页中，要把文字有条理地显示出来，就需要将这些文字分段显示。在HTML标签中，<code>&lt;P&gt;</code>标签用于定义段落，它可以将整个网页分为若干个段落。</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;p&gt;
+        这是第一段文字
+    &lt;/p&gt;
+    &lt;p&gt;
+        这是第二段文字
+    &lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+<p>特点：</p>
+<ul>
+<li>文本在一个段落中会根据浏览器窗口的大小自动换行。</li>
+<li>段落和段落之间保有空隙</li>
+</ul>
+<p>其中：p是paragraph的缩写</p>
+<h4 id="3">3、换行标签</h4>
+<p>在HTML中，一个段落中的文字会从左到右依次排列，直到浏览器窗口的右端，然后才自动换行。如果希望某段文本强制换行显示，就需要使用换行标签<code>＜br /&gt;</code>。</p>
+<p>如：</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;p&gt;
+        这是第一段文字，这是第一行 &lt;br /&gt; 这是第二行
+    &lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+<p>其中：br为单词break的缩写</p>
+<p>标签语义：强制换行</p>
+<p>特点：</p>
+<ul>
+<li>换行标签是一个单标签</li>
+<li><code>&lt;br /&gt;</code>标签只是简单地开始新的一行，跟段落不一样，换行后行与行之间没有空隙。（换行不是分段）</li>
+</ul>
+<h4 id="4">4、文本格式化标签</h4>
+<p>在网页中，有时需要为文字设置粗体、科体或下划线等效果，这时就需要用到HTML中的文本格式化标签，使文字以特殊的方式显示。</p>
+<p>标签语义：突出重要性，比普通文字更重要</p>
+<ul>
+<li><strong>加粗：<code>&lt;strong&gt;&lt;/strong&gt;</code>或<code>&lt;b&gt;&lt;/b&gt;</code> - 更推荐使用<code>&lt;strong&gt;</code>标签，语义更强烈</strong></li>
+<li><strong>倾斜：<code>&lt;em&gt;&lt;/em&gt;</code>或<code>&lt;i&gt;&lt;/i&gt;</code> - 更推荐使用<code>&lt;em&gt;</code>标签，语义更强烈</strong></li>
+<li>删除线：<code>&lt;del&gt;&lt;/del&gt;</code>或者<code>&lt;s&gt;&lt;/s&gt;</code> - 更推荐使用<code>&lt;del&gt;</code>标签，语义更强烈</li>
+<li>下划线：<code>&lt;ins&gt;&lt;/ins&gt;</code>或<code>&lt;u&gt;&lt;/u&gt;</code> - 更推荐使用<code>&lt;ins&gt;</code>，语义你更强烈</li>
+</ul>
+<h4 id="5divspan">5、<code>&lt;div&gt;</code>和<code>&lt;span&gt;</code>标签</h4>
+<p><code>&lt;div&gt;</code>和<code>&lt;span&gt;</code>是没有语义的，它们就是一个盒子，用来装内容的，用来布局页面</p>
+<p>如：</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-09-26%20%E4%B8%8A%E5%8D%888.46.53.png" /></p>
+<p>这就是一个盒子</p>
+<pre><code class="language-html">&lt;div&gt;这是头部&lt;/div&gt;
+&lt;span&gt;今日价格&lt;/span&gt;
+</code></pre>
+<p>其中：</p>
+<p>div是division的缩写，表示分割、分区。span意为跨度、跨距。</p>
+<p>特点：</p>
+<ul>
+<li><code>&lt;div&gt;</code>标签用来布局，但是一行只能放一个<code>&lt;div&gt;</code>，即<code>&lt;div&gt;</code>标签中的内容单独占一行。大盒子</li>
+<li><code>&lt;span&gt;</code>标签用来布局，一行上可以有多个<code>&lt;span&gt;</code>。小盒子</li>
+</ul>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-09-26%20%E4%B8%8A%E5%8D%888.54.23.png" /></p>
+<h4 id="6">6、图像标签和路径</h4>
+<h5 id="_11">图像标签</h5>
+<p>在HTML标签中，<code>&lt;img&gt;</code>标签用于定义HTML页面中的图像。</p>
+<p>格式：<code>&lt;img src="图像URL" /&gt;</code></p>
+<p>如：</p>
+<pre><code class="language-html">&lt;body&gt;
+    图像标签的使用：&lt;br /&gt;
+    &lt;img src= &quot;img.jpg&quot;&gt;
+    &lt;h4&gt;
+        alt 的使用
+    &lt;/h4&gt;
+    &lt;img src= &quot;img.jpg&quot; alt= &quot;我是pink老师&quot;&gt;
+&lt;/body&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>img为单词image的缩写，意为图像</li>
+<li><code>src</code>是<code>&lt;img&gt;</code>标签的<code>必须</code>属性，它用于指定图像文件的路径和文件名。</li>
+<li><em>图像标签是<code>单标签</code></em></li>
+</ul>
+<h6 id="_12">图像标签的属性</h6>
+<p><em>所谓属性，简单理解就是属于这个图像标签的特性。</em></p>
+<ul>
+<li><code>src</code> - 指定图片的路径和名称</li>
+<li><code>alt</code> - 替换文本 - 图像显示不出来的时候用文字替换</li>
+<li><code>title</code> - 提示文本 - 鼠标放在图像上，显示的文字</li>
+<li><code>width</code> - 设定图像宽度</li>
+<li><code>height</code> - 设定图像的高度</li>
+<li><code>border</code> - 设定图像边框宽度</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li><em>图像标签可以拥有多个属性，必须写在标签名的后面</em></li>
+<li><em>属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格分开</em></li>
+<li><em>属性采取键值对的格式，即<code>key= "value"</code>的格式，<code>属性= "属性值"</code></em></li>
+<li><em>实际开发当中，一般宽度和高度只设置一个即可，另一个会自动等比例缩放</em></li>
+<li><em>border（边框）一般在css中设定，而不是从img的属性中设定</em></li>
+</ul>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-09-26%20%E4%B8%8B%E5%8D%882.42.41.png" /></p>
+<h5 id="_13">图像路径</h5>
+<h6 id="_14">目录文件夹和根目录：</h6>
+<p><em>实际工作中，我们的文件不能随便乱放，否则用起来很难快速的找到他们，因此我们需要一个文件夹来管理他们。</em></p>
+<p><strong>目录文件夹</strong>：存放页面所需要的相关素材。如：html源文件、图片（图片常常会放在目录文件夹下的一个新的文件夹里）等。</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-09-26%20%E4%B8%8B%E5%8D%883.11.15.png" /></p>
+<p><strong>根目录</strong>：打开目录文件夹的第一层就是根目录</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-09-26%20%E4%B8%8B%E5%8D%883.12.30.png" /></p>
+<h6 id="_15">路径</h6>
+<ol>
+<li>相对路径</li>
+</ol>
+<p>即，以引用文件所在位置为参考基础，而建立出的目录路径。简单来说就是图片相对于HTML页面的位置</p>
+<ul>
+<li>同一级路径：直接写图像的文件名即可</li>
+<li>下一级路径：如：<code>images/img.jpg</code>。其中，images文件夹在根目录下（与html文件处于同一目录下）。</li>
+<li>
+<p>上一级路径：如：<code>../img.jpg</code>。其中，<code>img.jpg</code>在根目录的上一级。再如：<code>../../img.jpg</code>。其中，<code>img.jpg</code>在根目录的上上级。</p>
+</li>
+<li>
+<p>绝对路径</p>
+</li>
+</ul>
+<p>是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径（mac上一般从Uesrs开始）。</p>
+<p>例如，"D:\web\img\logo.gif"或完整的网络地址"http//www.itcast.cn/images/ogo.gif"</p>
+<p><strong>注意</strong>：相对路径中的斜杠是<code>/</code>，而绝对路径中的斜杠是<code>\</code>。</p>
+<h4 id="7"><strong>7. 超链接标签</strong></h4>
+<p>在HTML标签中，<code>&lt;a&gt;&lt;/a&gt;</code>标签用于定义超链接，作用是从一个页面链接到另一个页面，即点击一个链接后会跳转到指定的页面。</p>
+<h5 id="_16">语法规范</h5>
+<pre><code class="language-html">&lt;a href=&quot;跳转目标&quot; target=&quot;目标窗口的弹出方式&quot;&gt; 文本或图像 &lt;/a&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>a是单词anchor的缩写，意为：锚</li>
+<li><code>&lt;a&gt;</code>的两个属性：</li>
+<li><code>href</code>：用于指定链接目标的url地址（必须属性）</li>
+<li><code>target</code>：用于指定链接页面的打开方式，其中<code>_self</code>为在当前窗口打开（默认值），<code>_blank</code>为在新窗口中打开</li>
+</ul>
+<h5 id="_17">链接分类</h5>
+<ol>
+<li>外部链接。例如：<code>&lt;a href="http://www.baidu.com"&gt;百度&lt;/a&gt;</code></li>
+<li>内部链接：网站内部页面之间的相互链接，直接链接内部页面名称即可。例如：<code>&lt;a href="index.html"&gt;首页&lt;/a&gt;</code></li>
+<li>空链接：如果当时没有确定链接目标时，就使用空链接。如：<code>&lt;a href="#"&gt;首页&lt;/a&gt;</code></li>
+<li>下载链接：如果href里的地址是一个文件或者压缩包，会下载这个文件。即：<code>&lt;a href="文件url"&gt;下载文件&lt;/a&gt;</code></li>
+<li>网页元素链接：网页中的各种网页元素，如文本、图像、表格、音频、视频等都可以添加超链接。如：<code>&lt;a href="http://www.baidu.com"&gt;&lt;img src="img jpg"/&gt;&lt;/a&gt;</code></li>
+<li>锚点链接： <ul>
+<li>找到目标位置标签，里面添加一个id属性 = 名字。如：<code>&lt;h3 id="two"&gt;第二集介绍&lt;/a&gt;</code></li>
+<li>在链接文本href属性中，设置属性值为<code>#名字</code>的形式，如<code>&lt;a href="#two"&gt;第二集&lt;/a&gt;</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="html_6">html语言中的注释和特殊字符</h3>
+<h4 id="_18">注释</h4>
+<p>如果需要在HTML文档中添加一些便于阅读和理解但又不需要显示在页面中的注释又字，就需要使用注释标签。</p>
+<p>格式：</p>
+<pre><code class="language-html">&lt;!-- 这是注释 --&gt;
+</code></pre>
+<h4 id="_19">特殊字符</h4>
+<p>在HTML页面中，一些特殊的符号很难或者不方便直接使用，此时我们就可以使用下面的字符来替代。</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-03%20%E4%B8%8A%E5%8D%8811.06.22.png" /></p>
+<p><em>重点记住空格、大于号、小于号即可</em></p>
+<h3 id="_20">表格</h3>
+<p>表格主要用于显示、展示数据，因为它可以让数据显示的非常的规整，可读性非常好。特别是后台展示数据的时候，能够熟练运用表格就显得很重要。一个清爽简约的表格能够把繁杂的数据表现得很有条理。</p>
+<p>Pink老师总结：表格不是用来<code>布局页面</code>的，而是用来<code>展示数据</code>的.</p>
+<h4 id="_21">表格的基本语法</h4>
+<pre><code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;单元格内的文字&lt;/td&gt;
+        ...
+    &lt;/tr&gt;
+    ...
+&lt;/table&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li><code>&lt;table&gt;&lt;/table&gt;</code>：用于定义表格</li>
+<li><code>&lt;tr&gt;&lt;/tr&gt;</code>：用于定义表格中的<code>行</code>，必须嵌套在<code>table</code>标签中。</li>
+<li><code>&lt;td&gt;&lt;/td&gt;</code>：用于定义表格中的单元格，必须嵌套在<code>tr</code>标签中。</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td&gt;姓名&lt;/td&gt;
+            &lt;td&gt;性别&lt;/td&gt;
+            &lt;td&gt;年龄&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;ljb&lt;/td&gt;
+            &lt;td&gt;男&lt;/td&gt;
+            &lt;td&gt;18&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;hyl&lt;/td&gt;
+            &lt;td&gt;女&lt;/td&gt;
+            &lt;td&gt;17&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+</code></pre>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-03%20%E4%B8%8A%E5%8D%8811.28.54.png" /></p>
+<h4 id="_22">表头单元格标签</h4>
+<p>一般表头单元格位于表格的第一行或第一列，表头单元格里面的文本内容加粗居中显示.</p>
+<p><code>&lt;th&gt;&lt;/th&gt;</code>标签表示HTML表格的表头部分（<code>table head</code>的缩写）</p>
+<p>如：</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;姓名&lt;/th&gt;
+            &lt;th&gt;性别&lt;/th&gt;
+            &lt;th&gt;年龄&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;ljb&lt;/td&gt;
+            &lt;td&gt;男&lt;/td&gt;
+            &lt;td&gt;18&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;hyl&lt;/td&gt;
+            &lt;td&gt;女&lt;/td&gt;
+            &lt;td&gt;17&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+</code></pre>
+<h4 id="_23">表格属性</h4>
+<p>表格标签这部分属性我们实际开发我们不常用，后面通过CSS来设置.</p>
+<p>目的：</p>
+<ul>
+<li>记住这些英语单词，后面CSS会使用.</li>
+<li>直观感受表格的外观形态，</li>
+</ul>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-03%20%E4%B8%8A%E5%8D%8811.37.57.png" /></p>
+<h4 id="_24">表格结构标签</h4>
+<p>使用场景：因力表格可能很长，为了更好的表示表格的语义，可以将表格分割成表格头部和表格主体两大部分。</p>
+<p>在表格标签中，分别用：<code>&lt;thead&gt;</code>标签表格的头部区域（不要与表头单元格标签<code>&lt;th&gt;</code>混淆）、<code>&lt;tbody&gt;</code>标签表格的主体区域。这样可以更好的分清表格结构。</p>
+<p>如：</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;姓名&lt;/th&gt;
+                &lt;th&gt;性别&lt;/th&gt;
+                &lt;th&gt;年龄&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;ljb&lt;/td&gt;
+                &lt;td&gt;男&lt;/td&gt;
+                &lt;td&gt;18&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;hyl&lt;/td&gt;
+                &lt;td&gt;女&lt;/td&gt;
+                &lt;td&gt;17&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+</code></pre>
+<h4 id="_25">合并单元格</h4>
+<p>特殊情况下，可以把多个单元格合并为一个单元格，这里同学们会最简单的合并单元格即可。</p>
+<h5 id="1_1">1、合并单元格的方式</h5>
+<ul>
+<li>跨列合并：<code>colspan="要合并的个数"</code></li>
+<li>跨行合并：<code>rowspan="要合并的个数"</code></li>
+</ul>
+<h5 id="2_1">2、目标单元格</h5>
+<p><em>即合并单元格代码的书写位置</em></p>
+<ul>
+<li>跨行：最上侧单元格为目标单元格，写合并代码</li>
+<li>跨列：最左侧单元格为目标单元格，写合并代码</li>
+</ul>
+<h5 id="3_1">3、合并单元格的代码格式</h5>
+<ol>
+<li>找到目标单元格.写上合并方式=合并的单元格数量。比如：<code>&lt;td colspan=“2”&gt;&lt;/td&gt;</code>。</li>
+<li>删除多余的单元格。</li>
+</ol>
+<h3 id="_26">列表</h3>
+<p>表格是用来显示数据的，那么<strong>列表就是用来布局的</strong>。</p>
+<p>列表最大的特点就是整齐、整吉、有序，它作为布局会更加自由和方便。</p>
+<p>根据使用情景不同，列表可以分为三大类：<code>无序列表</code>、<code>有序列表</code>和<code>自定义列表</code>。</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-03%20%E4%B8%8B%E5%8D%884.18.10.png" /></p>
+<h4 id="_27">无序列表</h4>
+<p><code>&lt;ul&gt;</code>标签表示HTML页面中项目的无序列表，一般会以项目符号呈现列表项，而列表项使用<code>&lt;li＞</code>标签定义。</p>
+<p>如：</p>
+<pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;列表项1&lt;/li&gt;
+    &lt;li&gt;列表项2&lt;/li&gt;
+    &lt;li&gt;列表项3&lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>无序列表的各个列表项之间没有顺序级别之分，是并列的。</li>
+<li><code>&lt;ul&gt;&lt;/ul&gt;</code>中只能嵌套<code>&lt;li&gt;&lt;/li&gt;</code>，直接在<code>&lt;ul&gt;&lt;/ul＞</code>标签中输入其他标签或者输入文字的做法是不被允许的。</li>
+<li><code>&lt;li&gt;&lt;/li&gt;</code>之间相当于一个容器，可以容纳任何元素。</li>
+<li>无序列表会带有自己的样式属性，但在实际使用时，我们会使用CSS来设置。</li>
+</ul>
+<h4 id="_28">有序列表</h4>
+<p>有序列表即力有排列顺序的列表，其各个列表项会按照一定的顺序排列定义。</p>
+<p>在HTML标签中，<code>&lt;ol&gt;</code>标签用于定义有序列表，列表排序以数字来显示，并且使用<code>&lt;li&gt;</code>标签来定义列表项。</p>
+<pre><code class="language-html">&lt;ol&gt;
+    &lt;li&gt;列表项1&lt;/li&gt;
+    &lt;li&gt;列表项2&lt;/li&gt;
+    &lt;li&gt;列表项3&lt;/li&gt;
+    ...
+&lt;/ol&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li><code>&lt;ol&gt;&lt;/ol&gt;</code>中只能嵌套<code>&lt;li&gt;&lt;/li&gt;</code>，直接在<code>&lt;ol&gt;&lt;/ol＞</code>标签中输入其他标签或者输入文字的做法是不被允许的。</li>
+<li><code>&lt;li&gt;&lt;/li&gt;</code>之间相当于一个容器，可以容纳任何元素。</li>
+<li>有序列表会带有自己的样式属性，但在实际使用时，我们会使用CSS来设置。</li>
+</ul>
+<p><em>不常用</em></p>
+<h4 id="_29">自定义列表</h4>
+<p>在HTML标签中，<code>&lt;dl&gt;</code>标签用于定义描述列表（或定义列表），该标签会与<code>&lt;dt&gt;</code>（定义项目/名字）（大哥）和<code>&lt;dd&gt;</code>（描述每一个项目/名字）（小弟）一起使用。</p>
+<p>如：</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;
+            关注我们
+        &lt;/dt&gt;
+        &lt;dd&gt;
+            bilibili
+        &lt;/dd&gt;
+        &lt;dd&gt;
+            微信
+        &lt;/dd&gt;
+        &lt;dd&gt;
+            github
+        &lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/body&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li><code>&lt;dl&gt;&lt;/dl&gt;</code>里面只能包含<code>&lt;dt&gt;</code>和<code>&lt;dd&gt;</code>。</li>
+<li><code>&lt;dt&gt;和&lt;dd&gt;</code>个数没有限制，经常是一个<code>&lt;dt&gt;</code>对应多个<code>&lt;dd&gt;</code>。</li>
+</ul>
+<h3 id="_30">表单</h3>
+<p>表单的作用：使用表单目的是为了收集用户信息。</p>
+<h4 id="_31">表单的组成：</h4>
+<p>一个完整的表单通常由<code>表单域</code>、<code>表单控件</code>（也称为<code>表单元素</code>）和<code>提示信息</code>3个部分构成。</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-12%20%E4%B8%8B%E5%8D%889.39.08.png" /></p>
+<h4 id="_32">表单域</h4>
+<p>表单域是一个包含表单元素的区域。</p>
+<p>语法规范：</p>
+<pre><code class="language-html">&lt;form action=&quot;url地址&quot; method=&quot;提交方式&quot; name=&quot;表单域名称&quot;&gt;
+    各种表单元素控件
+&lt;/form&gt;
+</code></pre>
+<p><img alt="" src="../../media/%E6%88%AA%E5%B1%8F2023-10-12%20%E4%B8%8B%E5%8D%889.45.53.png" /></p>
+<p>这里只需记住两点：</p>
+<ol>
+<li>在我们写表单元素之前，应该有个表单域吧他们进行包含.</li>
+<li>表单域是form标签.</li>
+</ol>
+<h4 id="_33">表单元素</h4>
+<p>在表单域中可以定义各种表单元素，这些表单元素就是允许用户在表单中输入或者选择的内容控件。</p>
+<h5 id="input-"><code>&lt;input&gt;</code>标签（单标签） - 输入表单元素</h5>
+<p>属性：<code>&lt;type&gt;</code>、<code>&lt;name&gt;</code>、<code>&lt;value&gt;</code></p>
+<p>属性值：</p>
+<p><img alt="" src="../../media/%E6%88%AA%E5%B1%8F2023-10-12%20%E4%B8%8B%E5%8D%889.58.14.png" /></p>
+<p>name是表单元素的名字</p>
+<p>value为表单元素内的提示文字</p>
+<p>如：</p>
+<pre><code class="language-html">&lt;form&gt;
+    用户名：&lt;input type=&quot;text&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<h6 id="label"><code>&lt;label&gt;</code>标签</h6>
+<p><code>&lt;label&gt;</code>标签为input元素定义标注（标签）。</p>
+<p><code>&lt;label&gt;</code>标签用于绑定一个表单元素，当点击<code>&lt;label&gt;</code>标签内的文本时，浏览器就会自动将焦点（光标/转到或者选择对应的表单元素上，用来增加用户体验.</p>
+<pre><code class="language-html">&lt;label for=&quot;sex&quot;&gt;男&lt;/label&gt;
+&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;sex&quot;/&gt;
+</code></pre>
+<ul>
+<li>for中的值和对应的id中的值一定相同</li>
+</ul>
+<h5 id="select-"><code>&lt;select&gt;</code>标签（双标签） - 下拉表单元素</h5>
+<p>使用场景：在页面中，如果有多个选项让用户选择，并且想要节约页面空间时，我们可以使用<code>&lt;select&gt;</code>标签控件定义下拉列表。</p>
+<p>语法：</p>
+<pre><code class="language-html">&lt;select&gt;
+    &lt;option selected = &quot;selected&quot;&gt;选项1&lt;/option&gt;
+    &lt;option&gt;选项2&lt;/option&gt;
+    &lt;option&gt;选项3&lt;/option&gt;
+    &lt;option&gt;选项4&lt;/option&gt;
+    ...
+&lt;/select&gt;
+</code></pre>
+<ul>
+<li><code>&lt;select&gt;</code>中至少包含一对<code>&lt;option&gt;</code></li>
+<li>在<code>&lt;option&gt;</code>中定义<code>selected = "selected"</code>时，当前项即为默认选中项。</li>
+</ul>
+<h5 id="textarea-"><code>&lt;textarea&gt;</code>标签（双标签） - 文本域元素</h5>
+<p>使用场景：当用户输入内容较多的情况下，我们就不能使用文本框表单了，此时我们可以使用<code>&lt;textarea&gt;</code>标签。</p>
+<p><code>&lt;textarea&gt;</code>标签是用于定义多行文本输入的控件。</p>
+<p>语法：</p>
+<pre><code class="language-html">&lt;textarea rows=&quot;3&quot; co1s=&quot;20&quot;&gt;请输入&lt;/textarea&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>cols=“每行中的字符数”，rows=“最示的行数”。（我们在实际开发中不会使用，都是用CSS来改变大小。）</li>
+</ul>
+<h2 id="css">CSS</h2>
+<h3 id="_34">简介</h3>
+<p>CSS的主要使用场景就是美化网页，布局页面的</p>
+<h4 id="html_7">html的局限性</h4>
+<p>说起HTML，这其实是个非常单纯的家伙，他只关注内容的语义。比如<code>&lt;h1&gt;</code>表明这是一个大标题，<code>&lt;P&gt;</code>表明这是一个段落，<code>&lt;img&gt;</code>表明这儿有一个图片，<code>&lt;a&gt;</code>表示此处有链接。</p>
+<h4 id="css_1">CSS简介</h4>
+<p>CSS是层叠样式表（CascadingStyleSheets）的简称。</p>
+<p>有时我们也会称之为CSS样式表或级联样式表</p>
+<p>CSS也是一种标记语言</p>
+<p>CSS主要用于设置HTML页面中的文本内容（字体、大小、对济方式等）、图片的外形（宽高、边框样式、边距等）以及版面的布局和外观显示样式。</p>
+<p><strong>CSS最大价值：由HTML专注去做结构呈现，样式交给CSS，即结构（HTML）与样式（CSS）相分离。</strong></p>
+<h4 id="css_2">CSS语法规范（体验）</h4>
+<p>CSS规则由两个主要的部分呢构成：选择器以及一条或多条声明。</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-03%20%E4%B8%8B%E5%8D%885.01.24.png" /></p>
+<p>如：</p>
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        /* 选择器 {样式} */
+        /* 给谁改样式 {改什么样式} */
+        p {
+            color: red;
+            /* 修改了文字大小为12像素 */
+            font-size: 12px;
+            /* px为像素的意思，font为字体的意思 */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;p&gt;
+        标题
+    &lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>选择器是用于指定CSS样式的HTML标签，花括号内是对该对象设置的具体样式</li>
+<li>属性和属性值以<code>键值对</code>的形式出现（即：属性: 属性值;）</li>
+</ul>
+<h4 id="css_3">CSS代码风格</h4>
+<h3 id="_35">选择器</h3>
+<h4 id="_36">作用</h4>
+<p>选择器（选择符）的作用：即选择要修改的对象标签。</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-03%20%E4%B8%8B%E5%8D%885.20.46.png" /></p>
+<h4 id="_37">分类</h4>
+<p>选择器分为基础选择器和复合选择器两个大类。</p>
+<ul>
+<li>基础选择器是由单个选择器组成的</li>
+<li>基础选择器又包括：标签选择器、类选择器、id选择器和通配符选择器。</li>
+</ul>
+<h4 id="_38">基础选择器</h4>
+<h5 id="_39">标签选择器</h5>
+<p>标签选择器（元素选择器）是指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式。</p>
+<p>语法：</p>
+<pre><code class="language-css">标签名{
+    属性1: 属性值1;
+    ...
+}
+</code></pre>
+<p>作用：标签选择器可以把某一类标签全部选择出来，比如所有的<code>&lt;div&gt;</code>标签和所有的<code>&lt;span&gt;</code>标签。</p>
+<p>优点：能快速为页面中的同类型标签同一设置样式</p>
+<p>缺点：不能差异化设置样式，只能选择全部的当前标签</p>
+<h5 id="_40">类选择器</h5>
+<p>如果根要差异化选择不同的标签，单独选一个或者某几个标签，可以使用类选择器。</p>
+<p>语法：</p>
+<pre><code class="language-css">&lt;!-- 定义类 --&gt;
+.类名{
+    属性1: 属性值1;
+    ...
+}
+</code></pre>
+<p>使用时要先定义类，再在html中的class属性调用已经定义好的类（样式点定义，结构类调用。一个或多个，开发最常用。）</p>
+<p>注意：</p>
+<ul>
+<li>类选择器使用"."来进行标识，后面紧跟类名。</li>
+<li>不能使用标签名最为类名。</li>
+<li>长名称或词组可以使用"-"来为选择器命名（如：yh-l）</li>
+<li>不要使用纯数字、中文命名，尽量使用英文字母来表示。</li>
+<li>命名要有意义</li>
+</ul>
+<p>类命名规则：</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-04%20%E4%B8%8A%E5%8D%8810.28.09.png" /></p>
+<h6 id="_41">类选择器的多类名</h6>
+<p>简单理解就是一个标签可以指定多个类名。</p>
+<p>使用方式：多个类名之前用空格分开</p>
+<ul>
+<li>可以把一些标签元素相同的样式（共同的部分）放到一个类里面。</li>
+<li>这些标签都可以调用这个公共的类，然后再调用自己独有的类。</li>
+</ul>
+<h5 id="id">id选择器</h5>
+<p>id选择器可以为标有特定id的HTML元素指定特定的样式。</p>
+<p>HTML元素以id属性来设置id选择器，CSS中id选择器以“#”来定义。</p>
+<p>语法：</p>
+<pre><code class="language-css">#id名{
+    属性1: 属性值1;
+    ...
+}
+</code></pre>
+<p>与类选择器的区别：只能被调用一次。类选择器一般在修改样式时使用，id选择器一般用于页面的唯一性元素上，经常和javascript搭配使用。</p>
+<h5 id="_42">通配符选择器</h5>
+<p>在CSS中，通配符选择器使用<code>*</code>定义，它表示选取页面中<code>所有</code>元素（标签）。</p>
+<p>语法：</p>
+<pre><code class="language-css">* {
+    属性1: 属性值1;
+    ...
+}
+</code></pre>
+<p>特殊情况下使用</p>
+<h4 id="_43">复合选择器</h4>
+<p>在CSS中，可以根据选择器的类型把选择器分为基础选择器和复合选择器，复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的。</p>
+<ul>
+<li>复合选择器可以更准确、更高效的选择目标元素（标签）</li>
+<li>复合选择器是由两个或多个基础选择器，通过不同的方式组合而成的</li>
+<li>常用的复合选择器包括：后代选择器、子选择器、并集选择择器、伪类选择器等等</li>
+</ul>
+<h5 id="_44">后代选择器</h5>
+<p>后代选择器又称为包含选择器，可以选择父元素里面子元素。其写法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔。当标签发生嵌套时，内层标签就成为外层标签的后代。</p>
+<p>语法：<code>元素1 元素2 { 样式声明 }</code></p>
+<p>上述语法表示选择元素 1 里面的所有元素 2 (后代元素)。</p>
+<p>例如：<code>ul li { 样式声明 } /* 选择 ul 里面所有的 li标签元素 */</code></p>
+<ul>
+<li>元素1 和 元素2 中间用空格隔开</li>
+<li>元素1 是父级，元素2 是子级，最终选择的是元素2</li>
+<li>元素2 可以是儿子，也可以是孙子等，只要是元素1 的后代即可</li>
+<li>元素1 和 元素2 可以是任意基础选择器</li>
+</ul>
+<h5 id="_45">子选择器</h5>
+<p>子元素选择器（子选择器）只能选择作为某元素的最近一级子元素。简单理解就是选亲儿子元素。</p>
+<p>语法：<code>元素1 &gt; 元素2 { 样式声明 }</code></p>
+<p>上述语法表示选择元素1 里面的所有直接后代(子元素) 元素2。</p>
+<p>例如：<code>div &gt; p { 样式声明 } /* 选择 div 里面所有最近一级 p 标签元素 */</code></p>
+<ul>
+<li>元素1 和 元素2 中间用 大于号 隔开</li>
+<li>元素1 是父级，元素2 是子级，最终选择的是元素2</li>
+<li>元素2 必须是亲儿子，其孙子、重孙之类都不归他管. 你也可以叫他 亲儿子选择器</li>
+</ul>
+<h5 id="_46">并集选择器</h5>
+<p>并集选择器可以选择多组标签, 同时为他们定义相同的样式。通常用于集体声明.</p>
+<p>并集选择器是各选择器通过英文逗号（,）连接而成，任何形式的选择器都可以作为并集选择器的一部分。</p>
+<p>语法：<code>元素1,元素2 { 样式声明 }</code></p>
+<p>上述语法表示选择元素1 和 元素2。</p>
+<p>例如：</p>
+<p><code>ul,div { 样式声明 } /* 选择 ul 和 div标签元素 */</code></p>
+<ul>
+<li>元素1 和 元素2 中间用逗号隔开</li>
+<li>逗号可以理解为和的意思</li>
+<li>并集选择器通常用于集体声明</li>
+</ul>
+<h5 id="_47">伪类选择器</h5>
+<p>伪类选择器用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素</p>
+<p>伪类选择器书写最大的特点是用冒号（:）表示，比如 :hover 、 :first-child 。</p>
+<p>因为伪类选择器很多，比如有链接伪类、结构伪类等，所以这里先给大家讲解常用的链接伪类选择器。</p>
+<h6 id="_48">链接伪类选择器</h6>
+<p>注意事项：</p>
+<ol>
+<li>为了确保生效，请按照 LVHA 的循顺序声明 :link－:visited－:hover－:active。</li>
+<li>记忆法：love hate 或者 lv 包包 hao 。</li>
+<li>因为 a 链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式。</li>
+</ol>
+<p>链接伪类选择器实际工作开发中的写法：</p>
+<pre><code class="language-css">/* a 是标签选择器 所有的链接 */
+a {
+color: gray;
+}
+/* :hover 是链接伪类选择器 鼠标经过 */
+a:hover {
+color: red; /* 鼠标经过的时候，由原来的 灰色 变成了红色 */
+}
+</code></pre>
+<h6 id="focus">:focus 伪类选择器</h6>
+<p>:focus 伪类选择器用于选取获得焦点的表单元素。</p>
+<p>焦点就是光标，一般情况 <input> 类表单元素才能获取，因此这个选择器也主要针对于表单元素来说。</p>
+<p>如：</p>
+<pre><code class="language-css">input:focus {
+background-color:yellow;
+}
+</code></pre>
+<h3 id="_49">字体属性</h3>
+<p>CSS Fonts（字体）属性用于定义字体系列、大小、粗细、和文字样式（如斜体）。</p>
+<h4 id="_50">字体样式</h4>
+<p>即<code>font-family</code>属性。</p>
+<p>如：</p>
+<pre><code class="language-css">p {
+    font-family: &quot;microsoft yahei&quot;;
+}
+</code></pre>
+<ul>
+<li>当字体名字是词组时，要用引号包围。</li>
+<li>一个字体属性可以跟多个属性值。（多个字体时按顺序执行，电脑上有哪个执行哪个）（可以使兼容性更好）</li>
+<li>尽量使用系统默认自带字体，不要用太小众的字体。</li>
+<li>最常见的字体：<code>"microsoft yahei"</code>, <code>tahoma</code>, <code>arial</code>, <code>"hiragino sans gb"</code>;</li>
+<li>开发中常常将字体定义在<code>body</code>标签中。</li>
+</ul>
+<h4 id="_51">文字大小</h4>
+<p>即<code>font-size</code>属性</p>
+<p>如：</p>
+<pre><code class="language-css">p {
+    font-size: 20px
+    &lt;!-- px是像素的单位 --&gt;
+}
+</code></pre>
+<ul>
+<li>不同浏览器可能默认量示的字号大小不一致，我们尽量给一个明确值大小，不要默认大小。</li>
+<li>可以给<code>body</code>指定整个页面的文字大小。</li>
+<li>标题标签特殊，需要单独指定文字大小。</li>
+</ul>
+<h4 id="_52">字体粗细</h4>
+<p>即<code>font-weight</code>属性</p>
+<p><code>font-weight: bold</code> - 字体加粗</p>
+<p><code>font-weight: number</code> - 更改字体粗细（变粗或变细） - 数字后面没有单位（更常用）</p>
+<ul>
+<li>700是加粗 = bold</li>
+<li>400是正常粗细 = normal</li>
+</ul>
+<h4 id="_53">文字样式</h4>
+<p>即<code>font-style</code>属性（如斜体等）</p>
+<p>属性值：</p>
+<p><code>normal</code> - 默认值
+<code>italic</code> - 斜体</p>
+<p>常用到让倾斜的字体不倾斜</p>
+<h4 id="_54">文字的复合属性</h4>
+<p>正常写可以这样：</p>
+<pre><code class="language-html">&lt;style&gt;
+        body {
+            font-size: large;
+            font-weight: 100;
+            font-style: italic;
+            font-family: &quot;Microsoft YaHei&quot;;
+        }
+&lt;/style&gt;
+</code></pre>
+<p>现在我们可以这样写：</p>
+<pre><code class="language-html">&lt;style&gt;
+    body {
+        /* font: font-style font-weight font-size/line-height font-family;
+        必须严格按照此顺序
+        如： */
+        font: italic 700 16px &quot;microsoft yahei&quot;;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>不需要沒置的属性可以省略（取默认值），但必须保留<code>font-size</code>和<code>font-family</code>属性否则font属性将不起作用。</li>
+</ul>
+<h4 id="_55">总结</h4>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-04%20%E4%B8%8B%E5%8D%8812.07.07.png" /></p>
+<h3 id="_56">文本属性</h3>
+<p>CSS Text（文本）属性可定义文本的外观，比如文本的颜色、对济文本、装饰文本、文本缩进、行间距等。</p>
+<h4 id="_57">文本颜色</h4>
+<p>即<code>color</code>属性。</p>
+<p>颜色属性值的表示方式：</p>
+<ol>
+<li>预定义的颜色值。如pink</li>
+<li>十六进制。如#ff0000，#ff6600</li>
+<li>RGB代码。如rgb(255,0,0)，rgb(100%,%0,%0)</li>
+</ol>
+<p><em>最常用16进制</em></p>
+<h4 id="_58">文本对齐</h4>
+<p>即<code>text-align</code>属性（只能设置水平对齐方式）</p>
+<p>属性值：</p>
+<ol>
+<li><code>left</code> - 左对齐 - 默认</li>
+<li><code>right</code> - 右对齐</li>
+<li><code>center</code> - 居中对齐</li>
+</ol>
+<p>如：</p>
+<pre><code class="language-html">&lt;style&gt;
+    h1 {
+        /* 本质是让h1盒子里面的文字水平居中对齐 */
+        text-align: center;
+    }
+&lt;/style&gt;
+</code></pre>
+<p><strong>h1标题的<code>范围</code>实际是以页面的宽为宽，以h1标签规定的的高为高的一个<code>盒子</code>的范围</strong></p>
+<h4 id="_59">装饰文本</h4>
+<p>即<code>text-decoration</code>属性。（可以给文本添加下划线、删除线、上划线等）</p>
+<p>属性值：</p>
+<ol>
+<li>none - 默认 - 无装饰</li>
+<li>underline - 下划线</li>
+<li>overline - 上划线</li>
+<li>line-through - 删除线</li>
+</ol>
+<p>如：</p>
+<pre><code class="language-html">&lt;!-- 取消a标签（链接标签默认的下划线） --&gt;
+&lt;style&gt;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+&lt;/style&gt;
+</code></pre>
+<h4 id="_60">文本首行缩进</h4>
+<p>即<code>text-indent</code>属性（用于指定文本的第一行缩进，通常是将段落的首行缩进。）</p>
+<p>属性值：</p>
+<ol>
+<li>需要缩进的像素值（可以取负值，即向左缩进）</li>
+<li>需要缩进的相对单位，以<code>em</code>为单位，表示当前元素（font-size）一个文字的大小。</li>
+</ol>
+<p>如：<code>text-indent: 10px;</code>或<code>text-indent: 2em;</code>（表示缩进当前字号两个字的距离）</p>
+<h4 id="_61">行间距（行高）</h4>
+<p>即<code>line-height</code>属性</p>
+<p><strong>属性值</strong>是像素值。</p>
+<p><strong>行间距的组成：</strong></p>
+<p>行间距包含上间距，文本高度，下间距</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-04%20%E4%B8%8B%E5%8D%8812.37.42.png" /></p>
+<ul>
+<li>上下间距随行间距的变化而变化</li>
+<li>文本高度是确定的，不随行间距的变化而变化</li>
+<li>上下间距永远是相同的</li>
+</ul>
+<h3 id="_62">引入方式</h3>
+<h4 id="css_4">CSS的三种样式表</h4>
+<p>按照CSS样式书写的位置（或引入的位置），CSS样式表可以分为三大类：</p>
+<ol>
+<li>行内样式表（行内式）</li>
+<li>内部样式表（嵌入式）</li>
+<li>外部样式表（链接式）</li>
+</ol>
+<h4 id="_63">内部样式表</h4>
+<p>内部样式表（内嵌样式表）是写到html页面内部.是将所有的CSS代码抽取出来，单独放到一个<code>&lt;style&gt;</code>标签中。</p>
+<ul>
+<li><code>&lt;style&gt;</code>标签理论上可以放在HTML文档的任何地方，但一般会放在文档的<code>&lt;head&gt;</code>标签中</li>
+<li>通过此种方式，可以方便控制当前整个页面中的元素样式设置</li>
+<li>代码结构清晰，但是并没有实现结构与样式完全分离</li>
+</ul>
+<p><em>在学习与练习中常用</em></p>
+<h4 id="_64">行内样式表</h4>
+<p>行内样式表（内联样式表）是在元素标签内部的<code>style</code>属性中设定CSS样式。适合于修改简单样式。</p>
+<p>即直接在标签的内部写，如：</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;div style=&quot;color: red; font-size: 12px;&quot;&gt;青春不常在，抓紧谈恋爱&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>style其实就是标签的属性</li>
+<li>要写在双引号中间，写法要符合CSS规范</li>
+<li>只可以控制其所在的标签的样式</li>
+<li>由于书写繁琐，并且<strong>没有体现出结构与样式相分离的思想</strong>，所以不推荐大量使用，只有对当前元素添加简单样式的时候，可以考虑使用</li>
+</ul>
+<h4 id="_65">外部样式表</h4>
+<p><em>实际开发中最常用，也最推荐同学们使用。</em></p>
+<p>实际开发都是外部样式表，适合于样式比较多的情况。核心是，样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中使用。</p>
+<p>使用方式：</p>
+<ol>
+<li>新建一个后缀名为<code>.css</code>的样式文件，把所有CSS代码都放入此文件中。</li>
+<li>直接在<code>.css</code>文件中写样式即可，不需要写<code>&lt;style&gt;</code>标签</li>
+<li>在HTML页面中，使用<code>&lt;link&gt;</code>标签引入这个文件。即：<code>&lt;link rel="stylesheet" href=".css文件路径"&gt;</code></li>
+</ol>
+<h5 id="link">link标签属性：</h5>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-04%20%E4%B8%8B%E5%8D%886.34.53.png" /></p>
+<h3 id="emmet">emmet语法</h3>
+<p>Emmet语法的前身是Zencoding，它使用缩写，来提高html/css的编写速度，Vscode内部已经集成该语法.</p>
+<h4 id="html_8">快速生成html结构</h4>
+<ol>
+<li>生成标签直接输入标签名按tab键即可比如<code>div</code>然后<code>tab</code>键，就可以生成<code>&lt;div&gt;&lt;/div&gt;</code></li>
+<li>如果根要生成多个相同标签加上*就可以了比如<code>div*3</code>加<code>tab</code>就可以快速生成3个div</li>
+<li>如果有父子级关系的标签，可以用<code>＞</code>比如<code>ul&gt;li</code>就可以了</li>
+<li>如果有兄弟关系的标签，用<code>+</code>就可以了比如<code>div+p</code></li>
+<li>如果生成带有<code>类</code>名或者<code>id</code>名字的，直接写<code>标签名.类名</code>或者<code>标签名#id名</code>再按<code>tab</code>键就可以了</li>
+<li>如果生成的div类名是有顺序的，可以用自增符号<code>＄</code>，如：<code>div.demo%*5</code></li>
+<li>如果想要在生成的标签内部写内容可以用<code>{}</code>表示，如：<code>div{我叫yhl}</code></li>
+</ol>
+<h4 id="css_5">快速生成CSS样式</h4>
+<p>例：</p>
+<ul>
+<li>输入<code>tac</code>生成<code>text-align: center;</code></li>
+<li>输入<code>w100</code>生成<code>width: 100px;</code></li>
+<li>输入<code>lh26px</code>生成<code>line-height: 26px;</code></li>
+</ul>
+<h3 id="_66">元素显示模式</h3>
+<h4 id="_67">什么是元素显示模式</h4>
+<p>元素显示模式就是元素（标签）以什么方式进行显示，比如<code>&lt;div&gt;</code>自己占一行，比如一行可以放多个<code>&lt;span&gt;</code>。</p>
+<p>作用：网页的标签非常多，在不同地方会用到不同类型的标签，了解他们的特点可以更好的布局我们的网页。</p>
+<p>HTML元素一般分为<code>块元素</code>和<code>行内元素</code>两种类型。</p>
+<h4 id="_68">块元素</h4>
+<p>常见的块元素：</p>
+<p><code>&lt;h1&gt;~&lt;h6&gt;</code>，<code>&lt;p&gt;</code>，<code>&lt;div&gt;</code>，<code>&lt;ul&gt;</code>，<code>&lt;ol&gt;</code>，<code>&lt;li&gt;</code>等，其中<code>&lt;div&gt;</code>是最典型的块元素</p>
+<p>特点：</p>
+<ul>
+<li>自己独占一行</li>
+<li>可以自行设置高度，宽度，外边距和内边距</li>
+<li>宽度默认是容器的（父级宽度）的100%</li>
+<li>是一个容器或盒子，里面可以放行内或者块级元素</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>文字类元素内不能使用块级元素。如：<code>&lt;p&gt;</code>标签或<code>&lt;h1&gt;~&lt;h6&gt;</code>标签主要用于存放文字，因此<code>&lt;p&gt;</code>里面不能放块级元素，特别是不能放<code>&lt;div&gt;</code></li>
+</ul>
+<h4 id="_69">行内元素</h4>
+<p>常见的行内元素：</p>
+<p>常见的行内元素有<code>&lt;a&gt;</code>、<code>&lt;strong&gt;</code>、<code>&lt;b&gt;</code>、<code>&lt;em&gt;</code>、<code>&lt;i&gt;</code>、<code>&lt;del&gt;</code>、<code>&lt;s&gt;</code>、<code>&lt;ins&gt;</code>、<code>&lt;u&gt;</code>、<code>&lt;span&gt;</code>等，其中<code>&lt;span&gt;</code>标签是最典型的行内元素。有的地方也将行内元素称为内联元素</p>
+<p>特点：</p>
+<ul>
+<li>相邻行内元素在一行上，一行可以显示多个。</li>
+<li>高、宽直接设置是无效的。</li>
+<li>默认宽度就是它本身内容的宽度。（小盒子）</li>
+<li><strong>行内元素只能容纳文本或其他行内元素。</strong>行内元素不可以放块元素。</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>链接<code>&lt;a&gt;</code>里面不能再放链接<code>&lt;a&gt;</code>了</li>
+<li>有时链接<code>&lt;a&gt;</code>里可以放块级元素，但是给<code>&lt;a&gt;</code>转换一下块级模式最安全</li>
+</ul>
+<h4 id="_70">行内块元素</h4>
+<p>常见的行内块元素：</p>
+<p>在行内元素中有几个特殊的标签<code>&lt;img/&gt;</code>、<code>&lt;input/&gt;</code>、<code>&lt;td&gt;</code>，它们同时具有块元素和行内元素的特点，有些资料称它们为行内块元素。</p>
+<p>特点：</p>
+<ul>
+<li>和相邻行内块元素在一行上，但是他们之间会有空白缝隙。一行可以显示多个。（行内元素特点）</li>
+<li>默认宽度就是它本身内容的宽度。（行内元素特点）</li>
+<li>高度，行高、外边距以及内边距都可以控制。（块级元素特点）</li>
+</ul>
+<h4 id="_71">元素显示模式的转换</h4>
+<p>特殊情况下，我们需要元素模式的转换，简单理解就是一个模式的元素需要另外一种模式的特性。如，增加链接的点击范围。</p>
+<h5 id="display-block">转换为块元素：<code>display: block;</code></h5>
+<p><em>使用最多</em></p>
+<p>如：</p>
+<pre><code class="language-html">&lt;style&gt;
+    a {
+        width: 150px;
+        height: 50px;
+        background-color: pink;
+        /* 把行内元素 &lt;a&gt; 转换为 块级元素 */
+        display: block;
+    }
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;a href=&quot;#&quot;&gt;123&lt;/a&gt;
+&lt;/body&gt;
+</code></pre>
+<h5 id="display-inline">转换为行内元素：<code>display: inline;</code></h5>
+<p><em>不常用</em></p>
+<pre><code class="language-html">&lt;style&gt;
+    div {
+        /* 把块元素转换为行内元素 */
+        display: inline;
+    }
+&lt;/style&gt;
+</code></pre>
+<h5 id="display-inline-block">转换为行内块元素：<code>display: inline-block;</code></h5>
+<p><em>可以巧妙使用</em></p>
+<h4 id="_72">总结</h4>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-04%20%E4%B8%8B%E5%8D%8810.00.03.png" /></p>
+<h3 id="_73">背景</h3>
+<p>通过CSS背景属性，可以给页面元素添加背景样式。</p>
+<p>背景属性可以设置背景颜色、背景图片、背景平铺、背景图片位置、背景图像固定等。</p>
+<h4 id="_74">背景颜色</h4>
+<p>即：<code>background-color: color;</code></p>
+<p>属性值：</p>
+<ul>
+<li>默认为transparent（透明）</li>
+</ul>
+<h4 id="_75">背景图片</h4>
+<p><code>background-image</code>属性描述了元素的背景图像。实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，<strong>优点是非常便于控制位置</strong>（精灵图也是一种运用场景）</p>
+<p>即：<code>background-image</code></p>
+<p>属性值：</p>
+<ul>
+<li>none - 无背景图 - 默认</li>
+<li>url - 使用绝对或相对地址指定背景图像</li>
+</ul>
+<h4 id="_76">背景平铺</h4>
+<p>即：<code>background-repeat: 属性值;</code></p>
+<p>属性值：</p>
+<ul>
+<li>repeat - 平铺 - 默认</li>
+<li>no-repeat - 不平铺</li>
+<li>repeat-x - 延x轴平铺</li>
+<li>repeat-y - 延y轴平铺</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-html">&lt;style&gt;
+    div {
+        /* 不平铺 */
+        background-repeat: no-repeat;
+        background-color: pink;
+        /* 页面元素既可以添加背景颜色也可以添加背景图片只不过背景图片会压住背景颠色 */
+    }
+&lt;/style&gt;
+</code></pre>
+<h4 id="_77">背景图片的位置</h4>
+<p>即：<code>background-position</code>属性</p>
+<p>属性值：x，y</p>
+<p>如：<code>background-position: x y;</code></p>
+<p>其中：</p>
+<p>参数代表的意思是：x坐标和y坐标。可以使用<code>方位名词</code>或者<code>精确单位</code></p>
+<h5 id="1rightleftcentertop">1、参数是方位名词。如right，left，center，top等</h5>
+<ul>
+<li>如果指定的两个值都是方位名词，则两个值前后顺字无关，比如left top和top left效果一致。如：<code>background-position: center top;</code>和<code>background-position: top center;</code>等价。</li>
+<li>如果只指定了一个方位名词，另一个值省略，则第二个值默认居中对齐。如果第一个值是top（y轴值）则第二个参数省略x（水平居中对齐）</li>
+</ul>
+<h5 id="2_2">2、参数是精确单位</h5>
+<ul>
+<li>如果参数值是精确坐标，那么第一个肯定是x坐标，第二个一定是y坐标。</li>
+<li>这里坐标表示的是图片左侧到盒子左侧的距离和图片顶部到盒子顶部的距离</li>
+<li>如果只指定一个数值，那亥数值一定是×坐标，另一个默认垂直居中</li>
+</ul>
+<p>如：<code>background-position: 50px 20px;</code></p>
+<h5 id="3_2">3、参数是混合单位</h5>
+<ul>
+<li>如果指定的两个值是精确单位和方位名词混合使用，则第一个值是×坐标，第二个值是y坐标</li>
+</ul>
+<h4 id="_78">背景图像固定</h4>
+<p>即：<code>background-attachment</code>。设置背景图像是否固定或者随着页面的其余部分滚动。</p>
+<p>background-attachment后期可以制作视差滚动的效果。</p>
+<p>属性值：</p>
+<ul>
+<li><code>scroll</code> - 背景图像是随对象内容滚动 - 默认</li>
+<li><code>fixed</code> - 背景图像固定</li>
+</ul>
+<h4 id="_79">背景属性的复合写法</h4>
+<p>为了简化背景属性的代码，我们可以将这些属性合并简写在同一个属性background中。从而节约代码量。</p>
+<p>当使用简写属性时，没有特定的书写顺序，一般习惯约定顺序为：</p>
+<p>background：背景颜色、背景图片地址、背景平铺、背景图像滚动、背景图片位置；</p>
+<p>如：</p>
+<pre><code class="language-html">&lt;style&gt;
+    body {
+        background: black url(image.jpg) no-repeat fixed center top;
+    }
+&lt;/style&gt;
+</code></pre>
+<p><em>在实际开发中我们更提倡简写</em></p>
+<h4 id="_80">背景颜色半透明</h4>
+<p>即：<code>background: rgba(0, 0, 0, 0.3);</code></p>
+<p>其中：</p>
+<ul>
+<li>最后一个数值表示透明度。取值在0～1之间。0表示100%透明，1表示100%不透明。</li>
+<li>我们习惯把0.3的0省略掉，写为<code>background:rgba(0,0,0.3);</code></li>
+<li>注意：背景半透明是指盒子背景半透明，盒子里面的內容不受景响</li>
+<li>半透明是CSS3新增属性，是IE9+版本浏览器才支持的（现在已经不关注兼容性了，放心大胆使用就好）</li>
+</ul>
+<h3 id="css_6">CSS三大特性</h3>
+<h4 id="_81">层叠性</h4>
+<p>相同选择器给设置相同的样式，此时一个样式就会覆盖（层叠）另一个冲突的样式。层叠性主要解决样式冲突的问题</p>
+<p>层叠性原则：
+* 样式冲突，遵循的原则是就近原则，哪个样式离结构近，就执行哪个样式
+* 样式不冲突，不会层叠
+* CSS层叠性口诀：长江后浪推前浪，前浪死在沙滩上。</p>
+<h4 id="_82">继承性</h4>
+<p>CSS中的继承: 子标签会继承父标签的某些样式，如文本颜色和字号。简单的理解就是：子承父业。</p>
+<ul>
+<li>恰当地使用继承可以简化代码，降低 CSS 样式的复杂性</li>
+<li>子元素可以继承父元素的样式（text-，font-，line-这些元素开头的可以继承，以及color属性）</li>
+<li>继承性口诀：龙生龙，凤生凤，老鼠生的孩子会打洞</li>
+</ul>
+<h5 id="_83">行高的继承性</h5>
+<pre><code class="language-css">body {
+font:12px/1.5 Microsoft YaHei；
+}
+</code></pre>
+<ul>
+<li>行高可以跟单位也可以不跟单位</li>
+<li>如果子元素没有设置行高，则会继承父元素的行高为 1.5</li>
+<li>此时子元素的行高是：当前子元素的文字大小 * 1.5</li>
+<li><strong>body 行高 1.5 这样写法最大的优势就是里面子元素可以根据自己文字大小自动调整行高</strong></li>
+</ul>
+<h4 id="_84">优先级</h4>
+<p>当同一个元素指定多个选择器，就会有优先级的产生。</p>
+<ul>
+<li>选择器相同，则执行层叠性</li>
+<li>选择器不同，则根据选择器权重执行</li>
+</ul>
+<p><img alt="" src="../../media/%E6%88%AA%E5%B1%8F2023-10-14%20%E4%B8%8A%E5%8D%8810.20.39.png" /></p>
+<p>注意：</p>
+<ol>
+<li>权重是有4组数字组成,但是不会有进位。</li>
+<li>可以理解为类选择器永远大于元素选择器, id选择器永远大于类选择器,以此类推..</li>
+<li>等级判断从左向右，如果某一位数值相同，则判断下一位数值。</li>
+<li>可以简单记忆法: 通配符和继承权重为0, 标签选择器为1,类(伪类)选择器为 10, id选择器 100, 行内样式表为1000, !important 无穷大.</li>
+<li>继承的权重是0， 如果该元素没有直接选中，不管父元素权重多高，子元素得到的权重都是 0。</li>
+</ol>
+<p>权重叠加：如果是复合选择器，则会有权重叠加，需要计算权重。</p>
+<ul>
+<li>div ul li ------&gt; 0,0,0,3</li>
+<li>.nav ul li ------&gt; 0,0,1,2</li>
+<li>a:hover -----—&gt; 0,0,1,1</li>
+<li>.nav a ------&gt; 0,0,1,1</li>
+</ul>
+<h3 id="css_7">CSS盒子模型</h3>
+<p>页面布局要学习三大核心，盒子模型，浮动和定位.学习好盒子模型能非常好的帮助我们布局页面。</p>
+<h4 id="_85">看透网页布局的本质</h4>
+<p>每个网页都是由许许多多的盒子组成的</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-04%20%E4%B8%8B%E5%8D%8811.58.59.png" /></p>
+<p>网页布局过程：</p>
+<ol>
+<li>先准备好相关的网页元素，网页元素基本都是盒子Box。</li>
+<li>利用CSS设置好盒子样式，然后摆放到相应位置。（核心）</li>
+<li>往盒子里面装内容。</li>
+</ol>
+<h4 id="_86">盒子模型的组成</h4>
+<p>所谓盒子模型：就是把HTML页面中的布局元素看作是一个矩形的盒子，也就是一个盛装內容的容器。</p>
+<p>CSS盒子模型本质上是一个盒子，封装周围的HTML元素，它包括：边框、外边距、内边距、和实际内容</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-05%20%E4%B8%8A%E5%8D%8812.05.29.png" /></p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-05%20%E4%B8%8A%E5%8D%8812.06.54.png" /></p>
+<h4 id="border">边框（border）</h4>
+<p>border可以设置元素的边框。边框有三部分组成；边框宽度（粗细）、边框样式、边框颜色。</p>
+<p>属性：</p>
+<ul>
+<li><code>border-width</code> - 边框粗细 - 单位是px</li>
+<li><code>border-style</code> - 边框样式</li>
+<li><code>border-color</code> - 边框颜色</li>
+</ul>
+<p>属性值：</p>
+<ol>
+<li>border-width：...px</li>
+<li>border-style：solid（实线边框）、dashed（虚线边框）、dotted（点线边框）</li>
+<li>border-color：color</li>
+</ol>
+<p>语法：</p>
+<p><code>border: border-width border-style border-color</code></p>
+<p>注意：边框的复合写法没有顺序！以上顺序为通俗约定。</p>
+<p><strong>边框的分开写法：</strong></p>
+<p>即把<code>border</code>换为<code>border-top/bottom/left/right</code></p>
+<p><em>边框会额外增加盒子的实际大小：</em></p>
+<p>边框会额外增加盒子的实际大小。因此我们有两种方案解决：</p>
+<ol>
+<li>测量盒子大小的时候，不量边框.</li>
+<li>如果测量的时候包含了边框，则需要width/height减去边框宽度</li>
+</ol>
+<h4 id="_87">内容</h4>
+<p>文字，图片，其他的盒子</p>
+<h4 id="padding">内边距（padding）</h4>
+<p>属性：</p>
+<ul>
+<li><code>padding-left</code> - 左内边距</li>
+<li><code>padding-right</code> - 右内边距</li>
+<li><code>padding-top</code> - 上内边距</li>
+<li><code>padding-bottom</code> - 下内边距</li>
+</ul>
+<p>属性值为像素值。</p>
+<p>内边距的复合写法：</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-05%20%E4%B8%8A%E5%8D%8812.24.17.png" /></p>
+<p><em>padding会额外增加盒子的实际大小：</em></p>
+<p><em>如果保证盒子跟效果图大小保持一致，则让width/height减去多出来的内边距大小即可。</em></p>
+<p><em>如果盒子本身没有指定width/height属性，则此时padding不会撑开盒子大小。</em></p>
+<h4 id="margin">外边距（margin）</h4>
+<p>margin属性用于设置外边距，即控制盒子和盒子之间的距离。</p>
+<p>属性：</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-05%20%E4%B8%8A%E5%8D%8812.30.18.png" /></p>
+<p><em>margin的简写方式与padding完全一致。</em></p>
+<h5 id="_88">外边距的典型应用：让块级盒子水平居中</h5>
+<p>条件：（步骤）</p>
+<ol>
+<li>盒子必须指定了宽度。</li>
+<li>保证盒子左右的外边距都设置为<code>auto</code>。</li>
+</ol>
+<p>常见写法：</p>
+<ul>
+<li>margin-left auto; margin-right auto;</li>
+<li>margin: auto;</li>
+<li>margin: 0 auto;</li>
+</ul>
+<p><em>注意：以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加 <code>text-align:center</code>即可。（把行内元素或行内块元素当成普通的文字来看）</em></p>
+<h5 id="_89">外边距的合并</h5>
+<h6 id="_90">嵌套块元素垂直外边距的塌陷</h6>
+<p>对于两个嵌套关系（父子关系）的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值。</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-05%20%E4%B8%8A%E5%8D%8812.39.08.png" /></p>
+<p>解决方案：</p>
+<ul>
+<li>可以为父元素定义上（透明）边框。</li>
+<li>可以为父元素定义上内边距。</li>
+<li>可以为父元素添加<code>overflow:hidden</code>。（先记住，不管原理，<strong>最好用的方案</strong>）</li>
+</ul>
+<h4 id="_91">清除网页元素自带的边距</h4>
+<p>网页元素很多都带有默认的内外边距，而且不同浏览器默认的也不一致。因此我们在布局前，首先要清除下网页元素的内外边距。</p>
+<pre><code class="language-html">&lt;style&gt;
+    * {
+        /* 这句话也是我们CSS的第一行代码 */
+        padding:0;
+        margin:0;
+    }
+&lt;/style&gt;
+</code></pre>
+<p><em>注意：行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距。但是转换为块级和行内块元素就可以设置上下内外边距了。</em></p>
+<h4 id="_92">圆角边框</h4>
+<p>语法：</p>
+<p><code>border-radius: length;</code></p>
+<p>参数值：</p>
+<ul>
+<li>像素值。</li>
+<li>百分比。如：50%的意思就是半径为宽度和高度的一半。等价于将矩形完全变为（椭）圆。</li>
+</ul>
+<p>参数值的复合写法：属性后可以跟四个值，分别代表左上角、右上角、右下角、左下角。</p>
+<p>也可以分开写：分开写：border-top-left-radius、border-top-right-radius、border-bottom-right-radius和border-bottom-left-radius</p>
+<p>其中：</p>
+<ul>
+<li>radius是<code>半径</code>的意思</li>
+<li>原理：（椭）圆与边框的交集形成圆角效果</li>
+<li>如果是正方形，想要设置为一个圆，把数值修改为高度或者宽度的一半即可，或者直接写为50%</li>
+<li>如果是个矩形，设置为高度的一半即可</li>
+</ul>
+<h4 id="_93">阴影</h4>
+<h5 id="_94">盒子阴影</h5>
+<p>语法：</p>
+<p><code>box-shadow: h-shadow v-shadow blur spread color inset;</code></p>
+<p>属性值：</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-05%20%E4%B8%8A%E5%8D%8812.57.18.png" /></p>
+<p>单位为像素和颜色</p>
+<p><em>其中颜色属性的属性值一般设置为<code>rgba(0, 0, 0, .3)</code>（rgb中(0，0，0)是黑色）</em></p>
+<p>原先盒子没有影子，当鼠标经过时出现影子（未完待续）</p>
+<h5 id="_95">文字阴影</h5>
+<p>语法：</p>
+<p><code>text-shadow: h-shadow v-shadow blur color;</code></p>
+<p>属性值：</p>
+<p><img alt="Alt text" src="../../media/%E6%88%AA%E5%B1%8F2023-10-05%20%E4%B8%8A%E5%8D%881.02.59.png" /></p>
+<h3 id="_96">浮动</h3>
+<h4 id="_97">传统网页布局的三种方式</h4>
+<p>CSS提供了三种传统布局方式（简单说，就是盒子如何进行排列顺序）：</p>
+<ul>
+<li>普通流（标准流）</li>
+<li>浮动</li>
+<li>定位</li>
+</ul>
+<h4 id="_98">为什么需要浮动？</h4>
+<p><img alt="" src="../../media/%E6%88%AA%E5%B1%8F2023-10-14%20%E4%B8%8A%E5%8D%8810.24.28.png" /></p>
+<p><img alt="" src="../../media/%E6%88%AA%E5%B1%8F2023-10-14%20%E4%B8%8A%E5%8D%8810.24.54.png" /></p>
+<p>总结： 有很多的布局效果，标准流没有办法完成，此时就可以利用浮动完成布局。 因为浮动可以改变元素标签默认的排列方式.</p>
+<p>浮动最典型的应用：可以让多个块级元素一行内排列显示。</p>
+<p>网页布局第一准则：多个块级元素纵向排列找标准流，多个块级元素横向排列找浮动。</p>
+<h4 id="_99">什么是浮动？</h4>
+<p>float 属性用于创建浮动框，将其移动到一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘。</p>
+<p>语法：<code>选择器 { float: 属性值; }</code></p>
+<p>属性值：</p>
+<ul>
+<li>none - 元素不浮动（默认）</li>
+<li>left - 元素向左浮动</li>
+<li>right - 元素向右浮动</li>
+</ul>
+<h4 id="_100">浮动的特性</h4>
+<ol>
+<li><strong>脱离标准普通流的控制（浮） 移动到指定位置（动）, （俗称脱标）</strong></li>
+</ol>
+<p><img alt="" src="../../media/%E6%88%AA%E5%B1%8F2023-10-14%20%E4%B8%8A%E5%8D%8810.30.38.png" /></p>
+<ol>
+<li>
+<p><strong>浮动的盒子不再保留原先的位置</strong></p>
+</li>
+<li>
+<p>浮动的元素会一行内显示并且元素顶部对齐</p>
+</li>
+</ol>
+<p><img alt="" src="../../media/%E6%88%AA%E5%B1%8F2023-10-14%20%E4%B8%8A%E5%8D%8810.32.07.png" /></p>
+<p>注意： 浮动的元素是互相贴靠在一起的（不会有缝隙），如果父级宽度装不下这些浮动的盒子， 多出的盒子会另起一行对齐。</p>
+<ol>
+<li>
+<p>浮动的元素会具有行内块元素的特性.</p>
+</li>
+<li>
+<p>如果块级盒子没有设置宽度，默认宽度和父级一样宽，但是添加浮动后，它的大小根据内容来决定</p>
+</li>
+<li>浮动的盒子中间是没有缝隙的，是紧挨着一起的</li>
+<li>行内元素同理</li>
+</ol>
+<h4 id="_101">应用</h4>
+<p>浮动元素经常和标准流父级搭配使用</p>
+<p>为了约束浮动元素位置, 我们网页布局一般采取的策略是:</p>
+<p>先用标准流的父元素排列上下位置, 之后内部子元素采取浮动排列左右位置. 符合网页布局第一准侧.</p>
+<p>网页布局第二准则：</p>
+<p>先设置盒子的大小, 之后设置盒子的位置.</p>
+<h3 id="_102">常见的网页布局</h3>
+<h4 id="_103">浮动布局注意点</h4>
+<ol>
+<li>浮动和标准流的父盒子搭配。</li>
+</ol>
+<p><strong>先用标准流的父元素排列上下位置, 之后内部子元素采取浮动排列左右位置</strong></p>
+<ol>
+<li>一个元素浮动了，理论上其余的兄弟元素也要浮动。</li>
+</ol>
+<p>一个盒子里面有多个子盒子，如果其中一个盒子浮动了，那么其他兄弟也应该浮动，以防止引起问题。</p>
+<p><strong>浮动的盒子只会影响浮动盒子后面的标准流,不会影响前面的标准流.</strong></p>
+<h4 id="_104">清除浮动</h4>
+<h5 id="_105">为什么要清除浮动？</h5>
+<p>由于父级盒子很多情况下，不方便给高度，但是子盒子浮动又不占有位置，最后父级盒子高度为 0 时，就会 影响下面的标准流盒子。</p>
+<p>如：</p>
+<p><img alt="" src="../../media/%E6%88%AA%E5%B1%8F2023-10-14%20%E4%B8%8A%E5%8D%8810.39.33.png" /></p>
+<p>由于浮动元素不再占用原文档流的位置，所以它会对后面的元素排版产生影响</p>
+<h5 id="_106">清除浮动的本质：</h5>
+<ul>
+<li>清除浮动的本质是清除浮动元素造成的影响</li>
+<li>如果父盒子本身有高度，则不需要清除浮动</li>
+<li><strong>清除浮动之后，父级就会根据浮动的子盒子自动检测高度。父级有了高度，就不会影响下面的标准流了</strong></li>
+</ul>
+<h5 id="clear">语法：<code>选择器{clear:属性值;}</code></h5>
+<p>属性值：</p>
+<ul>
+<li>left - 不允许有左侧浮动的影响</li>
+<li>right - 不允许有右侧浮动的影响</li>
+<li>both - 同时清除两侧浮动的影响</li>
+</ul>
+<p>我们实际工作中， 几乎只用 clear: both;</p>
+<p>清除浮动的策略是: 闭合浮动.</p>
+<h5 id="_107">清除浮动的方法</h5>
+<h6 id="1_2">1、额外标签法(不常用)</h6>
+<p>额外标签法也称为隔墙法，是 W3C 推荐的做法。</p>
+<p>额外标签法会在浮动元素末尾添加一个空的标签。例如<code>&lt;div style=”clear:both”&gt;&lt;/div&gt;</code>，或者其他标签（如<br />等）。</p>
+<p>优点： 通俗易懂，书写方便</p>
+<p>缺点： 添加许多无意义的标签，结构化较差</p>
+<p><strong>注意： 要求这个新的空标签必须是块级元素。</strong></p>
+<h6 id="overflow">父级添加 overflow</h6>
+<p>可以给父级添加 overflow 属性，将其属性值设置为 hidden、 auto 或 scroll 。
+子不教,父之过,注意是给父元素添加代码</p>
+<ul>
+<li>优点：代码简洁</li>
+<li>缺点：无法显示溢出的部分</li>
+</ul>
+<h6 id="after">:after 伪元素法</h6>
+<p>伪元素：在父盒子后面插入一个新盒子，从而把父盒子撑起来</p>
+<p>:after 方式是额外标签法的升级版。也是给父元素添加</p>
+<pre><code class="language-css">.clearfix:after {
+    content: &quot;&quot;;
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix { /* IE6、7 专有 */
+    *zoom: 1;
+}
+</code></pre>
+<ul>
+<li>优点：没有增加标签，结构更简单</li>
+<li>缺点：照顾低版本浏览器</li>
+<li>代表网站： 百度、淘宝网、网易等</li>
+</ul>
+<h6 id="_108">双伪元素清除浮动</h6>
+<p>也是给给父元素添加</p>
+<pre><code class="language-css">    .clearfix:before,.clearfix:after {
+    content:&quot;&quot;;
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    *zoom:1;
+}
+</code></pre>
+<ul>
+<li>优点：代码更简洁</li>
+<li>缺点：照顾低版本浏览器</li>
+<li>代表网站：小米、腾讯等</li>
+</ul>
+<hr />
+<h2 id="_109">学习中遇到的问题</h2>
+<h3 id="1vscodehtml">1、使用vscode编辑后的html文件打开后中文出现乱码</h3>
+<p>在<code>HTML</code>页面的<code>&lt;head&gt;</code>标签中添加如下 meta 标签： <code>&lt;meta charset="utf-8"&gt;</code>这个标签指定了HTML页面使用的字符编码为<code>utf-8</code>，可以解决大部分中文乱码问题。</p>
+<h3 id="2macvscodehtml">2、如何在mac端的vscode中快速打开html界面</h3>
+<p>安装<code>open in browser</code>扩展</p>
+<h3 id="3_3">3、让文字水平居中显示</h3>
+<p>即让文字的行间距（行高）等于盒子的高。</p>
+<h3 id="4span">4、两个span标签再同一行，高度不一样的解决办法</h3>
+<p>为span标签添加<code>vertical-align:middle;</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      syxb2
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/syxb2" target="_blank" rel="noopener" title="GitHub | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/24550465" target="_blank" rel="noopener" title="Bilibili | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.xiaohongshu.com/user/profile/63caa3bd0000000026006cf2" target="_blank" rel="noopener" title="小红书 | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M160 32c-35.3 0-64 28.7-64 64v224c0 35.3 28.7 64 64 64h352c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zm236 106.7 96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84c4.5-6.6 12-10.6 20-10.6s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1-64 0zm-144-8c0-13.3-10.7-24-24-24S0 106.7 0 120v224c0 75.1 60.9 136 136 136h320c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>

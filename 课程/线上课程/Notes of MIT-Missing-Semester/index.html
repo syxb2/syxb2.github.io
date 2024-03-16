@@ -1,0 +1,7793 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="syxb2的主站">
+      
+      
+        <meta name="author" content="syxb2">
+      
+      
+        <link rel="canonical" href="https://syxb2.github.io/myblog/%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/Notes%20of%20MIT-Missing-Semester/">
+      
+      
+        <link rel="prev" href="../Notes%20of%20Crash%20Course%20Computer%20Science/">
+      
+      
+        <link rel="next" href="../%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E8%82%B2%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE%20%E7%AC%94%E8%AE%B0/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Notes of MIT-Missing-Semester - syxb2的主站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#notes-of-mit-missing-semester" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="syxb2的主站" class="md-header__button md-logo" aria-label="syxb2的主站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            syxb2的主站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Notes of MIT-Missing-Semester
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/syxb2/myblog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    syxb2.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  欢迎
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E5%8D%9A%E5%AE%A2/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/" class="md-tabs__link">
+          
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Notes%20of%20Crash%20Course%20Computer%20Science/" class="md-tabs__link">
+          
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="syxb2的主站" class="md-nav__button md-logo" aria-label="syxb2的主站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    syxb2的主站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/syxb2/myblog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    syxb2.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    欢迎
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    博客
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            博客
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    编程语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            编程语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML%20%26%20CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML & CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/LaTeX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTeX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Mathematica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/Operating%20System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operating System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/Vim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/Multipass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multipass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/Obsidian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsidian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/%E5%88%A9%E7%94%A8Mkdocs%E4%B8%8EGitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    利用Mkdocs与GitHub搭建个人博客
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/%E9%A9%BE%E8%80%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    驾考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习工作流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2/Others/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Others
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    课程笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            课程笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    线上课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            线上课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Notes%20of%20Crash%20Course%20Computer%20Science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes of Crash Course Computer Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Notes of MIT-Missing-Semester
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Notes of MIT-Missing-Semester
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一课：课程概览与 shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一课：课程概览与 shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shell_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要用 shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令（1）（commands）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      面向终端的应用程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是 shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是路径">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      pwd 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      cd 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flagoption" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序的标志（flag）和选项（option）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序的标志（flag）和选项（option）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      --help标志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      - + 字母
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls 的 -l 标志
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件/文件夹的权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令（2）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令（2）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      mv 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      rm 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      rmdir 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      cat 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      tail 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    <span class="md-ellipsis">
+      head 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#man" class="md-nav__link">
+    <span class="md-ellipsis">
+      man 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      流（streams）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="流（streams）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准输入流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准输出流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准错误流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      流的重定向
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      管道（pipe）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    <span class="md-ellipsis">
+      root 账户
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="root 账户">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      sudo 程序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      打开文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二课：shell 工具和脚本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二课：shell 工具和脚本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      访问变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      加载/使用函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="加载/使用函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      source 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键字
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="关键字">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#true-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      true 命令 和 false 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令替换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令替换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      进程替换
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      脚本实例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      bash 中的比较运算符
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="bash 中的比较运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 [...] 中
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 ((...)) 中
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      bash 中的通配符
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="bash 中的通配符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、*
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、**
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、{}
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用不同语言来实现与 shell 交互的脚本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用不同语言来实现与 shell 交互的脚本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 c 语言：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 python：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell 中一些好用的命令/工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shell 中一些好用的命令/工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1ls-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、ls -l
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2man" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、man 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、tldr 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4find" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、find 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fd" class="md-nav__link">
+    <span class="md-ellipsis">
+      fd 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locate" class="md-nav__link">
+    <span class="md-ellipsis">
+      locate 命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="locate 命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updatedb" class="md-nav__link">
+    <span class="md-ellipsis">
+      updatedb 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      grep 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rg-ripgrep" class="md-nav__link">
+    <span class="md-ellipsis">
+      rg / ripgrep 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      history 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fzf" class="md-nav__link">
+    <span class="md-ellipsis">
+      fzf 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      tree 命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tree 命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broot" class="md-nav__link">
+    <span class="md-ellipsis">
+      broot 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      source 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      习题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ls_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls 常用参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    <span class="md-ellipsis">
+      find 查找最近创建的文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell 控制流程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shell 控制流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      if 语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      for 语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    <span class="md-ellipsis">
+      while 语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#until" class="md-nav__link">
+    <span class="md-ellipsis">
+      until 语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-break-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell 中 也有 break 和 continue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      压缩命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xargs-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      xargs 命令（1）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三课：编辑器（Vim）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四课：数据整理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四课：数据整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据过滤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据过滤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grep_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      grep 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sed" class="md-nav__link">
+    <span class="md-ellipsis">
+      sed 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      head 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则表达式（1）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="正则表达式（1）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      特殊字符：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="特殊字符：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1s" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、s/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、*
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、+
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、[]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7、|
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8、?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      捕获组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则调试器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据聚合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据聚合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wc" class="md-nav__link">
+    <span class="md-ellipsis">
+      wc 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      sort 命令 （1）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniq" class="md-nav__link">
+    <span class="md-ellipsis">
+      uniq 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      sort 命令（2）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      awk 命令（1）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      paste 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      awk 命令（2）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      其它好用的工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其它好用的工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bc" class="md-nav__link">
+    <span class="md-ellipsis">
+      bc 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      R 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnuplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      gnuplot 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      两种特殊的数据整理方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="两种特殊的数据整理方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令行参数整理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令行参数整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xargs-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      xargs 命令（2）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像整理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="图像整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ffmpeg" class="md-nav__link">
+    <span class="md-ellipsis">
+      ffmpeg 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert" class="md-nav__link">
+    <span class="md-ellipsis">
+      convert 程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      gzip 程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tee" class="md-nav__link">
+    <span class="md-ellipsis">
+      tee 程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feh" class="md-nav__link">
+    <span class="md-ellipsis">
+      feh 程序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      习题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1d" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、\d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、. and \.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、[...]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、[^...]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-and-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、[..-..] and \w
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、{} and {,}
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7star-and-plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      7、*(star) and +(plus)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8question-mark-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      8、?(question mark) and \?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9s" class="md-nav__link">
+    <span class="md-ellipsis">
+      9、\s
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      10、^ and $
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11match-groups-and-0-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      11、Match groups() and \0-9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11、Match groups() and \0-9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nested-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested(嵌套) groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#match-groups-with-metacharacter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Match groups with metacharacter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipe-in-match-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      |(pipe) in Match groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12other-special-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      12、Other special characters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12、Other special characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-s-and-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      \D, \S and \W
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      \b
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五课：命令行环境
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五课：命令行环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unix 信号机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unix 信号机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      结束进程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="结束进程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sigint" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIGINT 信号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sigquit" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIGQUIT 信号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      kill 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      暂停和后台执行进程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="暂停和后台执行进程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sigstop" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIGSTOP 信号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fg-bg" class="md-nav__link">
+    <span class="md-ellipsis">
+      fg 和 bg 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      jobs 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sighup" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIGHUP 信号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nohup" class="md-nav__link">
+    <span class="md-ellipsis">
+      nohup 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disown" class="md-nav__link">
+    <span class="md-ellipsis">
+      disown 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      实例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux 终端多路复用器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tmux 终端多路复用器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux 快捷键
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tmux 快捷键">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      会话
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      窗口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      面板
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      别名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dotfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dotfiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dotfiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      例如：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例如：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shell-dotfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell 的 dotfile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dotfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      其它程序的 dotfile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      符号链接
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      连接到远程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH 密钥
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH 密钥">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorized_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      authorized_keys 文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      密钥生成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过 ssh 复制文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known_hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      known_hosts 文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="known_hosts 文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      第六课：版本控制（git）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第六课：版本控制（git）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git 数据模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git 数据模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blob" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blob
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用（reference）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      历史记录建模
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据模型的伪代码表示
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据模型的伪代码表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存寻址
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用（reference）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      仓库
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      暂存区
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git 命令行接口
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git 命令行接口">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      分支和合并
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分支和合并">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      演示：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      远端
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="远端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      撤销
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git 高级操作
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      第七课：调试及性能分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      第八课：元编程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第八课：元编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="构建系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      make
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="make">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makefile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      第九课：安全和密码学
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      第十课：大杂烩
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      注：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E8%82%B2%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    中国计算机教育中缺失的一课 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BIT-0-C%E8%AF%AD%E8%A8%80%E8%AF%BE%E7%A8%8B%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIT-0-C语言课程 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BDC%E8%AF%AD%E8%A8%80%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何学好C语言 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B3%E4%BA%8E%E5%A4%A7%E5%AD%A6%E7%9A%84%E4%B8%80%E5%88%87%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于大学的一切 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    线下课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            线下课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BA%BF%E4%B8%8B%E8%AF%BE%E7%A8%8B/%E6%9C%AC%E7%A7%91%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80I%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    程序设计与算法基础I 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BA%BF%E4%B8%8B%E8%AF%BE%E7%A8%8B/%E6%9C%AC%E7%A7%91%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5%EF%BC%88PBLF%EF%BC%89%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    程序设计与项目实践 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一课：课程概览与 shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一课：课程概览与 shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shell_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要用 shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令（1）（commands）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      面向终端的应用程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是 shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是路径">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      pwd 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      cd 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flagoption" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序的标志（flag）和选项（option）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序的标志（flag）和选项（option）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      --help标志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      - + 字母
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls 的 -l 标志
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件/文件夹的权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令（2）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令（2）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      mv 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      rm 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      rmdir 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      cat 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      tail 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    <span class="md-ellipsis">
+      head 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#man" class="md-nav__link">
+    <span class="md-ellipsis">
+      man 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      流（streams）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="流（streams）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准输入流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准输出流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准错误流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      流的重定向
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      管道（pipe）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    <span class="md-ellipsis">
+      root 账户
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="root 账户">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      sudo 程序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      打开文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二课：shell 工具和脚本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二课：shell 工具和脚本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      访问变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      加载/使用函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="加载/使用函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      source 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键字
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="关键字">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#true-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      true 命令 和 false 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令替换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令替换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      进程替换
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      脚本实例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      bash 中的比较运算符
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="bash 中的比较运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 [...] 中
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 ((...)) 中
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      bash 中的通配符
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="bash 中的通配符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、*
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、**
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、{}
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用不同语言来实现与 shell 交互的脚本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用不同语言来实现与 shell 交互的脚本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 c 语言：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 python：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell 中一些好用的命令/工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shell 中一些好用的命令/工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1ls-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、ls -l
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2man" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、man 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、tldr 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4find" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、find 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fd" class="md-nav__link">
+    <span class="md-ellipsis">
+      fd 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locate" class="md-nav__link">
+    <span class="md-ellipsis">
+      locate 命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="locate 命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updatedb" class="md-nav__link">
+    <span class="md-ellipsis">
+      updatedb 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      grep 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rg-ripgrep" class="md-nav__link">
+    <span class="md-ellipsis">
+      rg / ripgrep 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      history 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fzf" class="md-nav__link">
+    <span class="md-ellipsis">
+      fzf 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      tree 命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tree 命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broot" class="md-nav__link">
+    <span class="md-ellipsis">
+      broot 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      source 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      习题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ls_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls 常用参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    <span class="md-ellipsis">
+      find 查找最近创建的文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell 控制流程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shell 控制流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      if 语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      for 语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    <span class="md-ellipsis">
+      while 语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#until" class="md-nav__link">
+    <span class="md-ellipsis">
+      until 语句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-break-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell 中 也有 break 和 continue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      压缩命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xargs-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      xargs 命令（1）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三课：编辑器（Vim）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四课：数据整理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四课：数据整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据过滤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据过滤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grep_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      grep 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sed" class="md-nav__link">
+    <span class="md-ellipsis">
+      sed 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      head 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则表达式（1）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="正则表达式（1）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      特殊字符：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="特殊字符：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1s" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、s/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、*
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、+
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、[]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7、|
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8、?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      捕获组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则调试器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据聚合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据聚合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wc" class="md-nav__link">
+    <span class="md-ellipsis">
+      wc 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      sort 命令 （1）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniq" class="md-nav__link">
+    <span class="md-ellipsis">
+      uniq 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      sort 命令（2）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      awk 命令（1）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      paste 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      awk 命令（2）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      其它好用的工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其它好用的工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bc" class="md-nav__link">
+    <span class="md-ellipsis">
+      bc 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      R 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnuplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      gnuplot 命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      两种特殊的数据整理方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="两种特殊的数据整理方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令行参数整理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令行参数整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xargs-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      xargs 命令（2）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像整理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="图像整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ffmpeg" class="md-nav__link">
+    <span class="md-ellipsis">
+      ffmpeg 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert" class="md-nav__link">
+    <span class="md-ellipsis">
+      convert 程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      gzip 程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tee" class="md-nav__link">
+    <span class="md-ellipsis">
+      tee 程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feh" class="md-nav__link">
+    <span class="md-ellipsis">
+      feh 程序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      习题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1d" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、\d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、. and \.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、[...]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、[^...]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-and-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、[..-..] and \w
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、{} and {,}
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7star-and-plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      7、*(star) and +(plus)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8question-mark-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      8、?(question mark) and \?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9s" class="md-nav__link">
+    <span class="md-ellipsis">
+      9、\s
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      10、^ and $
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11match-groups-and-0-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      11、Match groups() and \0-9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11、Match groups() and \0-9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nested-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested(嵌套) groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#match-groups-with-metacharacter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Match groups with metacharacter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipe-in-match-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      |(pipe) in Match groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12other-special-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      12、Other special characters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12、Other special characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-s-and-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      \D, \S and \W
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      \b
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五课：命令行环境
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五课：命令行环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unix 信号机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unix 信号机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      结束进程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="结束进程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sigint" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIGINT 信号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sigquit" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIGQUIT 信号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      kill 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      暂停和后台执行进程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="暂停和后台执行进程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sigstop" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIGSTOP 信号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fg-bg" class="md-nav__link">
+    <span class="md-ellipsis">
+      fg 和 bg 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      jobs 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sighup" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIGHUP 信号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nohup" class="md-nav__link">
+    <span class="md-ellipsis">
+      nohup 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disown" class="md-nav__link">
+    <span class="md-ellipsis">
+      disown 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      实例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux 终端多路复用器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tmux 终端多路复用器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux 快捷键
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tmux 快捷键">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      会话
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      窗口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      面板
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      别名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dotfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dotfiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dotfiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      例如：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例如：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shell-dotfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell 的 dotfile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dotfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      其它程序的 dotfile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      符号链接
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      连接到远程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH 密钥
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH 密钥">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorized_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      authorized_keys 文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      密钥生成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过 ssh 复制文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known_hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      known_hosts 文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="known_hosts 文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      第六课：版本控制（git）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第六课：版本控制（git）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git 数据模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git 数据模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blob" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blob
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用（reference）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      历史记录建模
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据模型的伪代码表示
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据模型的伪代码表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存寻址
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用（reference）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      仓库
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      暂存区
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git 命令行接口
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git 命令行接口">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      分支和合并
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分支和合并">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      演示：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      远端
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="远端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      撤销
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git 高级操作
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      第七课：调试及性能分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      第八课：元编程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第八课：元编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="构建系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      make
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="make">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makefile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      第九课：安全和密码学
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      第十课：大杂烩
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      注：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="notes-of-mit-missing-semester">Notes of MIT-Missing-Semester</h1>
+<p><strong>主讲：John、Anish、Jose（Massachusetts Institute of Technology）</strong></p>
+<p>课程笔记：<a href="https://missing-semester-cn.github.io">https://missing-semester-cn.github.io</a></p>
+<h2 id="shell">第一课：课程概览与 shell</h2>
+<h3 id="shell_1">为什么要用 shell</h3>
+<p>当你熟悉的可视化界面无法实现你想要的功能时，那么 shell 将成为你与计算机交互的主要方式之一。</p>
+<p>可视化界面功能是十分局限的，因为你只能使用它所提供的的按钮、滑块、输入字段等功能。而这些文本工具通常是相互可组合的，可以使用许多不同的组合或编程方式进行自动化。这就是为什么，在本课程中，我们将专注于这些基于命令行或文本的工具，而Shell则是实现这些工作的主要工具之一。</p>
+<h3 id="1commands">命令（1）（commands）</h3>
+<p>命令通常是相对简单的东西，通常会像是使用参数执行程序之类的事情。如：</p>
+<p>echo 程序：</p>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % echo hello
+hello
+</code></pre>
+<ul>
+<li>echo 可以打印出你给它的参数。</li>
+</ul>
+<p><strong>参数</strong> 就是命令后面以空格分隔的东西。</p>
+<p>使用由多个单词组成的参数：</p>
+<ol>
+<li>由 " 包围。</li>
+</ol>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % echo &quot;hello world&quot;
+hello world
+</code></pre>
+<ol>
+<li>由 ' 包围</li>
+<li>使用转义</li>
+</ol>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % echo hello\ world
+hello world
+</code></pre>
+<h3 id="_1">面向终端的应用程序</h3>
+<ul>
+<li>这些应用程序存储在文件系统中</li>
+<li>这些程序不是 shell 自带的，而是你的计算机自带的。而 shell 做的只是确定程序的位置并执行它</li>
+<li>shell 通过<code>环境变量</code>来确定程序的位置</li>
+</ul>
+<h3 id="_2">环境变量</h3>
+<p>环境变量是一种变量，就像编程语言中的变量一样。</p>
+<p>环境变量是初次启动 shell 时需要设置的东西。例如你的主目录在哪里，你的用户名是什么。一个至关重要的变量即路径变量，就是 shell 搜索程序的路径。</p>
+<pre><code class="language-zsh">echo $PATH
+# 查看路径变量
+</code></pre>
+<p>如果我们想知道我们实际运行的是哪个程序，我们可以用 which 程序</p>
+<pre><code class="language-zsh">which echo
+/usr/bin/echo
+# 如果我们输入 echo，那我们运行的就是这个目录下的程序
+</code></pre>
+<h3 id="shell_2">什么是 shell</h3>
+<p>shell，特别是 bash，真的是一种编程语言。shell 提示符后面不仅能运行带有参数的程序，还可以做类似 while 循环，条件语句等的事情。你甚至还可以在 shell 中定义函数，变量。</p>
+<h3 id="_3">什么是路径</h3>
+<p>路径是描述计算机上文件位置的方式</p>
+<ul>
+<li>绝对路径：绝对路径是能完全确定文件位置的路径，即文件的完整路径</li>
+<li>相对路径：相对路径是相对于你当前所在的位置的路径</li>
+</ul>
+<h4 id="pwd">pwd 命令</h4>
+<p><em>要找出当前位置（工作目录），我们可以运行 pwd</em></p>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % pwd
+/Users/baijiale
+</code></pre>
+<h4 id="cd">cd 命令</h4>
+<p><em>要更改工作目录，我们可以运行 cd（change directory）</em></p>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % cd /home
+# 更改到 home 目录
+</code></pre>
+<p><em>cd 命令有一个参数<code>-</code>，它可以快速回到上一个工作目录</em></p>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % cd -
+</code></pre>
+<ul>
+<li>” . “表示当前目录</li>
+<li>“ .. ”表示父目录</li>
+</ul>
+<h4 id="ls">ls 命令</h4>
+<p><em>还有一个非常有用的命令 ls，它可以查看当前目录中有哪些内容</em></p>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % ls
+Library    Pictures
+</code></pre>
+<p><em>ls 也可以使用路径作为参数，那么就是查看这个路径下的文件</em></p>
+<ul>
+<li>“~”代表主（家）目录（不是根目录），即<code>/home/bjl</code>。也可以使用<code>~</code>来写相对路径</li>
+</ul>
+<p>常用标志</p>
+<p><code>-R</code> 标志：递归地列出某个目录结构</p>
+<h3 id="flagoption">程序的标志（flag）和选项（option）</h3>
+<p>大多数程序都会采用所谓的标志和选项，这些标志通常以<code>-</code>开头。</p>
+<h4 id="-help"><code>--help</code>标志</h4>
+<p>这个标志对大多数程序都可用，它会打印出该命令的帮助信息。</p>
+<p><strong>现在，我们更建议使用<code>man ls</code>代替<code>ls --help</code></strong></p>
+<p><code>zsh
+ usage: ls [-@ABCFGHILOPRSTUWabcdefghiklmnopqrstuvwxy1%,] [--color=when] [-D format] [file ...]</code>
+usage 中：[] 代表可选项，... 表示一个或多个文件（选项）</p>
+<h4 id="-"><code>-</code> + <code>字母</code></h4>
+<p>通常我们称单个破折号（-）加字母的组合为 标志（flag）。不带任何内容也是标志；带有值的东西叫做选项（option）。</p>
+<p>例如：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-15%20%E4%B8%8B%E5%8D%8812.53.27.png" /></p>
+<ul>
+<li>-a 和 --all 都是标志</li>
+<li>-C 和 --color 都是选项</li>
+</ul>
+<h4 id="ls-l">ls 的 -l 标志</h4>
+<p>-l 标志被用来显示长列表格式</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-15%20%E4%B8%8B%E5%8D%881.01.24.png" /></p>
+<ul>
+<li>它可以给我们关于文件的更多信息，这非常常用</li>
+<li>在某些条目开头的 d 表示这些条目是一个文件夹。</li>
+<li><strong>之后的字母表示为该文件设置的权限。阅读方法：三个字符为一组，第一组是文件所有者设置的权限；第二组是拥有该文件的组设置的权限；最后一组是其他人的权限列表。</strong></li>
+</ul>
+<h3 id="_4">文件/文件夹的权限</h3>
+<p>对于文件：</p>
+<ul>
+<li>读（r），即可以读取它的内容</li>
+<li>写（w），即可以修改它的内容并保存文件</li>
+<li>执行（x，execute），即可以执行这个文件</li>
+</ul>
+<p>对于文件夹：</p>
+<ul>
+<li>读（r），是否可以看到这个目录中的文件</li>
+<li>写（w），是否被允许在该目录中重命名、创建或删除文件</li>
+<li><strong>执行（x），执行权限就是所谓的搜索权限，这意味着你是否可以进入这个目录，即用 cd 进入这个目录从而写入/删除/读取文件</strong></li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>即使你对一个文件有写入权限，但你没有它所在目录的写入权限，你仍不能删除该文件</li>
+<li>文件夹的读权限只是可以看到文件夹中有哪些文件，如果你想对文件夹的文件进行操作，你必须拥有这个文件夹的执行权限。</li>
+</ul>
+<h3 id="2">命令（2）</h3>
+<h4 id="mv">mv 命令</h4>
+<p>移动文件</p>
+<pre><code class="language-zsh">mv [当前文件路径] [目标文件路径]
+</code></pre>
+<h4 id="cp">cp 命令</h4>
+<p>复制文件</p>
+<pre><code class="language-zsh">cp [要复制文件路径] [目标文件路径]
+</code></pre>
+<h4 id="rm">rm 命令</h4>
+<p>删除文件</p>
+<pre><code class="language-zsh">rm [文件路径]
+</code></pre>
+<p>注意：rm 默认情况下不能递归删除，所以不能用 rm 删除文件夹。</p>
+<p>可以使用 -r 标志进行递归删除，然后给出要删除的路径，就可以删除这个路径下的所有文件。</p>
+<h4 id="rmdir">rmdir 命令</h4>
+<p>只能删除空文件夹（空目录）</p>
+<h4 id="mkdir">mkdir 命令</h4>
+<p>创建新目录（文件夹）</p>
+<h4 id="cat">cat 命令</h4>
+<ol>
+<li>打印文件内容</li>
+<li>将输入与输出连在一起</li>
+</ol>
+<h4 id="tail">tail 命令</h4>
+<p>打印输入的最后 n 行</p>
+<h4 id="head">head 命令</h4>
+<p>打印输出的前n行</p>
+<pre><code class="language-zsh">cat xxx.txt | head -n5
+</code></pre>
+<ul>
+<li>打印 xxx.txt 的前五行</li>
+</ul>
+<h4 id="man">man 命令</h4>
+<p>手册页</p>
+<pre><code class="language-zsh">man [程序（命令）名称]
+</code></pre>
+<p><em>⌃L 快捷键可以快速清除终端</em></p>
+<h3 id="streams">流（streams）</h3>
+<p>与文件交互，让文件在不同的程序之间传输。</p>
+<h4 id="_5">标准输入流</h4>
+<p>一般输入流来自键盘，也就是你的终端</p>
+<h4 id="_6">标准输出流</h4>
+<p>就是每当程序打印输出时，输出的内容就会传递到这个流中。默认情况下，输出流也是指向你的终端的。</p>
+<h4 id="_7">标准错误流</h4>
+<p>用于在程序编写时输出错误信息，以避免污染标准输出。</p>
+<h4 id="_8">流的重定向</h4>
+<p>改变程序的输入/输出指向。</p>
+<p>方法：使用尖括号 <code>&lt;</code> or <code>&gt;</code></p>
+<ul>
+<li><code>&lt;</code> 表示 将这个程序的 输入 重定向为这个文件的内容</li>
+<li><code>&gt;</code> 表示 将前面程序的 输出 重定向到这个文件中。（即重定向标准输出流）</li>
+<li><code>&gt;&gt;</code> 表示 追加 而不是 覆盖</li>
+<li><code>2&gt;</code> 用来重定向标准错误流</li>
+</ul>
+<p>例如：</p>
+<pre><code class="language-zsh">echo hello &gt; hello.txt
+</code></pre>
+<ul>
+<li>这里使用的是相对路径，所以会在当前路径创建一个 hello.txt 的文件（如果当前路径没有这个文件）</li>
+</ul>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % cat &lt; hello.txt
+hello
+</code></pre>
+<p>或</p>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % cat &lt; hello.txt &gt; hello2.txt
+</code></pre>
+<ul>
+<li>让 shell 使用 hello.txt 作为 cat 命令的输入，并将 cat 命令的输出打印到 hello2.txt 中</li>
+<li>这样可以实现复制一份 hello.txt 文件，新文件的名字为 hello2.txt</li>
+</ul>
+<p>如果</p>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % cat &lt; hello.txt &gt;&gt; hello2.txt
+baijiale@Bais-Mac ~ % cat hello2.txt
+hello
+hello
+</code></pre>
+<h3 id="pipe">管道（pipe）</h3>
+<p>管道符是 <code>|</code></p>
+<p>它的作用是将 左边程序的输出 作为 右边程序的输入。</p>
+<p>例如：</p>
+<pre><code class="language-zsh">ls -l / | tail -n1 
+</code></pre>
+<ul>
+<li>-n1 表示只打印最后 1 行（也可以写成 --line=1）</li>
+<li><strong>这句话的意思是 打印 <code>ls -l /</code> 的输出的最后一行。</strong></li>
+</ul>
+<p>也可以</p>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % ls -l / | tail -n1 &gt; ls.txt
+baijiale@Bais-Mac ~ % cat ls.txt
+...
+</code></pre>
+<p><strong>管道不仅适用于文本数据，你也可以对图像、视频等东西使用它们。</strong></p>
+<h3 id="root">root 账户</h3>
+<ul>
+<li>它的用户 ID 是 0。</li>
+<li>它可以在你的系统上随意做任何事情，拥有最高权限。</li>
+</ul>
+<h4 id="sudo">sudo 程序</h4>
+<p>大多数时间，你不会作为 root 用户来操作。通常，你会使用一个叫 sudo（do as su，su 指超级账户super user） 的程序，这可以使你以超级账户的身份执行操作。</p>
+<p>但是有时 sudo 程序会由于语法问题失效</p>
+<p>如：</p>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % sudo echo 500 &gt; brightness
+zsh: brightness: Permission denied
+</code></pre>
+<p>这是因为：</p>
+<p>输入和输出的重定向不是程序所知道的，这个通道和重定向是由shell设置的。所以，在这种情况下，我告诉我的shell运行程序"sudo"，并使用参数"echo"和"500"，并将其输出发送到名为"brightness"的文件。但是shell是打开"brightness"文件的东西，而不是"sudo"程序。</p>
+<p>所以，在这种情况下，作为<code>我运行的</code>shell，尝试打开brightness文件进行写入，但是不允许这样做。</p>
+<p>解决方法：</p>
+<ol>
+<li>使用 root 账户运行 shell</li>
+</ol>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % sudo su
+Password:
+sh-3.2#
+</code></pre>
+<ul>
+<li>su 是一个复杂的命令，可以让你以管理员的身份获取一个 shell</li>
+<li>
+<p><code>#</code> 代表 你正在以 root 身份运行 shell</p>
+</li>
+<li>
+<p>使用管道</p>
+</li>
+</ul>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % echo 500 | sudo tee brightness
+</code></pre>
+<ul>
+<li>tee 命令会将输入内容写入文件，同时也输出到标准输出</li>
+</ul>
+<h3 id="_9">打开文件</h3>
+<ul>
+<li>linux：xdg-open 命令</li>
+<li>MacOS：open 命令</li>
+</ul>
+<blockquote>
+<p>学过这一节课，你就不需要再打开 finder 窗口了，也不需要再使用鼠标点击了。</p>
+</blockquote>
+<h2 id="shell_3">第二课：shell 工具和脚本</h2>
+<h3 id="_10">变量</h3>
+<h5 id="_11">定义变量</h5>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % foo=bar
+</code></pre>
+<ul>
+<li>变量名是 foo</li>
+<li>中间没有空格</li>
+</ul>
+<h5 id="_12">访问变量</h5>
+<ul>
+<li>我们可以使用 <code>$</code> 来访问变量的值</li>
+</ul>
+<pre><code class="language-zsh">baijiale@Bais-Mac ~ % echo $foo
+bar
+</code></pre>
+<p>注意：</p>
+<ul>
+<li>注意空格的使用，空格通常用来分隔参数。因此不需要在 = 两侧添加空格</li>
+<li><code>"</code> 内的 <code>$</code> 会被解释；<code>'</code> 内的 <code>$</code> 不会被解释</li>
+</ul>
+<pre><code class="language-zsh">echo &quot;value is $foo&quot;
+value is bar
+</code></pre>
+<pre><code class="language-zsh">echo 'value is $foo'
+value is $foo
+</code></pre>
+<p><em>bash / zsh 中使用字符串需要用 <code>"</code> 或 <code>'</code> 包围</em></p>
+<h3 id="_13">函数</h3>
+<h4 id="_14">定义函数</h4>
+<p>shell 也可以定义函数</p>
+<p>函数存放在 <code>.sh</code> 文件中</p>
+<p>如：文件 <code>mcd·sh</code></p>
+<pre><code class="language-shell"># （1）
+mcd () {
+    mkdir -p &quot;$1&quot;
+    cd &quot;$1&quot;
+}
+</code></pre>
+<ul>
+<li>从上到下，按序执行</li>
+<li><strong>在这里，<code>$1</code> 是一种特殊变量，类似于其它脚本语言（c语言）里的 <code>argv</code>，即 命令行参数</strong></li>
+</ul>
+<h4 id="_15">加载/使用函数</h4>
+<p>我们可以直接在 shell 中输入（1）的内容来定义并执行函数</p>
+<p>但是通常把它写入文件（ .sh 文件）更好：</p>
+<h5 id="source">source 命令</h5>
+<pre><code class="language-zsh">source mcd.sh
+</code></pre>
+<ul>
+<li>这会在我们打开的 shell 中加载并执行这个脚本（定义 mcd 函数）</li>
+</ul>
+<p>这时我们再执行</p>
+<pre><code class="language-zsh">mcd test
+</code></pre>
+<ul>
+<li>就可以创建并进入 test 文件夹</li>
+</ul>
+<h3 id="_16">关键字</h3>
+<p>关键字的格式：<code>$</code> + ...</p>
+<ol>
+<li><code>$</code> + <code>1~9</code> 访问第 1～9 个参数。</li>
+<li><code>$@</code> 它将展开为所有的参数。因此，不必假定有三个可能的参数而编写 $1、$2、$3等。如果我们不知道有多少参数，我们可以将参数都放到这里。</li>
+<li><code>$0</code> 表示脚本的名称。</li>
+<li><code>$#</code> 表示我们给该命令的参数数量。</li>
+<li><code>$$</code> 表示当前的进程 ID.</li>
+<li><code>$?</code> 获取上一个命令的错误代码。<ul>
+<li>如果没有错误 $? 返回 0。</li>
+</ul>
+</li>
+<li><code>$_</code> 获取上一个命令的最后一个参数。</li>
+</ol>
+<pre><code class="language-zsh">mkdir test
+cd $_
+</code></pre>
+<ul>
+<li>
+<p>最终会进入 test 目录。</p>
+</li>
+<li>
+<p><code>!!</code> 获取上一个命令。</p>
+</li>
+</ul>
+<h4 id="true-false">true 命令 和 false 命令</h4>
+<ul>
+<li>true 命令的错误代码始终返回 0。</li>
+<li>false 命令的错误代码始终返回 1。</li>
+</ul>
+<p>通过逻辑运算符（<code>||</code> 、 <code>&amp;&amp;</code> 等），我们可以执行某些条件语句，如：</p>
+<pre><code class="language-zsh">false || echo &quot;Oops fail&quot;
+Oops fail
+</code></pre>
+<ul>
+<li>或运算符（<code>||</code>）：先执行第一个命令，如果第一个命令失败，就执行第二个命令；如果第一个命令成功，则不执行第二个命令。</li>
+<li>与运算符（<code>&amp;&amp;</code>）：只有当第一个命令没有错误的情况下才会执行第二个命令。</li>
+<li><code>;</code> ：可以连接多个命令，从前到后以此执行。</li>
+</ul>
+<h3 id="_17">命令替换</h3>
+<p>命令替换即在一个命令的<strong>输出</strong>中嵌套另一个命令</p>
+<p>格式：<code>$(命令)</code></p>
+<p>如：</p>
+<pre><code class="language-zsh">echo &quot;we are in $(pwd)&quot;
+</code></pre>
+<p>也可以用于 将命令输出结果赋值给变量</p>
+<p>如：</p>
+<pre><code class="language-zsh">foo=$(pwd)
+</code></pre>
+<ul>
+<li>将 pwd 命令（打印当前目录路径）的输出赋值给 foo 变量</li>
+</ul>
+<h4 id="_18">进程替换</h4>
+<p><strong>它会内部执行，然后将输出结果放到一个类似临时文件的东西中，并将（临时文件的）文件标识符（类似文件名）作为参数提供给最左边命令。</strong></p>
+<p>格式：<code>&lt;(命令)</code></p>
+<p>如：</p>
+<pre><code class="language-zsh">cat &lt;(ls) &lt;(ls ..)
+</code></pre>
+<ul>
+<li>将 <code>ls</code> 和 <code>ls ..</code> 的输出连在一起并输出。</li>
+</ul>
+<p>这常用于有些命令的输入不是从标准输入流中输入的，而是从某些文件中获取。</p>
+<h3 id="_19">脚本实例</h3>
+<p>接下来让我们看一个例子：</p>
+<p>这个程序用来检查文件中是否含有子字符串 foobar</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%887.59.19.png" /></p>
+<ul>
+<li><code>date</code> 是一个程序，用来打印当前日期</li>
+<li><code>greb</code> 程序用来在某个文件中搜索子字符串</li>
+<li><code>2&gt;</code> 用来重定向标准错误流</li>
+<li><code>-ne</code> 表示 不等于，类似 <code>!=</code></li>
+<li><code>$0</code> 表示脚本的名称。</li>
+<li><code>$#</code> 表示我们给该命令的参数数量。</li>
+<li><code>$$</code> 表示当前的进程 ID.</li>
+<li>第七行的 <code>$@</code> 会把输入的所有参数传递给 for 循环，for 循环将依次创建 file 变量，并将每一个参数逐一赋值给 file（file 这个变量可以被 文件 赋值，则 file 就等同于这个 文件）</li>
+<li><code>$file</code> 会将 file 变量展开。</li>
+<li><code>/dev/null</code> 被称为黑洞文件，顾名思义，它会将写入的文件丢弃。</li>
+<li><code>$?</code> 获取上一个命令的错误代码。</li>
+<li>第 13 行表示如果文件中没有 foobar，则在 file 末尾追加 foobar 的注释（# foobar）</li>
+</ul>
+<p>我们运行这个程序：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%888.18.49.png" /></p>
+<p>我们可以看到许多被扩展了的变量</p>
+<ul>
+<li><code>$(date)</code> 被替换为当前时间。</li>
+<li>60827 是随机生成的 PID，每个运行中的程序都有唯一的 PID，用于在操作系统中标识该进程。</li>
+</ul>
+<h3 id="bash">bash 中的比较运算符</h3>
+<h4 id="_20">在 <code>[...]</code> 中</h4>
+<ul>
+<li>大于 - <code>-gt</code></li>
+<li>小于 - <code>-lt</code></li>
+<li>等于 - <code>==</code></li>
+<li>不等于 - <code>-ne</code></li>
+</ul>
+<h4 id="_21">在 <code>((...))</code> 中</h4>
+<ul>
+<li>大于/大于等于 - <code>&gt;</code> / <code>&gt;=</code></li>
+<li>小于/小于等于 - <code>&lt;</code> / <code>&lt;=</code></li>
+</ul>
+<h3 id="bash_1">bash 中的通配符</h3>
+<h4 id="1">1、<code>*</code></h4>
+<p>如：</p>
+<pre><code class="language-zsh">ls *.sh
+</code></pre>
+<ul>
+<li>这将显示任何以 .sh 结尾的文件。</li>
+</ul>
+<h4 id="2_1">2、<code>**</code></h4>
+<ul>
+<li>任意文件夹</li>
+</ul>
+<h4 id="3">3、<code>?</code></h4>
+<p>如：</p>
+<pre><code class="language-zsh">ls project?
+</code></pre>
+<ul>
+<li><code>?</code> 扩展为任意一个字符。</li>
+<li>project1 和 project2 会显示出来，而 proiect42 不会显示。</li>
+</ul>
+<h4 id="4">4、<code>{}</code></h4>
+<p>如：</p>
+<pre><code class="language-zsh">convert image.{png,jpg}
+</code></pre>
+<p>扩展为</p>
+<pre><code class="language-zsh">convert image.png image.jpg
+</code></pre>
+<ul>
+<li>convert 是 liunx 上的图像编辑程序，它的的功能之一就是转换图像格式</li>
+</ul>
+<p>再如：</p>
+<pre><code class="language-zsh">foo{,1,2,3}
+</code></pre>
+<p>扩展为</p>
+<pre><code class="language-zsh">foo foo1 foo2 foo3
+</code></pre>
+<p>再如：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%888.34.03.png" /></p>
+<p>扩展为</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%888.34.22.png" /></p>
+<ul>
+<li>touch 用来创建文件</li>
+</ul>
+<p>甚至你可以使用区间的形式：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%888.35.47.png" /></p>
+<p>扩展为：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%888.36.03.png" /></p>
+<ul>
+<li><code>{a..j}</code> 表示 a 到 j</li>
+</ul>
+<p>我们可以在这里练习一下刚才的进程替换</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%888.39.20.png" /></p>
+<ul>
+<li><code>diff</code> 程序用来比较不同，并将不同的地方输出</li>
+</ul>
+<h3 id="shell_4">使用不同语言来实现与 shell 交互的脚本</h3>
+<p>首先要给脚本文件执行权限（以 .py 文件为例）：</p>
+<pre><code class="language-zsh">chmod a+x filemane.py
+</code></pre>
+<h4 id="c">使用 c 语言：</h4>
+<ul>
+<li>c语言中有专门的命令行参数 argc（参数个数）和 argv（参数）</li>
+</ul>
+<h4 id="python">使用 python：</h4>
+<p>当我们输入 xxx.py 时，shell 知道它必须使用 python 来作为解释器。</p>
+<p>xxx.py 的第一行就是运行这个脚本的程序所在的路径：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%888.49.16.png" /></p>
+<p>但是，不是所有的机器的 python 都在这个路径下，所以我们可以使用这个：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%888.49.49.png" /></p>
+<ul>
+<li>env 命令将利用 路径环境变量 搜索"python"二进制文件ß并执行它</li>
+<li>这里我们指定用”python“参数运行 env 命令</li>
+</ul>
+<p>当然也可以直接写：</p>
+<pre><code class="language-zsh">python3 xxx.py
+</code></pre>
+<blockquote>
+<p><strong>使用第三方的 shellcheck 应用程序可以检查 .sh 文件中的语法错误</strong></p>
+</blockquote>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%888.55.11.png" /></p>
+<h3 id="shell_5">shell 中一些好用的命令/工具</h3>
+<h4 id="1ls-l">1、<code>ls -l</code></h4>
+<p>以列表的形式列出文件</p>
+<h4 id="2man">2、<code>man</code> 命令</h4>
+<p>提供程序的帮助信息</p>
+<p>这不仅适用于系统自带的命令，如果安装工具的时候同时安装了 man 包，也适用于安装的第三方命令</p>
+<h4 id="3tldr">3、<code>tldr</code> 命令</h4>
+<p>提供使用命令的例子</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%889.07.58.png" /></p>
+<h4 id="4find">4、<code>find</code> 命令</h4>
+<p>用法：</p>
+<pre><code class="language-zsh">find . -name src -type d
+</code></pre>
+<ul>
+<li><code>.</code> 表示查找目录为当前路径</li>
+<li>src 是要查找的名称</li>
+<li>d 是要查找的类型是 文件夹；f 表示类型是 文件。</li>
+</ul>
+<p>还可以：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%889.13.50.png" /></p>
+<p>再如：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-25%20%E4%B8%8B%E5%8D%889.15.14.png" /></p>
+<ul>
+<li>第二条命令表示找到当前路径下的所有 .tmp 文件并删除它们。</li>
+<li><code>-exec</code> 是 find 命令的参数，表示对文件 <code>执行</code> 命令（execute - 执行）</li>
+<li><code>{}</code> 表示 find 返回的文件 在需要执行语句中的位置</li>
+</ul>
+<h4 id="fd"><code>fd</code> 命令</h4>
+<p>是 <code>find</code> 命令的升级命令</p>
+<ul>
+<li>默认使用正则表达式</li>
+<li>可以忽略搜索你的 git 文件夹</li>
+<li>用不同的颜色显示代码</li>
+<li>相比于 find 更简短</li>
+<li>相比于 find 更好的支持 unicode 编码</li>
+</ul>
+<p>例：</p>
+<pre><code class="language-zsh">fd &quot;.*py&quot;
+</code></pre>
+<h4 id="locate"><code>locate</code> 命令</h4>
+<p>为了实现采用数据库的方式首先构建一个索引，然后让该索引以某种方式进行更新。</p>
+<ul>
+<li>locate 只会查找 文件系统中的 包含你输入的子字符串的 路径</li>
+<li>locate 会先在上面构建一个索引，再根据索引列出索引下的所有文件</li>
+</ul>
+<h5 id="updatedb"><code>updatedb</code> 命令</h5>
+<p>为了使索引保持更新，我们可以使用 <code>updatedb</code> 命令来更新此数据库。这时通过 <code>cron</code> 运行的。</p>
+<p><em>注：cron 是 unix 中用于定期运行任务的工具。它允许用户指定一个/多个命令或脚本，并设置在指定时间或周期自动运行。</em></p>
+<h4 id="grep"><code>grep</code> 命令</h4>
+<p>在 输入的内容（可以是文件） 中查找 字符串</p>
+<p>如：</p>
+<pre><code class="language-zsh">grep foobar mcd.sh
+</code></pre>
+<p>grep 具有 -R 标志，这使它能遍历整个目录来查找</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-28%20%E4%B8%8B%E5%8D%888.32.22.png" /></p>
+<h4 id="rg-ripgrep"><code>rg</code> / <code>ripgrep</code> 命令</h4>
+<p>它与 grep 相似，但是：</p>
+<ul>
+<li>rg 命令会有颜色标记</li>
+<li>支持 unicode 编码</li>
+<li>可以显示搜索结果在文件的哪一行</li>
+</ul>
+<p>常用标志：</p>
+<ul>
+<li><code>-C number</code> 查看搜索结果周围n行的内容</li>
+<li><code>-u</code> 不忽略隐藏文件</li>
+<li><code>--state</code> 会指出此次搜索的匹配次数、行数、文件等内容</li>
+</ul>
+<h4 id="history"><code>history</code> 命令</h4>
+<p>打印出 历史使用的命令，<em>这要比一直按上箭头更加高效</em></p>
+<p>可以以 数字 作为参数，意思是从第 n 条命令开始打印</p>
+<pre><code class="language-zsh">history 1
+</code></pre>
+<ul>
+<li>表示打印出所有的命令</li>
+</ul>
+<p>我们甚至还可以：</p>
+<pre><code class="language-zsh">history 1 | grep convert
+</code></pre>
+<ul>
+<li>打印所有带有 convert 的命令</li>
+</ul>
+<p><strong>我们也可以使用 <code>^R</code> 快捷键来向上搜索使用过的命令</strong></p>
+<h4 id="fzf"><code>fzf</code> 命令</h4>
+<p>交互式地查找 字符串</p>
+<p>如：</p>
+<pre><code class="language-zsh">cat example.sh | fzf
+</code></pre>
+<ul>
+<li>将 cat 的输出传递到 fzf 中，我们可以交互式地查找 example.sh 中的内容</li>
+</ul>
+<h4 id="tree"><code>tree</code> 命令</h4>
+<p>更友好的打印目录结构，并根据不同的类型进行着色。</p>
+<p><em>当然你也可以使用 <code>ls -R</code> 打印目录结构</em></p>
+<h5 id="_22">参数</h5>
+<p>1、<code>-I</code> 参数：</p>
+<p>可以让你忽略对应的文件/文件夹</p>
+<p>语法：</p>
+<pre><code class="language-shell">tree -I &quot;...[|...]&quot;
+</code></pre>
+<ul>
+<li>用 <code>|</code> 分隔不同的文件。<code>...</code> 处使用 正则表达式 匹配。</li>
+</ul>
+<h4 id="broot"><code>broot</code> 命令</h4>
+<p>与 tree 相似，但更高级。</p>
+<h4 id="source_1"><code>source</code> 命令</h4>
+<p>功能：</p>
+<ul>
+<li>刷新当前的shell环境</li>
+<li>在当前环境使用source执行Shell脚本</li>
+<li>从脚本中导入环境中一个Shell函数</li>
+<li>从另一个Shell脚本中读取变量</li>
+</ul>
+<h3 id="_23">习题</h3>
+<h4 id="_24">第一题</h4>
+<h5 id="ls_1">ls 常用参数</h5>
+<ol>
+<li>ls 打印隐藏文件：ls -a</li>
+<li>ls 以列表的形式打印：ls -l</li>
+<li>ls 以最近访问顺序排序：ls -u</li>
+<li>ls 以彩色文本显示输出结果</li>
+</ol>
+<h4 id="find">find 查找最近创建的文件</h4>
+<pre><code class="language-zsh">find &lt;路径&gt; -name -ctime -n / +n
+</code></pre>
+<ul>
+<li>-n表示文件创建时间距现在n天以内，+n表示文件创建时间距现在n天以前。</li>
+</ul>
+<h4 id="shell_6">shell 控制流程</h4>
+<h5 id="if">if 语句</h5>
+<p>语法：</p>
+<pre><code class="language-zsh">if [ condition ]; then
+    command1 
+    command2
+    ...
+    commandN 
+fi
+</code></pre>
+<p>if else / elif</p>
+<pre><code class="language-zsh">if [ condition1 ]; then
+    command1
+elif [ condition2]; then 
+    command2
+else
+    commandN
+fi
+</code></pre>
+<h5 id="for">for 语句</h5>
+<p>语法：</p>
+<pre><code class="language-zsh">for var in item1 item2 ... itemN; do
+    command1
+    command2
+    ...
+    commandN
+done
+</code></pre>
+<h5 id="while">while 语句</h5>
+<p>语法：</p>
+<pre><code class="language-zsh">while [ condition ]; do
+    command
+done
+</code></pre>
+<h5 id="until">until 语句</h5>
+<p>语句：</p>
+<pre><code class="language-zsh">until [ condition ]; do
+    command
+done
+</code></pre>
+<ul>
+<li>until 循环执行一系列命令直至条件为 true 时停止。</li>
+<li>until 循环与 while 循环在处理方式上刚好相反。</li>
+</ul>
+<h5 id="shell-break-continue">shell 中 也有 break 和 continue</h5>
+<h4 id="_25">压缩命令</h4>
+<p><code>zip</code> 命令 和 <code>tar</code> 命令</p>
+<ul>
+<li><code>zip</code> 命令用来压缩和解压缩 .zip 文件</li>
+<li><code>tar</code> 命令用来压缩和解压缩 .tar 文件</li>
+</ul>
+<h4 id="_26">第三题</h4>
+<p>test3.sh</p>
+<pre><code class="language-zsh">#!/usr/bin/env bash
+
+n=$((RANDOM % 100))
+
+if [[ n -eq 42 ]]; then
+    echo &quot;Something went wrong&quot;
+    echo &gt;&amp;2 &quot;The error was using magic numbers&quot;
+    exit 1
+fi
+
+echo &quot;Everything went according to plan&quot;
+</code></pre>
+<p>test31.sh</p>
+<pre><code class="language-zsh">#!/usr/bin/env bash
+
+source &quot;/Users/baijiale/Documents/Visual Studio Code/sh/practice/MIT-Missing-Semester/test3.sh&quot; &gt;stream.txt 2&gt;&gt;stream.txt
+until [ &quot;$?&quot; -ne 0 ]; do
+    source &quot;/Users/baijiale/Documents/Visual Studio Code/sh/practice/MIT-Missing-Semester/test3.sh&quot; &gt;stream.txt 2&gt;&gt;stream.txt
+done
+cat stream.txt
+</code></pre>
+<h4 id="_27">第四题</h4>
+<p>在用管道连接命令时，我们将标准输出和标准输入连接起来，但是有些命令，例如<code>tar</code> 则需要从参数接受输入。解决办法：</p>
+<h5 id="xargs-1"><code>xargs</code> 命令（1）</h5>
+<p>可以将输入的没行都转换成参数</p>
+<p>答案：</p>
+<pre><code class="language-zsh">find ~/Documents -name &quot;*.md&quot; | xargs zip -0 -r ~/Documents/compressed.zip
+</code></pre>
+<ul>
+<li>这里把 .html 文件 换成了 .md 文件</li>
+<li>-r 参数表示递归，即把输入的所有文件压缩在同一个压缩包中</li>
+<li>后面的路径是压缩包的存放目录与压缩包名称</li>
+</ul>
+<h4 id="_28">注意：</h4>
+<p>如果您使用的是 MacOS，请注意默认的 BSD <code>find</code> 与 <a href="https://en.wikipedia.org/wiki/List_of_GNU_Core_Utilities_commands">GNU coreutils</a> 中的是不一样的。你可以为<code>find</code>添加<code>-print0</code>选项，并为<code>xargs</code>添加<code>-0</code>选项。作为 Mac 用户，您需要注意 mac 系统自带的命令行工具和 GNU 中对应的工具是有区别的；如果你想使用 GNU 版本的工具，也可以使用 <a href="https://formulae.brew.sh/formula/coreutils">brew 来安装</a>。</p>
+<h2 id="vim">第三课：编辑器（Vim）</h2>
+<p>TODO</p>
+<h2 id="_29">第四课：数据整理</h2>
+<p>数据整理 即 将一种格式的数据转换成另一种格式的数据。</p>
+<p>如 使用管道运算符时，把 一个程序的输出 传递到 另一个程序的输入。</p>
+<p><strong>我们以 系统日志 作为 数据源 来学习数据整理</strong></p>
+<p>这门课以一个远程的 linux 服务器的日志为例</p>
+<h3 id="_30">数据过滤</h3>
+<p>我们要在日志中搜索带有 ssh 的数据，从而查看陌生人对我的服务器做了什么：</p>
+<h4 id="grep_1"><code>grep</code> 命令</h4>
+<ul>
+<li>grep (global regular expression) 命令用于查找文件里符合条件的字符串或正则表达式。</li>
+<li>若不指定任何文件名称，或是所给予的文件名为 -，则 grep 指令会从标准输入设备读取数据。</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-zsh">journalctl | grep ssh
+</code></pre>
+<p>如果我们只像查看人们连接服务器时使用的用户名，即 搜索 显示为以断开连接的无效用户的用户名。我们可以：</p>
+<pre><code class="language-zsh">journalctl | grep ssh | grep &quot;Disconnected from&quot; ｜ less
+</code></pre>
+<ul>
+<li>首先，整个日志文件会先通过网络传到本地</li>
+<li>然后再从本地进行筛选工作</li>
+<li>把命令的输出传入 <code>less</code>，就可以分页查看。</li>
+</ul>
+<p>或：</p>
+<pre><code class="language-zsh">journalctl | grep ssh | grep &quot;Disconnected from&quot; &gt; ssh.log
+</code></pre>
+<ul>
+<li>将命令的标准输出写入 ssh.log 文件</li>
+<li>这就意味着 我们不需要重复的输入这条命令，我们只需要 cat ssh.log 文件即可</li>
+</ul>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-29%20%E4%B8%8B%E5%8D%888.08.17.png" /></p>
+<p>但是这仍然是一大坨，而且这些行里有我们不需要的信息，我们真正想看的只是 用户名</p>
+<h4 id="sed"><code>sed</code> 命令</h4>
+<ul>
+<li>sed 是一个 流编辑器</li>
+<li>它允许你修改 流 的内容（可以简单理解为 文本替换，但它实际上是一个在 流 上的完整编程语言）</li>
+<li>sed 最常用的操作就是在 流 上执行 替换表达式</li>
+<li>除了 搜索 和 替换 之外，sed 是一个糟糕的编程语言，所以我们可以不仅仅局限于 sed</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-zsh">cat ssh.log | sed 's/.*Disconnected from//' ｜ less
+</code></pre>
+<ul>
+<li>这句话的意思是 搜索 “Disconnected from" 并将它以及它之前的内容替换为 空</li>
+<li><code>.</code> 表示任意单个字符</li>
+<li><code>*</code> 表示匹配零次或多次 * 之前的字符</li>
+<li><code>.*</code> 表示这个字符串以及它之前的所有内容</li>
+<li><code>s/</code> 表示 这是一个 替换表达式</li>
+<li>它有两个以 <code>/</code> 分隔的参数：第一个 <code>/</code> 后是搜索字符串；第二个 <code>/</code> 后是要替换成的字符串，目前是空</li>
+</ul>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-29%20%E4%B8%8B%E5%8D%888.17.35.png" /></p>
+<p>可以看到，这样就删除了 Disconnected from 以及它之前的内容</p>
+<h4 id="head_1"><code>head</code> 命令</h4>
+<pre><code class="language-zsh">cat ssh.log | sed 's/.*Disconnected from//' ｜ head -n5
+</code></pre>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-29%20%E4%B8%8B%E5%8D%888.45.14.png" /></p>
+<h4 id="1_1">正则表达式（1）</h4>
+<p>上面的 <code>s/.*Disconnected from//</code> 实际上就是一个 正则表达式 的例子</p>
+<ul>
+<li>正则表达式 本质上是一种强大的 匹配文本（单个字符、字符串或其它数据类型）的方法</li>
+<li>它的本质是 生成一个程序，用于搜索给定的文本</li>
+</ul>
+<h5 id="_31">特殊字符：</h5>
+<h6 id="1s">1、<code>s/</code></h6>
+<ul>
+<li>表示 这是一个 替换表达式</li>
+</ul>
+<h6 id="2_2">2、<code>.</code></h6>
+<ul>
+<li>表示任意单个字符</li>
+</ul>
+<h6 id="3_1">3、<code>*</code></h6>
+<ul>
+<li>表示匹配零次或多次 * 之前的字符</li>
+</ul>
+<h6 id="4_1">4、<code>+</code></h6>
+<ul>
+<li>表示匹配一次或多次 + 之前的字符</li>
+</ul>
+<h6 id="5">5、<code>[]</code></h6>
+<ul>
+<li>表示匹配多种字符中的一种</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-zsh">echo 'aba' | sed 's/[ab]//'
+</code></pre>
+<ul>
+<li>这句话的意思是把任何 a 或 b 字符替换为 空</li>
+</ul>
+<p>输出：</p>
+<pre><code>ba
+</code></pre>
+<ul>
+<li><em>只替换一次是因为 正则表达式默认情况下只会 匹配一次 替换一次</em></li>
+</ul>
+<p>我们可以使用 <code>g</code> 修饰符，表示尽可能多的匹配</p>
+<pre><code class="language-zsh">echo 'acbra' | sed 's/[ab]//g'
+</code></pre>
+<p>输出：</p>
+<pre><code>cr
+</code></pre>
+<h6 id="6">6、<code>()</code></h6>
+<ul>
+<li>用来把字符串当成一个整体</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-zsh">echo 'abcaba' | sed -E 's/(ab)* //g'
+</code></pre>
+<ul>
+<li>这句话的意思就是 尽可能多地把零个或多个 ab 替换为 空</li>
+<li><code>-E</code> 是因为 sed 是一个非常古老的工具，不支持新的正则表达式版本，<code>-E</code> 可以让其支持。所以，通常我们使用 sed 时，都要加上 -E</li>
+<li>如果不使用 -E，就需要在 括号 前加上 <code>\</code>，以表示转义</li>
+</ul>
+<h6 id="7">7、<code>|</code></h6>
+<ul>
+<li>表示 或</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-zsh">echo 'abcaba' | sed -E 's/(ab|bc)* //g'
+</code></pre>
+<ul>
+<li>将所有的 ab 或 bc 替换为 空</li>
+</ul>
+<h6 id="8">8、<code>?</code></h6>
+<ul>
+<li>表示 零次或一次</li>
+</ul>
+<p>了解这些之后，我们取前五行</p>
+<p>如果其中有人以 <code>Disconnected from</code> 这个用户名登陆</p>
+<p>如：</p>
+<pre><code class="language-zsh">echo 'Disconnected from invalid user Disconnected from 84.211' | sed 's/.*Disconnected from //'
+</code></pre>
+<p>输出：</p>
+<pre><code>84.211
+</code></pre>
+<ul>
+<li>可以看到，这句话导致用户名被删除。这是因为当你使用 <code>.*</code>，它会尽可能匹配更多的内容（贪婪匹配 greedy）</li>
+<li>要想使它不进行贪婪匹配，就需要在 <code>.*</code> 后加上一个 <code>?</code>。作用是当表达式遇到第一个 <code>Disconnected from</code> 时，就立刻开始后面的匹配。</li>
+</ul>
+<p>因此，我们需要一个更聪明的策略来防止一些诡异的用户名输入</p>
+<p>对于这五行数据：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-29%20%E4%B8%8B%E5%8D%889.00.09.png" /></p>
+<ul>
+<li>有些行写了 invaild，但有些行又没有</li>
+</ul>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$//' | head -n5
+</code></pre>
+<ul>
+<li>这里 <code>?</code> 表示 零次或一次，因为 我想要 0个或1个 invalid</li>
+<li>后面的那个 <code>.*</code> 指的是 用户名</li>
+<li><code>[0-9.]</code> 表示 区间匹配数字 或 匹配<code>.</code>，用于匹配 ip 地址</li>
+<li><code>( \[preayth\])</code> 中 <code>\</code> 表示将 <code>[]</code> 转义</li>
+<li>最后一件事是给正则表达式打 锚点：<code>^</code> 匹配 行的开头；<code>$</code> 匹配 行的结尾，锚点必须匹配整行。（这是为了解决 如果有人用整行文字作为用户名，那么没有锚点的正则表达式就会匹配用户名，这不是我们希望看到的）</li>
+</ul>
+<p>输出为：空</p>
+<p>这么做会将所有行全部删除，但我们是想保留用户名</p>
+<h5 id="_32">捕获组</h5>
+<p>任何带有 <code>()</code> 的表达式，都算是一个捕获组</p>
+<ul>
+<li>捕获组可以指定我们关心的值，并在以后重复使用它</li>
+<li>注意，括号对匹配没有任何影响，括号只是表示括号内部是一个整体</li>
+<li>捕获组之所以有用，是因为<strong>你可以在替换时引用它们</strong></li>
+</ul>
+<p>如：</p>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | head -n100
+</code></pre>
+<ul>
+<li><code>\2</code> 表示 引用 第二个捕获组</li>
+<li>这句话的意思就是，替换整行为第二个捕获组做代表的内容。</li>
+</ul>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-02-29%20%E4%B8%8B%E5%8D%889.39.44.png" /></p>
+<h5 id="_33">正则调试器</h5>
+<p>用于检查正则表达式的正确性和效果</p>
+<p>一般在网络上可以找到网页版的正则调试器</p>
+<h3 id="_34">数据聚合</h3>
+<h4 id="wc"><code>wc</code> 命令</h4>
+<ul>
+<li>wc 是 单词计数程序。</li>
+<li><code>-l</code> 标志 可以让它按行计数</li>
+</ul>
+<h4 id="sort-1"><code>sort</code> 命令 （1）</h4>
+<ul>
+<li>sort 可以接受很多行的输入，再把它们排序，然后把排序好的行输出。</li>
+</ul>
+<h4 id="uniq"><code>uniq</code> 命令</h4>
+<ul>
+<li>uniq 会查看一个排序后的行列表，然后它会去除那些重复的行。</li>
+<li><code>-c</code> 标志 会让它计算重复行的个数 并 去除它们</li>
+</ul>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c
+</code></pre>
+<p>效果</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-01%20%E4%B8%8B%E5%8D%889.00.26.png" /></p>
+<p>但仍有很多垃圾信息，如果我现在想知道哪个用户名出现的最多</p>
+<p>我们还可以使用 sort 工具：</p>
+<h4 id="sort-2"><code>sort</code> 命令（2）</h4>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | sort -nk1 -1 ｜ tail -n10
+</code></pre>
+<ul>
+<li><code>-n</code> 用于数字排序</li>
+<li><code>-k</code> 可以让你选择 输入中 以空格为分隔符的列 来执行排序</li>
+<li><code>1,1</code> 表示 从第一列（以空格为分隔符）开始并在第一列停止 为排序依据</li>
+<li>默认情况下，sort 按 升序 从上到下 排序</li>
+<li><code>tail -n10</code> 表示 只输出最后 10 行</li>
+</ul>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-01%20%E4%B8%8B%E5%8D%889.07.47.png" /></p>
+<p>现在，如果我只是想要一个以 <code>,</code> 分隔的前 20 个用户名列表，（因为我每天要给自己发一些电子邮件，来说明一些信息，例如，这些用户名是前 20。</p>
+<h4 id="awk-1"><code>awk</code> 命令（1）</h4>
+<ul>
+<li>awk 是一种 基于 列 的 流 处理器。主要用于 编辑 列 数据</li>
+<li>默认情况下，awk 将输入解析为以空格为分隔符的列</li>
+</ul>
+<p>如：我只想打印第二列</p>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | sort -nk1 -1 ｜ tail -n20 | awk '{print $2}'
+</code></pre>
+<ul>
+<li><code>$2</code> 表示 第二列</li>
+</ul>
+<h4 id="paste"><code>paste</code> 命令</h4>
+<ul>
+<li>paste 命令 可以把多个 行 合并在一起 ^d37df8</li>
+<li><code>-sd + 字符</code> 用以 分隔输入</li>
+</ul>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | sort -nk1 -1 ｜ tail -n20 | awk '{print $2}' | paste -sd,
+</code></pre>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-01%20%E4%B8%8B%E5%8D%889.17.21.png" /></p>
+<h4 id="awk-2"><code>awk</code> 命令（2）</h4>
+<p>事实上，awk 还有可以做很多事</p>
+<p>如果 我想查看所有仅出现一次且以 c 开头以 e 结尾的用户名，我可以：</p>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | awk '$1 == 1 &amp;&amp; $2 ~ /^c.*e$/ {print $0}'
+</code></pre>
+<ul>
+<li><code>^</code> 和 <code>$</code> 是 正则表达式 的 锚点</li>
+<li><code>$1</code> 表示 第一列</li>
+<li><code>$2</code> 表示第二列</li>
+<li><code>$0</code> 表示 全部列</li>
+<li><code>~</code> 表示 匹配正则表达式</li>
+</ul>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-01%20%E4%B8%8B%E5%8D%889.25.54.png" /></p>
+<p>现在我又想知道有多少行匹配了刚才的那个模式</p>
+<p>当然 <code>wc -l</code> 可以满足我们的要求：</p>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | awk '$1 == 1 &amp;&amp; $2 ~ /^c.*e$/ {print $0}' | wc -l
+</code></pre>
+<p>输出：</p>
+<pre><code>31
+</code></pre>
+<p>因为 awk 是一个完整的编程语言，所以 我们还可以使用 awk 实现：</p>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | awk 'BEGIN { rows = 0 } $1 == 1 &amp;&amp; $2 ~ /^c.*e$/ { rows += 1 } END { print rows }'
+</code></pre>
+<ul>
+<li>BEGIN 在第一行的开头被匹配；END 在最后一行的最后被匹配。</li>
+<li>正则表达式 用于 逐行匹配</li>
+<li>awk 这句话的意思是 从第 0 行开始，将变量 rows 设置为 0，碰到匹配 <code>$1 == 1 &amp;&amp; $2 ~ /^c.*e$/</code> 的行时，将 rows 的值加一，直到匹配到最后一行时，打印 rows 的值。</li>
+</ul>
+<h3 id="_35">其它好用的工具</h3>
+<h4 id="bc"><code>bc</code> 命令</h4>
+<p>bc 的全称是 berkeley calculator，即伯克利计算器</p>
+<ul>
+<li>它是一个非常简介的 命令行计算器</li>
+<li>它不会给你提示符让你输入，而是从 标准输入流 中读取</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-zsh">echo &quot;1 + 2&quot; | bc -l
+</code></pre>
+<ul>
+<li>要加 <code>-l</code> 是因为许多程序的默认模式通常不是很好用</li>
+</ul>
+<p>输出：</p>
+<pre><code>3
+</code></pre>
+<p>还以上面的日志文件为例，假如我要求出 登陆次数不为 1 的用户 的 登陆的总次数</p>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | awk '$1 != 1 { print $1 }' | paste -sd+
+</code></pre>
+<ul>
+<li><a href="./#^d37df8">paste</a> 可以把多个行连接在一起</li>
+</ul>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8A%E5%8D%889.07.31.png" /></p>
+<p>现在，我们就可以：</p>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | awk '$1 != 1 { print $1 }' | paste -sd+ | bc -l
+</code></pre>
+<p>输出：</p>
+<pre><code>191665
+</code></pre>
+<h4 id="r"><code>R</code> 命令</h4>
+<p>R 是一种 专门用于统计分析的编程语言</p>
+<p>（这又是一种你要专门去学习的一种编程语言）</p>
+<p>如：</p>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | awk '$1 != 1 { print $1 }' | | R --slave -e 'x &lt;- scan(file=&quot;stdin&quot;, quiet=TRUE); summary(x)'
+</code></pre>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8A%E5%8D%889.17.06.png" /></p>
+<h4 id="gnuplot"><code>gnuplot</code> 命令</h4>
+<p>gnuplot 是一种从标准输入中获取内容的绘图工具</p>
+<p>如：</p>
+<pre><code class="language-zsh">cat ssh.log | sed -E 's/^.*Disconnected from (invaild )?user .* [0-9.]+ port [0-9]+( \[preayth\])?$/\2/' | sort | uniq -c | sort -nk1,1 | tail -n5 | gnuplot -p -e 'set boxwidth 0.5; plot &quot;-&quot; using 1:xtic(2) with boxes'
+</code></pre>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8A%E5%8D%889.25.47.png" /></p>
+<h3 id="_36">两种特殊的数据整理方式</h3>
+<h4 id="_37">命令行参数整理</h4>
+<h5 id="xargs-2"><code>xargs</code> 命令（2）</h5>
+<ul>
+<li>xargs 可以 将输入的每行都转换成参数</li>
+</ul>
+<p>这里以 Rust 语言的编译器为 信息源</p>
+<pre><code class="language-zsh">rustup toolchain list
+</code></pre>
+<p>输出：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8A%E5%8D%889.33.14.png" /></p>
+<p>现在，我不想要比如去年三月的 Nightly 版本了，我想把它删除</p>
+<p>所以，现在我们可以先找出过期的 Nightly 版本：</p>
+<pre><code class="language-zsh">rustup toolchain list | grep nightly ｜ grep -v 'nightly-x86'
+</code></pre>
+<ul>
+<li><code>-v</code> 表示 不匹配</li>
+</ul>
+<p>效果：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8A%E5%8D%889.36.20.png" /></p>
+<p>现在，我想卸载这一个个工具链，我当然可以手动复制这些名字并粘贴到 <code>rustup toolchain uninstall</code>，但我们现在已经有了这个列表了，所以，我们可以：</p>
+<p>首先去掉后缀：</p>
+<pre><code class="language-zsh">rustup toolchain list | grep nightly ｜ grep -v 'nightly-x86' | sed 's/-x86.*//'
+</code></pre>
+<p>效果</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8A%E5%8D%889.39.58.png" /></p>
+<p>下面，把这些东西作为参数传递，这时就需要 xargs：</p>
+<pre><code class="language-zsh">rustup toolchain list | grep nightly ｜ grep -v 'nightly-x86' | sed 's/-x86.*//' | xargs rustup toolchain uninstall 
+</code></pre>
+<p>这就相当于输入：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8A%E5%8D%889.42.30.png" /></p>
+<p>我们就可以删除所有这些被选择出来的编译器</p>
+<h4 id="_38">图像整理</h4>
+<h5 id="ffmpeg"><code>ffmpeg</code> 命令</h5>
+<ul>
+<li>ffmpeg 用于编码和解码视频，某种程度上也可以处理图像</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-zsh">ffmpeg -i /dev/video0 -frames 1 -f image2 -
+</code></pre>
+<ul>
+<li>从 /dev/video0 中读取</li>
+<li><code>-frames 1</code> 表示只读取视频的 单个（第一）帧</li>
+<li><code>-f image2</code> 表示 我想要输出一个图片文件而不是一个只有一帧的视频文件</li>
+<li><code>-</code> 表示 输出到 标准输出流（或 从标准输入流 输入） 而不是 创建文件</li>
+</ul>
+<p>接着：</p>
+<h5 id="convert"><code>convert</code> 程序</h5>
+<ul>
+<li>convert 是一个 图像处理程序</li>
+</ul>
+<pre><code class="language-zsh">ffmpeg -i /dev/video0 -frames 1 -f image2 - | convert - -colorspace gray -
+</code></pre>
+<ul>
+<li>第一个 <code>-</code> 表示 从 标准输入 读取</li>
+<li><code>-colospace gray</code> 表示将图像的色彩空间转换为 灰度图</li>
+<li>第二个 <code>-</code> 表示将图像输出到 标准输出流</li>
+</ul>
+<p>接着：</p>
+<h5 id="gzip"><code>gzip</code> 程序</h5>
+<ul>
+<li>gzip 程序用于压缩（这个图像）文件</li>
+<li>它也在标准输入/输出流上工作</li>
+</ul>
+<pre><code class="language-zsh">ffmpeg -i /dev/video0 -frames 1 -f image2 - | convert - -colorspace gray - | gzip ｜ ssh tsp 'gzip -d | tee copy.png'
+</code></pre>
+<ul>
+<li><code>ssh</code> 用于在远程服务器执行命令（tsp 是服务器的名字）</li>
+<li><code>gzip -d</code> 表示解压缩（decode）</li>
+</ul>
+<h5 id="tee"><code>tee</code> 程序</h5>
+<p>接着上面的语句</p>
+<ul>
+<li><code>tee</code> 会读取输入，然后 同时输出到 文件 和 标准输出中</li>
+</ul>
+<p>接着：</p>
+<h5 id="feh"><code>feh</code> 程序</h5>
+<ul>
+<li>feh 用来在 图片查看器 中打开文件</li>
+</ul>
+<pre><code class="language-zsh">ffmpeg -i /dev/video0 -frames 1 -f image2 - | convert - -colorspace gray - | gzip ｜ ssh tsp 'gzip -d | tee copy.png' | feh -
+</code></pre>
+<ul>
+<li>将服务器（标准输出中）生成的图片传回本地，并在图片查看器中查看</li>
+</ul>
+<h3 id="_39">习题</h3>
+<h4 id="_40">第一题</h4>
+<p><strong>学习 正则表达式(regular expressions) in <a href="https://regexone.com">https://regexone.com</a></strong></p>
+<h5 id="1d">1、<code>\d</code></h5>
+<p><code>\d</code> can be used in replace of any digit(数字) from 0 - 9</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%884.07.44.png" /></p>
+<h5 id="2-and">2、<code>.</code> and <code>\.</code></h5>
+<p><code>.</code>(dot) can match any single character; and <code>\.</code>(slash dot) can escape the dot(转义为 <code>.</code>)</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%884.07.16.png" /></p>
+<h5 id="3_2">3、<code>[...]</code></h5>
+<p>Using <code>[]</code>(square brackets) to match special characters. For example, the pattern(模式) <code>[abc]</code> will only match a single a, b or c and nothing else</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%884.12.11.png" /></p>
+<h5 id="4_2">4、<code>[^...]</code></h5>
+<p>Using <code>^</code>(hat) to exclude(排除) special characters</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%884.16.44.png" /></p>
+<h5 id="5-and-w">5、<code>[..-..]</code> and <code>\w</code></h5>
+<p>Using <code>-</code>(dash) to match a sequential(顺序的) range characters</p>
+<ul>
+<li>the pattern <code>[0-6]</code> will only match any single digit character from zero to six.</li>
+<li><code>[^n-p]</code> will only match any single character <strong>except</strong> for letters n to p.</li>
+</ul>
+<p><code>\w</code> can be used to match the character range <code>[A-Za-z0-9_]</code></p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%884.28.02.png" /></p>
+<h5 id="6-and">6、<code>{}</code> and <code>{,}</code></h5>
+<p>Using <code>{}</code>(curly braces) to match repetitions of character; and using <code>{,}</code> to match a range of this repetition</p>
+<p>For example:</p>
+<ul>
+<li><code>a{1,3}</code> will match the a character no more than 3 times, but no less than once</li>
+</ul>
+<p><code>{}</code> can also be used with special metacharacters</p>
+<p>For example:</p>
+<ul>
+<li><code>[wxy]{5}</code>: five characters, each of which can be a w, x, or y</li>
+<li><code>.{2,6}</code>: between two and six of <strong>any</strong> character</li>
+</ul>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%884.44.31.png" /></p>
+<h5 id="7star-and-plus">7、<code>*</code>(star) and <code>+</code>(plus)</h5>
+<p><code>*</code> represents 0 or more of the character that it follows</p>
+<p><code>+</code> represents 1 or more of the character that it follows</p>
+<p>For example:</p>
+<ul>
+<li><code>[abc]+</code> one or more of any a, b, or c character</li>
+</ul>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%884.50.25.png" /></p>
+<h5 id="8question-mark-and">8、<code>?</code>(question mark) and <code>\?</code></h5>
+<p><code>?</code> can be used to match either 0 or 1 of the preceding(先前的) character or group</p>
+<p>Using slash to escape it.（转义）</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%884.56.36.png" /></p>
+<h5 id="9s">9、<code>\s</code></h5>
+<p><code>\s</code> can be used to match <strong>any</strong> of the whitespaces above</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%885.05.16.png" /></p>
+<h5 id="10-and">10、<code>^</code> and <code>$</code></h5>
+<p>Using <code>^</code> and <code>$</code>(dollar) to describe both the start and the end of the line to tighten our patterns</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%885.10.48.png" /></p>
+<h5 id="11match-groups-and-0-9">11、Match groups<code>()</code> and <code>\0-9</code></h5>
+<p><code>()</code>(parentheses) allow us to extract(提取) informathon for further processing</p>
+<p><strong>Using <code>\0-9</code>(sometimes <code>$0-9</code>) to use(replace) the match groups above</strong></p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%885.16.42.png" /></p>
+<h6 id="nested-groups">Nested(嵌套) groups</h6>
+<p>such as (a(bc))</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%885.21.27.png" /></p>
+<h6 id="match-groups-with-metacharacter">Match groups with metacharacter</h6>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%885.23.07.png" /></p>
+<h6 id="pipe-in-match-groups"><code>|</code>(pipe) in Match groups</h6>
+<p>Using <code>|</code> to denote(表示) different possible sets of characters (字符集)</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-02%20%E4%B8%8B%E5%8D%885.28.43.png" /></p>
+<h5 id="12other-special-characters">12、Other special characters</h5>
+<h6 id="d-s-and-w"><code>\D</code>, <code>\S</code> and <code>\W</code></h6>
+<ul>
+<li><code>\D</code> represents any <strong>non-digit</strong>(非数字的) character</li>
+<li><code>\S</code> represents any <strong>non-whitespace</strong> character.</li>
+<li><code>\W</code>  any represents any <strong>non-alphanumeric</strong>(非字母数字的) character</li>
+</ul>
+<h6 id="b"><code>\b</code></h6>
+<p><code>\b</code> be used to matches the boundary(边界) between a word and a non-word character(非单词字符).</p>
+<p>It's most useful in capturing entire words ( for example by using the pattern <code>\w+\b</code> ).</p>
+<h4 id="_41">第二题</h4>
+<p>统计words文件 (<code>/usr/share/dict/words</code>) 中包含至少三个<code>a</code> 且不以<code>'s</code>结尾的单词个数。这些单词中，出现频率前三的末尾两个字母是什么？ <code>sed</code>的 <code>y</code>命令，或者 <code>tr</code> 程序也许可以帮你解决大小写的问题。共存在多少种词尾两字母组合？还有一个很 有挑战性的问题：哪个组合从未出现过？</p>
+<pre><code class="language-zsh">cat words | grep -E &quot;^a.*a.*a.*(..)[^'s]$&quot; | sed -E &quot;s/^a.*a.*a.*(..)$/\1/&quot; | uniq -c | sort -nk1
+</code></pre>
+<p>哪个组合从未出现过：</p>
+<p>TODO</p>
+<h2 id="_42">第五课：命令行环境</h2>
+<h3 id="unix">Unix 信号机制</h3>
+<ul>
+<li>你可以使用 <code>man signal</code> 来查看所有支持的信号</li>
+</ul>
+<h4 id="_43">结束进程</h4>
+<h5 id="sigint"><code>SIGINT</code> 信号</h5>
+<ul>
+<li>当我们输入 <code>Ctrl-C</code> 时，shell 会发送一个<code>SIGINT</code> 信号到进程。</li>
+</ul>
+<p><em><code>SIGINT</code> 信号可以被程序捕获</em></p>
+<p>下面这个 Python 程序向您展示了捕获信号<code>SIGINT</code> 并忽略它的基本操作，它并不会让程序停止。</p>
+<pre><code class="language-python">#!/usr/bin/env python
+import signal, time
+
+def handler(signum, time):
+    print(&quot;\nI got a SIGINT, but I am not stopping&quot;)
+
+signal.signal(signal.SIGINT, handler)
+i = 0
+while True:
+    time.sleep(.1)
+    print(&quot;\r{}&quot;.format(i), end=&quot;&quot;)
+    i += 1
+</code></pre>
+<ul>
+<li><em>注意：有些信号可以被程序捕获，而有些信号则规定不能被程序捕获</em></li>
+</ul>
+<h5 id="sigquit"><code>SIGQUIT</code> 信号</h5>
+<p>为了停止这个程序，我们需要使用<code>SIGQUIT</code> 信号，通过输入<code>Ctrl-\</code>可以发送该信号。</p>
+<p>现在我们向这个程序发送两次 <code>SIGINT</code> ，然后再发送一次 <code>SIGQUIT</code>：</p>
+<pre><code>$ python sigint.py
+24^C
+I got a SIGINT, but I am not stopping
+26^C
+I got a SIGINT, but I am not stopping
+30^\[1]    39913 quit       python sigint.pyƒ
+</code></pre>
+<h5 id="kill"><code>kill</code> 命令</h5>
+<p>语法：</p>
+<pre><code class="language-zsh">kill -TERM &lt;PID&gt;
+# PID 指进程 ID
+</code></pre>
+<ul>
+<li><code>-TERM</code> 指 Unix 信号</li>
+</ul>
+<h5 id="_44">应用</h5>
+<p>比如当一个程序正在写入时，我们按下 <code>⌃C</code> ，但我们希望程序再写入完成之后再退出，这时候就需要捕获 <code>SIGINT</code> 信号</p>
+<h4 id="_45">暂停和后台执行进程</h4>
+<h5 id="sigstop"><code>SIGSTOP</code> 信号</h5>
+<ul>
+<li><code>SIGSTOP</code> 会让进程暂停。</li>
+<li>在终端中，键入 <code>^Z</code> 会让 shell 发送 <code>SIGTSTP</code> 信号</li>
+</ul>
+<h5 id="fg-bg"><code>fg</code> 和 <code>bg</code> 命令</h5>
+<ul>
+<li>使用 <a href="https://www.man7.org/linux/man-pages/man1/fg.1p.html"><code>fg</code></a> 命令使进程回到前台继续运行</li>
+<li>使用<a href="http://man7.org/linux/man-pages/man1/bg.1p.html"><code>bg</code></a> 命令使进程在后台继续运行。</li>
+</ul>
+<h5 id="jobs"><code>jobs</code> 命令</h5>
+<ul>
+<li><a href="http://man7.org/linux/man-pages/man1/jobs.1p.html"><code>jobs</code></a> 命令会列出当前终端会话中尚未完成的全部任务。</li>
+</ul>
+<p>使用任务：</p>
+<ul>
+<li>方法一：使用 PID 引用这些任务（用 <a href="https://www.man7.org/linux/man-pages/man1/pgrep.1.html"><code>pgrep</code></a> 找出 PID）。</li>
+<li>方法二（更常用）：使用百分号 + 任务编号（<code>jobs</code> 会打印任务编号）来选取该任务。（如果要选择最近的一个任务，可以使用 <code>$!</code> 这一特殊参数。）</li>
+</ul>
+<h5 id="sighup"><code>SIGHUP</code> 信号</h5>
+<ul>
+<li>关闭终端时终端会向正在运行的程序发送 <code>SIGHUP</code> 信号，使进程终止。</li>
+</ul>
+<h5 id="nohup"><code>nohup</code> 命令</h5>
+<p>为了防止上面这种情况发生，您可以使用 <a href="https://www.man7.org/linux/man-pages/man1/nohup.1.html"><code>nohup</code></a> (一个用来忽略 <code>SIGHUP</code> 的封装) 来运行程序</p>
+<h5 id="disown"><code>disown</code> 命令</h5>
+<p>针对已经运行的程序，可以使用 <code>disown</code> 命令。</p>
+<h5 id="_46">实例</h5>
+<pre><code>$ sleep 1000
+^Z
+[1]  + 18653 suspended  sleep 1000
+
+$ nohup sleep 2000 &amp;
+[2] 18745
+appending output to nohup.out
+
+$ jobs
+[1]  + suspended  sleep 1000 # suspended - a.已经暂停的
+[2]  - running    nohup sleep 2000
+
+$ bg %1
+[1]  - 18653 continued  sleep 1000
+
+$ jobs
+[1]  - running    sleep 1000
+[2]  + running    nohup sleep 2000
+
+$ kill -STOP %1
+[1]  + 18653 suspended (signal)  sleep 1000
+
+$ jobs
+[1]  + suspended (signal)  sleep 1000
+[2]  - running    nohup sleep 2000
+
+$ kill -SIGHUP %1
+[1]  + 18653 hangup     sleep 1000
+
+$ jobs
+[2]  + running    nohup sleep 2000
+
+$ kill -SIGHUP %2
+
+$ jobs
+[2]  + running    nohup sleep 2000
+
+$ kill %2
+[2]  + 18745 terminated  nohup sleep 2000
+
+$ jobs
+</code></pre>
+<h3 id="tmux"><a href="https://www.man7.org/linux/man-pages/man1/tmux.1.html"><code>tmux</code></a> 终端多路复用器</h3>
+<ul>
+<li><code>tmux</code> 允许我们基于面板和标签分割出多个终端窗口，以便同时与多个 shell 会话进行交互。</li>
+<li>还允许我们可以分离当前终端会话并在将来重新连接。</li>
+</ul>
+<h4 id="tmux_1">tmux 快捷键</h4>
+<h5 id="_47">会话</h5>
+<p>每个会话都是一个独立的工作区，其中包含一个或多个窗口</p>
+<ul>
+<li><code>tmux</code> 开始一个新的会话</li>
+<li><code>tmux new -s NAME</code> 以指定名称开始一个新的会话</li>
+<li><code>tmux ls</code> 列出当前所有会话</li>
+<li>在 <code>tmux</code> 中输入 <code>&lt;C-b&gt; d</code> ，将当前会话分离</li>
+<li><code>tmux a</code> 重新连接最后一个会话。您也可以通过 <code>-t</code> 来指定具体的会话</li>
+</ul>
+<h5 id="_48">窗口</h5>
+<p>相当于编辑器或是浏览器中的标签页，从视觉上将一个会话分割为多个部分</p>
+<ul>
+<li><code>&lt;C-b&gt; c</code> 创建一个新的窗口，使用 <code>&lt;C-d&gt;</code>关闭</li>
+<li><code>&lt;C-b&gt; N</code> 跳转到第  <em>N</em> 个窗口，注意每个窗口都是有编号的</li>
+<li><code>&lt;C-b&gt; p</code> 切换到前一个窗口</li>
+<li><code>&lt;C-b&gt; n</code> 切换到下一个窗口</li>
+<li><code>&lt;C-b&gt; ,</code> 重命名当前窗口</li>
+<li><code>&lt;C-b&gt; w</code> 列出当前所有窗口</li>
+</ul>
+<h5 id="_49">面板</h5>
+<p>像 vim 中的分屏一样，面板使我们可以在一个屏幕里显示多个 shell</p>
+<ul>
+<li><code>&lt;C-b&gt; "</code> 水平分割</li>
+<li><code>&lt;C-b&gt; %</code> 垂直分割</li>
+<li><code>&lt;C-b&gt; &lt;方向&gt;</code> 切换到指定方向的面板，&lt;方向&gt; 指的是键盘上的方向键</li>
+<li><code>&lt;C-b&gt; z</code> 切换当前面板的缩放</li>
+<li><code>&lt;C-b&gt; [</code> 开始往回卷动屏幕。您可以按下空格键来开始选择，回车键复制选中的部分</li>
+<li><code>&lt;C-b&gt; &lt;空格&gt;</code> 在不同的面板排布间切换</li>
+</ul>
+<h3 id="_50">别名</h3>
+<ul>
+<li>别名相当于一个长命令的缩写，shell 会自动将其替换成原本的命令</li>
+<li>在默认情况下 shell 并不会保存别名。为了让别名持续生效，您需要将配置放进 shell 的启动文件里，像是<code>.bashrc</code> 或 <code>.zshrc</code></li>
+</ul>
+<p>语法：</p>
+<pre><code class="language-zsh">alias alias_name=&quot;command_to_alias arg1 arg2&quot;
+</code></pre>
+<ul>
+<li>注意：<code>=</code>两边是没有空格的，因为 <a href="https://www.man7.org/linux/man-pages/man1/alias.1p.html"><code>alias</code></a> 是一个 shell 命令，它只接受一个参数。</li>
+</ul>
+<p>例如：</p>
+<pre><code class="language-zsh"># 创建常用命令的缩写
+alias ll=&quot;ls -lh&quot;
+
+# 能够少输入很多
+alias gs=&quot;git status&quot;
+alias gc=&quot;git commit&quot;
+alias v=&quot;vim&quot;
+
+# 手误打错命令也没关系
+alias sl=ls
+
+# 重新定义一些命令行的默认行为
+alias mv=&quot;mv -i&quot;           # -i prompts before overwrite
+alias mkdir=&quot;mkdir -p&quot;     # -p make parent dirs as needed
+alias df=&quot;df -h&quot;           # -h prints human readable format
+
+# 别名可以组合使用
+alias la=&quot;ls -A&quot;
+alias lla=&quot;la -l&quot;
+
+# 在忽略某个别名
+\ls
+# 或者禁用别名
+unalias la
+
+# 获取别名的定义
+alias ll
+# 会打印 ll='ls -lh'
+</code></pre>
+<h3 id="dotfiles">Dotfiles</h3>
+<ul>
+<li>即 <code>.</code> 开头的文件，很多程序的配置都是通过纯文本格式的被称作 dotfiles 的配置文件来完成的</li>
+</ul>
+<h4 id="_51">例如：</h4>
+<h5 id="shell-dotfile">shell 的 dotfile</h5>
+<p>shell 的配置也是通过这类文件完成的。在启动时，您的 shell 程序会读取很多文件以加载其配置项。</p>
+<ul>
+<li>对于 <code>bash</code>来说，在大多数系统下，您可以通过编辑 <code>.bashrc</code> 或 <code>.bash_profile</code> 来进行配置。在文件中您可以添加需要在启动时执行的命令，shell 启动时会自动执行这些命令。</li>
+<li><em>实际上，很多程序都要求您在 shell 的配置文件中包含一行类似 <code>export PATH="$PATH:/path/to/program/bin"</code> 的命令，这样才能确保这些程序能够被 shell 找到。</em></li>
+</ul>
+<p>关于此，请查阅：<a href="https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html">https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html</a></p>
+<h5 id="dotfile">其它程序的 dotfile</h5>
+<ul>
+<li><code>bash</code> - <code>~/.bashrc</code>, <code>~/.bash_profile</code></li>
+<li><code>git</code> - <code>~/.gitconfig</code></li>
+<li><code>vim</code> - <code>~/.vimrc</code> 和  <code>~/.vim</code> 目录</li>
+<li><code>ssh</code> - <code>~/.ssh/config</code></li>
+<li><code>tmux</code> - <code>~/.tmux.conf</code></li>
+</ul>
+<p>一些 dotfile 仓库：<a href="https://github.com/mathiasbynens/dotfiles">https://github.com/mathiasbynens/dotfiles</a></p>
+<h4 id="_52">符号链接</h4>
+<p>我们应该如何管理这些配置文件呢？它们应该在它们的文件夹下，并使用版本控制系统进行管理，然后通过脚本将其 <strong>符号链接</strong> 到需要的地方。</p>
+<h3 id="ssh">SSH</h3>
+<p>SSH（secure shell，安全 shell）</p>
+<h4 id="_53">连接到远程</h4>
+<p>语法：</p>
+<pre><code class="language-zsh">ssh &lt;登陆用户名&gt;@&lt;服务器地址&gt;
+</code></pre>
+<ul>
+<li>服务器地址 可以是 URL 也可以是 ip 地址</li>
+</ul>
+<h4 id="_54">执行命令</h4>
+<p><code>ssh</code> 的一个经常被忽视的特性是它可以直接远程执行命令。 </p>
+<p>例如：</p>
+<ol>
+<li><code>ssh foobar@server ls</code> 可以直接在用foobar的命令下执行 <code>ls</code> 命令。</li>
+<li>配合管道来使用： <code>ssh foobar@server ls | grep PATTERN</code> 会在本地查询远端 <code>ls</code> 的输出而 <code>ls | ssh foobar@server grep PATTERN</code> 会在远端对本地 <code>ls</code> 输出的结果进行查询。</li>
+</ol>
+<h4 id="ssh_1">SSH 密钥</h4>
+<p>SSH 基于密钥的验证机制使用了密码学中的公钥。</p>
+<ul>
+<li>我们只需要向服务器提供公钥，以证明本地客户端持有对应的私钥，而不需要公开其私钥。</li>
+<li>私钥(通常是 <code>~/.ssh/id_rsa</code> 或者 <code>~/.ssh/id_ed25519</code>) 等效于您的密码。</li>
+</ul>
+<h5 id="authorized_keys"><code>authorized_keys</code> 文件</h5>
+<ul>
+<li>一般一台本地机器只需创建一对密钥（包含 私钥 和 公钥）即可。要链接远程服务器时，只需要把公钥内容拷贝到远程服务器的 <code>~/.ssh/authorized_keys</code> 文件中。</li>
+</ul>
+<p>可以通过这个方式来拷贝公钥：</p>
+<pre><code class="language-zsh">cat .ssh/id_ed25519.pub | ssh foobar@remote 'cat &gt;&gt; ~/.ssh/authorized_keys'
+</code></pre>
+<ul>
+<li>一对密钥可以多次使用（即你的每台服务器都会有你的那把公钥，私钥只保存在本地电脑中。）</li>
+<li>您可以为密钥设置密码，防止有人持有您的私钥并使用它访问您的服务器。您可以使用 <a href="https://www.man7.org/linux/man-pages/man1/ssh-agent.1.html"><code>ssh-agent</code></a> 或 <a href="https://linux.die.net/man/1/gpg-agent"><code>gpg-agent</code></a>，这样就不需要每次都输入该密码了。</li>
+</ul>
+<h5 id="_55">密钥生成</h5>
+<p>使用 <a href="http://man7.org/linux/man-pages/man1/ssh-keygen.1.html"><code>ssh-keygen</code></a> 命令可以生成一对密钥：</p>
+<pre><code class="language-zsh">ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519
+</code></pre>
+<ul>
+<li>ed25519 表示生成密钥时使用的标准（？）</li>
+<li>id_ed25519 表示密钥的名称</li>
+<li>公钥以 <code>.pub</code> 为拓展名；私钥没有拓展名</li>
+</ul>
+<h5 id="ssh_2">通过 ssh 复制文件</h5>
+<p>使用 ssh 复制文件有很多方法：</p>
+<ul>
+<li><code>ssh+tee</code>, 最简单的方法是执行 <code>ssh</code> 命令，然后通过这样的方法利用标准输入实现 <code>cat localfile | ssh remote_server tee serverfile</code>。<em>回忆一下，<a href="https://www.man7.org/linux/man-pages/man1/tee.1.html"><code>tee</code></a> 命令会将标准输出写入到一个文件；</em></li>
+<li><a href="https://www.man7.org/linux/man-pages/man1/scp.1.html"><code>scp</code></a> ：当需要拷贝大量的文件或目录时，使用<code>scp</code> 命令则更加方便，因为它可以方便的遍历相关路径。语法如下：<code>scp path/to/local_file remote_host:path/to/remote_file</code>；</li>
+</ul>
+<h4 id="known_hosts"><code>known_hosts</code> 文件</h4>
+<p>known_hosts 文件每连接一个新的远程服务器都会产生一份数据，如下：</p>
+<pre><code>0.0.0.0 ecdsa-sha2-nistp256 AAAA...........=
+</code></pre>
+<p>包括远程机器ip、远程机器公钥</p>
+<h5 id="_56">作用：</h5>
+<p>known_hosts的作用就是记录你曾经远程连接过的机器信息。如果远程机器信息不变，则直接连接，如果改变了ssh就会问你一下，小子，你还连不连了？如果你yes， 他就重新保存一份到known_hosts文件了。</p>
+<h2 id="git">第六课：版本控制（git）</h2>
+<h3 id="git_1">Git 数据模型</h3>
+<h4 id="_57">对象</h4>
+<h5 id="blob">Blob</h5>
+<ul>
+<li>在 Git 的术语里，文件被称作 Blob，也就是一组数据。</li>
+</ul>
+<h5 id="tree_1">Tree</h5>
+<ul>
+<li>目录则被称之为 tree（树），它将名字与 Blob对象 或 tree对象 进行映射（使得目录中可以包含其他目录）。</li>
+</ul>
+<h5 id="commit">commit</h5>
+<p>一次 提交（commit） 就相当于是一个 快照 </p>
+<p>Git 将顶级目录中的文件和文件夹作为集合，并通过一系列快照来管理其历史记录。快照则是被追踪的最顶层的树。</p>
+<p>例如，一个树看起来可能是这样的：</p>
+<pre><code>&lt;root&gt; (tree)
+|
++- foo (tree)
+|  |
+|  + bar.txt (blob, contents = &quot;hello world&quot;)
+|
++- baz.txt (blob, contents = &quot;git is wonderful&quot;)
+</code></pre>
+<ul>
+<li>这个顶层的树包含了两个元素：<ul>
+<li>一个名为 “foo” 的 tree（它本身包含了一个blob对象 “bar.txt”）</li>
+<li>以及一个 blob 对象 “baz.txt”。</li>
+</ul>
+</li>
+</ul>
+<h4 id="reference">引用（reference）</h4>
+<p>现在，所有的快照都可以通过它们的 SHA-1 哈希值来标记了。但这也太不方便了，谁也记不住一串 40 位的十六进制字符。Git 的解决方法是给这些哈希值赋予人类可读的名字，也就是引用（references）。</p>
+<ul>
+<li><strong>引用</strong> 是指向提交的指针。与对象不同的是，它是可变的（引用可以被更新，指向新的提交）。</li>
+</ul>
+<h4 id="_58">历史记录建模</h4>
+<p>在 Git 中，历史记录是一个由 commit 组成的有向无环图。</p>
+<p>这代表 Git 中的每个快照都有一系列的“父辈”，也就是其之前的一系列快照。</p>
+<p>注意：</p>
+<ul>
+<li>快照可以具有多个“父辈”，因为某个快照可能由多个父辈而来。例如，经过合并后的两条分支。</li>
+</ul>
+<p>通过可视化的方式来表示这些历史提交记录时，看起来差不多是这样的：</p>
+<pre><code>o &lt;-- o &lt;-- o &lt;-- o &lt;---- o
+            ^            /
+             \          v
+              --- o &lt;-- o
+</code></pre>
+<ul>
+<li><code>o</code> 表示一次提交（快照）</li>
+<li>箭头指向了当前提交的父辈（这是一种“在…之前”，而不是“在…之后”的关系）。</li>
+<li>在第三次提交之后，历史记录分岔成了两条独立的 分支（也就是 git 中的分支）。这可能因为此时需要同时开发两个不同的特性，它们之间是相互独立的。开发完成后，这些 分支 可能会被合并并创建一个新的提交，这个新的提交会同时包含这些特性。</li>
+</ul>
+<h4 id="_59">数据模型的伪代码表示</h4>
+<h5 id="_60">对象</h5>
+<p>对象包括 blob、tree and commit</p>
+<pre><code>// 文件就是一组数据
+type blob = array&lt;byte&gt;
+
+// 一个包含文件和目录的目录
+type tree = map&lt;string, tree | blob&gt;
+
+// 每个提交都包含一个父辈，元数据和顶层树
+type commit = struct {
+    parent: array&lt;commit&gt; # 父辈
+    author: string # 元数据
+    message: string # 元数据
+    snapshot: tree # 顶层数
+}
+</code></pre>
+<h6 id="_61">内存寻址</h6>
+<ul>
+<li>Git 在储存数据时，所有的对象（包括 blob tree commit，注意别忘了 commit 也是对象）都会基于它们的 <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1 哈希</a> 进行寻址。</li>
+</ul>
+<p><em><code>SHA-1 哈希</code> 就是可以根据 <code>对象</code> 生成唯一的十六进制字符串的东西，哈希值与对象一一对应。（？）对象的哈希值不可更改，因为对象不可更改，就相当于向哈希函数输入一个对象，对于不同对象来说，输出是唯一确定的</em></p>
+<pre><code>objects = map&lt;string, object&gt;
+
+// 储存函数
+def store(object):
+    id = sha1(object)
+    objects[id] = object
+
+// 寻址函数
+def load(id):
+    ...
+    return objects[id]
+</code></pre>
+<p>当引用其他对象时，实际上并没有真正的在硬盘上保存这些对象，而是仅仅保存了它们的哈希值作为引用。</p>
+<p>例如：</p>
+<p>对于 tree，它本身会包含一些指向其他内容的指针，例如 <code>baz.txt</code> (blob) 和 <code>foo</code>(tree)。</p>
+<p>我们可以用 <code>git cat-file -p 4448adbf7ecd394f42ae135bbeed9676e894af85</code>，即通过哈希值查看 baz.txt 的内容。</p>
+<h5 id="reference_1">引用（reference）</h5>
+<p>现在，所有的快照都可以通过它们的 SHA-1 哈希值来标记了。但这也太不方便了，谁也记不住一串 40 位的十六进制字符。Git 的解决方法是给这些哈希值赋予人类可读的名字，也就是引用（references）。</p>
+<ul>
+<li><strong>引用</strong> 是指向提交的指针。与对象不同的是，它是可变的（引用可以被更新，指向新的提交）。</li>
+</ul>
+<p>伪代码：</p>
+<pre><code>references = map&lt;string, string&gt; // 定义引用
+
+// 定义更改引用函数
+def update_reference(name, id):
+    references[name] = id
+
+// 定义使 引用 与 快照哈希值 一一对应的函数（？）
+def read_reference(name):
+    return references[name]
+
+// 定义解析引用的函数
+def load_reference(name_or_id):
+    if name_or_id in references:
+        return load(references[name_or_id])
+    else:
+        return load(name_or_id)
+</code></pre>
+<h5 id="_62">仓库</h5>
+<p>仓库实际就是 对象 和 引用</p>
+<p>在硬盘上，Git 仅 存储 对象和引用：因为其数据模型仅包含这些东西。所有的 <code>git</code> 命令都对应着对提交树的操作，例如增加对象，增加或删除引用。</p>
+<p>当你初始化一个 git 仓库时，默认情况下会创建一个名为 master 的 引用，根据规定，它通常表示代码中的主开发分支，所以，master 通常代表项目的最新版本。</p>
+<p>在这里，你可以将 master 视为指向这个提交的指针，随着我们添加更多的提交，这个指针将被改变，指向后面的提交。</p>
+<p>HEAD，是 git 中的一个特殊的引用，它类似于 master 的引用，HEAD 用于指向你当前正在查看的提交，如果 HEAD 指向 master，则它们都是指向的最新的那个提交（注意，不是当前工作目录，而是最近的那一次提交）</p>
+<h4 id="_63">暂存区</h4>
+<p>Git 中还包括一个和数据模型完全不相关的概念，但它确是创建提交的接口的一部分。</p>
+<p>Git 处理这些场景的方法是使用一种叫做 “暂存区（staging area）”的机制，它允许您指定下次快照中要包括那些改动。</p>
+<h3 id="git_2">Git 命令行接口</h3>
+<h4 id="_64">基础</h4>
+<h5 id="_65">命令</h5>
+<ul>
+<li><code>git help &lt;command&gt;</code>: 获取 git 命令的帮助信息</li>
+<li><code>git init</code>: 创建一个新的 git 仓库，其数据会存放在一个名为 <code>.git</code> 的目录下</li>
+<li><code>git status</code>: 显示当前的仓库状态</li>
+<li><code>git add &lt;filename&gt;</code>: 添加文件到暂存区</li>
+<li><code>git commit</code>: 创建一个新的提交<ul>
+<li>如何编写 <a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">良好的提交信息</a>!</li>
+<li>为何要 <a href="https://chris.beams.io/posts/git-commit/">编写良好的提交信息</a></li>
+</ul>
+</li>
+<li><code>git log</code>: 显示历史日志</li>
+<li><strong><code>git log --all --graph --decorate</code>: 可视化历史记录（有向无环图）</strong><ul>
+<li><code>git log --all --graph --decorate --oneline</code> --oneline 可以以更紧凑的方式显示 日志</li>
+</ul>
+</li>
+<li><code>git diff &lt;filename&gt;</code>: 显示与暂存区文件的差异</li>
+<li><code>git diff &lt;revision1&gt; [&lt;revision2&gt;] &lt;filename&gt;</code>: 显示某个文件两个版本之间的差异<ul>
+<li>revision 指 提交的 名称（引用，reference）</li>
+<li>默认情况下，显示 revision1 与工作区的不同</li>
+<li>如果有两个 revision 参数，则比较这两个提交的不同。</li>
+</ul>
+</li>
+<li><code>git checkout &lt;revision&gt;</code>: 更新 HEAD 和目前的分支</li>
+</ul>
+<h4 id="_66">分支和合并</h4>
+<h5 id="_67">命令</h5>
+<ul>
+<li><code>git branch</code>: 显示分支</li>
+<li><code>git branch &lt;name&gt;</code>: 创建分支</li>
+<li><code>git checkout -b &lt;name&gt;</code>: 创建分支并切换到该分支<ul>
+<li>相当于 <code>git branch &lt;name&gt;; git checkout &lt;name&gt;</code></li>
+</ul>
+</li>
+<li><code>git merge &lt;revision&gt;</code>: 合并到当前分支</li>
+<li><code>git mergetool</code>: 使用工具来处理合并冲突</li>
+<li><code>git rebase</code>: 将一系列补丁变基（rebase）为新的基线</li>
+</ul>
+<h5 id="_68">演示：</h5>
+<p>随时使用 <code>git status</code> 查看 git 仓库的状态</p>
+<p>创建 animal.py 文件，并提交，之后</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.45.31.png" /></p>
+<p>查看 git 日志（）：<code>git log --all --graph --decorate</code> ：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.38.04.png" /></p>
+<ul>
+<li>我们可以看到出现了新的提交，Add animal.py</li>
+</ul>
+<p>创建一个新的分支 cat：</p>
+<pre><code class="language-zsh">git branch cat
+</code></pre>
+<p>再次查看 log 文件</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.40.20.png" /></p>
+<ul>
+<li>我们会看到 HEAD 指向 master 分支，同时，这也是 cat 分支的位置</li>
+<li>git 不仅知道我们当前正在查看哪个快照，还知道 HEAD 与哪个分支相关联，比如现在 HEAD 就与 master 分支相关联</li>
+</ul>
+<p>现在切换到 cat 分支</p>
+<pre><code class="language-zsh">git checkout cat
+</code></pre>
+<p>查看 log</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.44.15.png" /></p>
+<ul>
+<li>可以看到，HEAD 现在与 cat 相关联（即，我们现在处于 cat 分支，而不再是 master）</li>
+</ul>
+<p>现在修改 animal.py 增加一些新的函数</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.45.46.png" /></p>
+<p>运行 <code>git diff</code></p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.46.38.png" /></p>
+<ul>
+<li>会显示自上次提交以来的改变</li>
+</ul>
+<p>现在我们再次提交，引用名称为 Add cat functionality</p>
+<p>查看 log</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.50.26.png" /></p>
+<ul>
+<li>我们可以看到刚才的提交</li>
+<li>目前为止，提交的顺序仍然是线性的</li>
+</ul>
+<p>切换回 master 分支</p>
+<pre><code class="language-zsh">git checkout master
+</code></pre>
+<p>查看 log</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.51.33.png" /></p>
+<ul>
+<li>我们可以看到 HEAD 指向 master</li>
+</ul>
+<p>添加并切换到 dog 分支</p>
+<pre><code class="language-zsh">git branch dog; git checkout dog
+</code></pre>
+<p>或</p>
+<pre><code class="language-zsh">git checkout -b dog
+</code></pre>
+<p>查看 log</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.53.28.png" /></p>
+<ul>
+<li>cat 分支 和 master 分支 仍然在原来的位置</li>
+<li>但 HEAD 指向了新创建的 dog 引用</li>
+</ul>
+<p>在 animal.py 中增加 dog 函数</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.54.52.png" /></p>
+<pre><code class="language-zsh">git diff
+</code></pre>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.55.33.png" /></p>
+<ul>
+<li>dog 分支 和 cat 分支上所做的修改输入并行修改</li>
+</ul>
+<p>现在我们再次提交，引用名称为 Add dog functionality</p>
+<pre><code class="language-zsh">git add animal.py
+</code></pre>
+<pre><code class="language-zsh">git commit
+</code></pre>
+<p>查看日志</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%886.57.30.png" /></p>
+<ul>
+<li>日志表明 历史记录分叉了！</li>
+</ul>
+<p>现在我们尝试把两条开发路径合并回主线，用于合并的命令是 <code>git merge</code>：</p>
+<p>切换回 master 分支</p>
+<pre><code class="language-zsh">git checkout master
+</code></pre>
+<p>查看 log</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.00.17.png" /></p>
+<p>合并 cat 分支 到 master</p>
+<pre><code class="language-zsh">git merge cat
+</code></pre>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.00.55.png" /></p>
+<ul>
+<li>Fast-forword 表示这个 master 分支，可以直接移动到 cat 分支所处的 commit，和 cat 合并</li>
+</ul>
+<p>查看 log</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.02.26.png" /></p>
+<ul>
+<li>master 分支直接移动到 cat 分支所处的 commit，并和 cat 合并了</li>
+</ul>
+<p>合并 dog 分支</p>
+<pre><code class="language-zsh">git merge dog
+</code></pre>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.03.58.png" /></p>
+<p>这时出现了问题：</p>
+<p>git 会尽力自行合并来自另一个分支的更改，但当 git 不知道如何合并时，就需要我们手动合并</p>
+<p>在执行 <code>git merge dog</code> 之后，查看 animal.py 文件</p>
+<pre><code class="language-zsh">vim animal.py
+</code></pre>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.07.40.png" /></p>
+<ul>
+<li><code>&lt;&lt;&lt;</code>、<code>&gt;&gt;&gt;</code> 和 <code>===</code> 是冲突标记</li>
+</ul>
+<p>我们先删除冲突标记，再手动合并这两个函数</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.08.48.png" /></p>
+<p>然后需要重新添加 animal.py 来告诉 git 我们已经解决了这个问题</p>
+<pre><code class="language-zsh">git add animal.py
+</code></pre>
+<p>然后执行</p>
+<pre><code class="language-zsh">git merge --continue
+</code></pre>
+<p>查看 log</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.11.30.png" /></p>
+<ul>
+<li>成功合并了</li>
+</ul>
+<h4 id="_69">远端</h4>
+<p>远程仓库 在本地 实际上就是一个新的分支（如 origin/main）</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.49.25.png" /></p>
+<p>如果在本地创建新提交：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.51.21.png" /></p>
+<ul>
+<li>可以看到 与本地其它分支一样，远程分支的位置不会改变。</li>
+</ul>
+<p>通过 <code>git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt;</code> 来更改 远程仓库分支指针 在本地的位置（就相当于 更改了 <strong>远端的</strong> 分支指针 在整个快照中的位置）</p>
+<p>但是，每次都输入这么一大串命令太麻烦，我们可以设置 当前所处本地分支 与 远程分支 的追踪关系：</p>
+<pre><code class="language-zsh"># git branch --set-upstream-to=&lt;remote&gt;/&lt;remote branch&gt;
+git branch --set-upstream-to=origin/master
+</code></pre>
+<ul>
+<li>现在输入 <code>git branch -vv</code> 就可以看到 本地分支master 与 远程分支master 相关联了。</li>
+</ul>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-03%20%E4%B8%8B%E5%8D%887.52.14.png" /></p>
+<p>之后我们再输入 <code>git push</code>，就相当于输入<code>git push origin master:master</code> 了。</p>
+<h5 id="_70">命令</h5>
+<ul>
+<li><code>git remote</code>: 列出远端</li>
+<li><code>git remote add &lt;name&gt; &lt;url&gt;</code>: 添加一个远端</li>
+<li><code>git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt;</code>: 将对象传送至远端并更新远端引用</li>
+<li><code>git branch --set-upstream-to=&lt;remote&gt;/&lt;remote branch&gt;</code>: 创建本地和远端分支的关联关系</li>
+<li><code>git fetch</code>: 从远端获取对象/索引</li>
+<li><code>git pull</code>: 相当于 <code>git fetch; git merge</code></li>
+<li><code>git clone</code>: 从远端下载仓库</li>
+</ul>
+<h4 id="_71">撤销</h4>
+<ul>
+<li><code>git commit --amend</code>: 编辑提交的内容或信息</li>
+<li><code>git reset HEAD &lt;file&gt;</code>: 恢复暂存的文件</li>
+<li><code>git checkout -- &lt;file&gt;</code>: 丢弃修改</li>
+<li><code>git restore</code>: git2.32版本后取代git reset 进行许多撤销操作</li>
+</ul>
+<p><img alt="" src="../media/20200312120348300.png" /></p>
+<h4 id="git_3">Git 高级操作</h4>
+<ul>
+<li><code>git config</code>: Git 是一个 <a href="https://git-scm.com/docs/git-config">高度可定制的</a> 工具</li>
+<li><code>git clone --depth=1</code>: 浅克隆（shallow clone），不包括完整的版本历史信息</li>
+<li><code>git add -p</code>: 交互式暂存</li>
+<li><code>git rebase -i</code>: 交互式变基</li>
+<li><code>git blame</code>: 查看最后修改某行的人</li>
+<li><code>git stash</code>: 暂时移除工作目录下的修改内容</li>
+<li><code>git bisect</code>: 通过二分查找搜索历史记录</li>
+<li><code>.gitignore</code>: <a href="https://git-scm.com/docs/gitignore">指定</a> 故意不追踪的文件</li>
+</ul>
+<h2 id="_72">第七课：调试及性能分析</h2>
+<p>TODO</p>
+<h2 id="_73">第八课：元编程</h2>
+<h3 id="_74">构建系统</h3>
+<h4 id="make">make</h4>
+<p>当我们执行 make 时，make 会在 当前目录 查找一个名为 Makefile 的文件。</p>
+<h5 id="makefile">Makefile</h5>
+<ul>
+<li>Makefile 是你定义 目标、依赖项和规则的地方</li>
+</ul>
+<p>例如：</p>
+<pre><code class="language-Makefile">paper.pdf: paper.tex plot-data.png
+    pdflatex paper.tex
+</code></pre>
+<ul>
+<li>冒号左侧的是要构建的目标</li>
+<li>冒号右侧的是构建它所需的依赖项（需要的文件）。注意：依赖项既可以是 所需文件 也可以是 需要用到的脚本 或 所需要的库（如，<code>plot.py</code>）。</li>
+<li>缩进的部分是从依赖构建目标时需要用到的命令。</li>
+</ul>
+<p>接着：</p>
+<pre><code class="language-Makefile">paper.pdf: paper.tex plot-data.png
+    pdflatex paper.tex
+
+plot-%.png: %.dat plot.py
+    ./plot.py -i $*.dat -o $@
+</code></pre>
+<ul>
+<li><code>%</code> 代表 任意字符串（是一种通配符），并且 <strong>可以复用</strong>。例如，在第二项中，如果目标是 <code>plot-foo.png</code>， <code>make</code> 会去寻找 <code>foo.dat</code> 和 <code>plot.py</code> 作为依赖。</li>
+<li><code>$*</code> 是一个特殊的变量，不管 <code>%</code> 是啥，makefile 都可以成功匹配。如，在上一条的例子中 <code>$*</code> 会扩展为 <code>foo</code>。</li>
+<li><code>$@</code> 也是一个特殊的变量，表示输出的文件名</li>
+</ul>
+<p>此时，当前目录中只有唯一一个 Makefile 文件，没有其他文件，这时我们运行 make：</p>
+<pre><code>$ make
+make: *** No rule to make target 'paper.tex', needed by 'paper.pdf'.  Stop.
+</code></pre>
+<ul>
+<li>当你没有给 make 任何参数时，它会默认构建第一个目标（这被叫做 默认目标）。所以此时 make 试图构建 paper.pdf，它提示我们，找不到 paper.tex 和 plot.pn，<strong>并且 也找不到 生成 paper.tex 的规则</strong></li>
+</ul>
+<p>现在我们将所需文件复制到当前目录，查看这些文件：</p>
+<pre><code>$ cat paper.tex
+\documentclass{article}
+\usepackage{graphicx}
+\begin{document}
+\includegraphics[scale=0.65]{plot-data.png}
+\end{document}
+
+$ cat plot.py
+#!/usr/bin/env python
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-i', type=argparse.FileType('r'))
+parser.add_argument('-o')
+args = parser.parse_args()
+
+data = np.loadtxt(args.i)
+plt.plot(data[:, 0], data[:, 1])
+plt.savefig(args.o)
+
+$ cat data.dat
+1 1
+2 2
+3 3
+4 4
+5 8
+</code></pre>
+<p>现在我们再次执行 make：</p>
+<pre><code>$ make
+./plot.py -i data.dat -o plot-data.png
+pdflatex paper.tex
+... lots of output ...
+</code></pre>
+<p>这时就生成了我们需要的 pdf 文件。</p>
+<p>这时，我们再次执行 make：</p>
+<pre><code>$ make
+make: 'paper.pdf' is up to date.
+</code></pre>
+<ul>
+<li>什么事情都没有发生。因为它什么都不需要做。</li>
+<li>make回去检查之前的构建是因其依赖改变而需要被更新。</li>
+</ul>
+<p>让我们试试修改 <code>paper.tex</code> 在重新执行 <code>make</code>：</p>
+<pre><code>$ vim paper.tex
+$ make
+pdflatex paper.tex
+...
+</code></pre>
+<ul>
+<li>注意 <code>make</code> 并<strong>没有</strong>重新执行 <code>plot.py</code> 这个命令，因为没必要：<code>plot-data.png</code> 的所有依赖都没有发生改变。</li>
+</ul>
+<p><em>make 会做最少的工作来完成目标</em></p>
+<p>...</p>
+<p>TODO</p>
+<h2 id="_75">第九课：安全和密码学</h2>
+<p>TODO</p>
+<h2 id="_76">第十课：大杂烩</h2>
+<p>TODO</p>
+<h2 id="_77">注：</h2>
+<ol>
+<li>直接运行脚本/函数和运行载入 shell 的脚本/函数是有区别的。直接运行的话 shell 会在当前所在路径运行命令，而运行载入 shell 的脚本则不是在当前所在路径运行。同样的道理也适用于在 shell 中定义的变量。</li>
+<li>log - 日志</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      syxb2
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/syxb2" target="_blank" rel="noopener" title="GitHub | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/24550465" target="_blank" rel="noopener" title="Bilibili | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.xiaohongshu.com/user/profile/63caa3bd0000000026006cf2" target="_blank" rel="noopener" title="小红书 | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M160 32c-35.3 0-64 28.7-64 64v224c0 35.3 28.7 64 64 64h352c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zm236 106.7 96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84c4.5-6.6 12-10.6 20-10.6s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1-64 0zm-144-8c0-13.3-10.7-24-24-24S0 106.7 0 120v224c0 75.1 60.9 136 136 136h320c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>

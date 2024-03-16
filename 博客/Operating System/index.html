@@ -1,0 +1,2592 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="syxb2的主站">
+      
+      
+        <meta name="author" content="syxb2">
+      
+      
+        <link rel="canonical" href="https://syxb2.github.io/myblog/%E5%8D%9A%E5%AE%A2/Operating%20System/">
+      
+      
+        <link rel="prev" href="../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Mathematica/">
+      
+      
+        <link rel="next" href="../Git/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Operating System - syxb2的主站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#operating-system" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="syxb2的主站" class="md-header__button md-logo" aria-label="syxb2的主站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            syxb2的主站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Operating System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/syxb2/myblog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    syxb2.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  欢迎
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/" class="md-tabs__link">
+          
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/Notes%20of%20Crash%20Course%20Computer%20Science/" class="md-tabs__link">
+          
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="syxb2的主站" class="md-nav__button md-logo" aria-label="syxb2的主站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    syxb2的主站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/syxb2/myblog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    syxb2.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    欢迎
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    博客
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            博客
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    编程语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            编程语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML%20%26%20CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML & CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/LaTeX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTeX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Mathematica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Operating System
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Operating System
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、文件权限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1、文件权限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      修改文件权限：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件权限的10位字符串表示
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、表示当前目录下的所有文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、sudo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4root" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、在终端进入root权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、关机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6ln-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、ln 命令（link 命令）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6、ln 命令（link 命令）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建硬链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建软链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      删除软链接
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用参数：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shell_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guishell" class="md-nav__link">
+    <span class="md-ellipsis">
+      图形用户界面（GUI）shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令行界面（CLI）的 shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oh-my-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oh-My-zsh
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Oh-My-zsh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-oh-my-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、安装 Oh-My-zsh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-zsh-syntax-highlighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、安装代码高亮插件 zsh-syntax-highlighting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2、安装代码高亮插件 zsh-syntax-highlighting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      zsh 主题配置文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="环境变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osx" class="md-nav__link">
+    <span class="md-ellipsis">
+      OSX
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OSX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境变量配置文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="环境变量配置文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统级别：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户级别：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell打开时加载：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用环境变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      包管理器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="包管理器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Homebrew">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brew" class="md-nav__link">
+    <span class="md-ellipsis">
+      关闭 brew 的自动更新和自动清理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homebrew_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew 安装/升级应用的机制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homebrew_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew 安装软件的安装路径
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homebrew-pin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew 的 pin 机制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识点本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、命令指向问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-osx" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、环境变量（适用于 OSX）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5mac-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、Mac 的命令行工具和 Linux 的命令行工具有所不同
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6osx" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、OSX设置登陆项源文件目录：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multipass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multipass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Obsidian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsidian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%88%A9%E7%94%A8Mkdocs%E4%B8%8EGitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    利用Mkdocs与GitHub搭建个人博客
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A9%BE%E8%80%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    驾考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习工作流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Others/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Others
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    课程笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            课程笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    线上课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            线上课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/Notes%20of%20Crash%20Course%20Computer%20Science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes of Crash Course Computer Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/Notes%20of%20MIT-Missing-Semester/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes of MIT-Missing-Semester
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E8%82%B2%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    中国计算机教育中缺失的一课 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/BIT-0-C%E8%AF%AD%E8%A8%80%E8%AF%BE%E7%A8%8B%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIT-0-C语言课程 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BDC%E8%AF%AD%E8%A8%80%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何学好C语言 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/%E5%85%B3%E4%BA%8E%E5%A4%A7%E5%AD%A6%E7%9A%84%E4%B8%80%E5%88%87%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于大学的一切 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    线下课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            线下课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8B%E8%AF%BE%E7%A8%8B/%E6%9C%AC%E7%A7%91%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80I%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    程序设计与算法基础I 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8B%E8%AF%BE%E7%A8%8B/%E6%9C%AC%E7%A7%91%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5%EF%BC%88PBLF%EF%BC%89%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    程序设计与项目实践 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、文件权限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1、文件权限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      修改文件权限：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件权限的10位字符串表示
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、表示当前目录下的所有文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、sudo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4root" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、在终端进入root权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、关机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6ln-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、ln 命令（link 命令）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6、ln 命令（link 命令）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建硬链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建软链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      删除软链接
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用参数：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shell_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guishell" class="md-nav__link">
+    <span class="md-ellipsis">
+      图形用户界面（GUI）shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      命令行界面（CLI）的 shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oh-my-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oh-My-zsh
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Oh-My-zsh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-oh-my-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、安装 Oh-My-zsh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-zsh-syntax-highlighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、安装代码高亮插件 zsh-syntax-highlighting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2、安装代码高亮插件 zsh-syntax-highlighting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      zsh 主题配置文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="环境变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osx" class="md-nav__link">
+    <span class="md-ellipsis">
+      OSX
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OSX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境变量配置文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="环境变量配置文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统级别：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户级别：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell打开时加载：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用环境变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      包管理器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="包管理器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Homebrew">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brew" class="md-nav__link">
+    <span class="md-ellipsis">
+      关闭 brew 的自动更新和自动清理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homebrew_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew 安装/升级应用的机制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homebrew_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew 安装软件的安装路径
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homebrew-pin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew 的 pin 机制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      知识点本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、命令指向问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-osx" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、环境变量（适用于 OSX）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5mac-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、Mac 的命令行工具和 Linux 的命令行工具有所不同
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6osx" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、OSX设置登陆项源文件目录：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="operating-system">Operating System</h1>
+<p><em>主要是 Unix / Linux</em></p>
+<blockquote>
+<p>其它 Unix 知识：<a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/Notes%20of%20MIT-Missing-Semester/">Notes of MIT-Missing-Semester</a></p>
+</blockquote>
+<h2 id="_1">命令</h2>
+<h3 id="1">1、文件权限</h3>
+<h4 id="_2">修改文件权限：</h4>
+<p><code>chmod</code> 命令</p>
+<pre><code class="language-shell">sudo chmod 600 ××× （只有所有者有读和写的权限）
+sudo chmod 644 ××× （所有者有读和写的权限，组用户只有读的权限）
+sudo chmod 700 ××× （只有所有者有读和写以及执行的权限）
+sudo chmod 666 ××× （每个人都有读和写的权限）
+sudo chmod 777 ××× （每个人都有读和写以及执行的权限）
+</code></pre>
+<h4 id="10">文件权限的10位字符串表示</h4>
+<p>如：</p>
+<p><img alt="" src="../media/20190426143002516.png" /></p>
+<ul>
+<li>第一位，如<code>[-]</code>：首位代表是目录or文件，<strong>d</strong>为<strong>目录</strong>，<strong>-</strong>为<strong>文件</strong>；  </li>
+<li>2-4位，如<code>[rwx]</code>：<strong>拥有人</strong>的权限，<strong>r可读</strong>，<strong>w可写</strong>，<strong>x可执行</strong>；  </li>
+<li>5-7位，如<code>[rw-]</code>：<strong>同群组</strong>使用者权限；  </li>
+<li>8-10位，如<code>[r–]</code>：其他使用者权限。</li>
+</ul>
+<p>数字表示：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-05%20%E4%B8%8B%E5%8D%8812.30.18.png" /></p>
+<h3 id="2">2、表示当前目录下的所有文件</h3>
+<pre><code class="language-shell">./*
+</code></pre>
+<h3 id="3sudo">3、sudo</h3>
+<p>Linux sudo命令以系统管理者的身份执行指令，也就是说，经由 sudo 所执行的指令就好像是 root 亲自执行。</p>
+<p>使用权限：在 /etc/sudoers 中有出现的使用者</p>
+<h3 id="4root">4、在终端进入root权限</h3>
+<pre><code class="language-shell">su root
+</code></pre>
+<h3 id="5">5、关机</h3>
+<pre><code class="language-zsh">sudo init 0 # 关机
+sudo init 6 # 为重新启动
+</code></pre>
+<h3 id="6ln-link">6、ln 命令（link 命令）</h3>
+<h4 id="_3">链接</h4>
+<ul>
+<li>硬链接：硬连接指通过索引节点来进行连接。在Linux的文件系统中，保存在磁盘分区中的文件不管是什么类型都给它分配一个编号，称为索引节点号(Inode Index)。在Linux中，多个文件名指向同一索引节点是存在的。一般这种连接就是硬连接。硬连接的作用是允许一个文件拥有多个有效路径名，这样用户就可以建立硬连接到重要文件，以防止“误删”的功能。其原因如上所述，因为对应该目录的索引节点有一个以上的连接。只删除一个连接并不影响索引节点本身和其它的连接，只有当最后一个连接被删除后，文件的数据块及目录的连接才会被释放。也就是说，文件真正删除的条件是与之相关的所有硬连接文件均被删除。</li>
+<li>软连接：另外一种连接称之为符号连接（Symbolic Link），也叫软连接。软链接文件有类似于Windows的快捷方式。它实际上是一个特殊的文件。在符号连接中，文件实际上是一个文本文件，其中包含的有另一文件的位置信息。</li>
+</ul>
+<h4 id="_4">使用方式</h4>
+<h5 id="_5">创建硬链接</h5>
+<p>一般不使用硬链接来链接文件</p>
+<pre><code class="language-zsh">ln ... ...
+</code></pre>
+<h5 id="_6">创建软链接</h5>
+<pre><code class="language-zsh">ln -s [源文件或目录] [目标文件或目录]
+</code></pre>
+<p>例：</p>
+<p>当前路径创建test 引向/var/www/test 文件夹 </p>
+<pre><code class="language-zsh">ln -s /var/www/test test
+</code></pre>
+<p>创建/var/test 引向/var/www/test 文件夹 </p>
+<pre><code class="language-zsh">ln -s /var/www/test /var/test
+</code></pre>
+<h5 id="_7">删除软链接</h5>
+<p>和删除普通的文件是一样的，删除都是使用rm来进行操作</p>
+<p>例：</p>
+<p>删除test</p>
+<pre><code class="language-zsh"># 推荐使用
+unlink test
+# 其次用法
+rm test
+</code></pre>
+<p><strong>不推荐使用rm -rf，在使用rm -rf删除时，如果链接目标是目录时千万要小心，使用  rm -rf test/ 时你会发现，软连接并没有被删除，而源目录下的文件会被删除！</strong></p>
+<p>修改软链接</p>
+<pre><code class="language-zsh">ln -snf [新的源文件或目录] [目标文件或目录]
+</code></pre>
+<p>这将会修改原有的链接地址为新的地址</p>
+<h4 id="_8">常用参数：</h4>
+<ul>
+<li>-f : 链结时先将与 dist 同档名的档案删除  </li>
+<li>-d : 允许系统管理者硬链结自己的目录  </li>
+<li>-i : 在删除与 dist 同档名的档案时先进行询问  </li>
+<li>-n : 在进行软连结时，将 dist 视为一般的档案  </li>
+<li>-s : 进行软链结(symbolic link)  </li>
+<li>-v : 在连结之前显示其档名  </li>
+<li>-b : 将在链结时会被覆写或删除的档案进行备份  </li>
+<li>-S SUFFIX : 将备份的档案都加上 SUFFIX 的字尾  </li>
+<li>-V METHOD : 指定备份的方式  </li>
+<li>--help : 显示辅助说明  </li>
+<li>--version : 显示版本</li>
+</ul>
+<h2 id="dos">DOS</h2>
+<p>DOS：是磁盘操作系统（英文：Disk Operating System）的缩写，是个人计算机上的一类操作系统。</p>
+<p>DOS 家族包括 MS-DOS、PC-DOS、DR-DOS、FreeDOS、PTS-DOS、ROM-DOS、JM-OS等，其中以 MS-DOS 最为著名。虽然这些系统常被简称为"DOS"，但没有任何一个系统单纯以"DOS"命名。</p>
+<h2 id="shell">Shell</h2>
+<p>以 zsh 为例</p>
+<h3 id="shell_1">什么是shell</h3>
+<p>『Shell / 壳层』：命令行界面的解释器，<strong>用户和系统内核的沟通桥梁</strong>。分为：①命令行界面（CLI） ；② 图形用户界面（GUI）。</p>
+<h4 id="guishell">图形用户界面（GUI）shell</h4>
+<p><strong>MacOS 的 shell</strong></p>
+<p>『Finder / 访达』: 在 MacOS 中，能让用户管理文件、文件、磁盘、网络，以及启动其他的应用程序的引用程序。</p>
+<p><strong>Linux 的 shell</strong></p>
+<p>『X窗口管理器』: 独立的 X窗口管理器，例如 Blackbox 与 Fluxbox 。</p>
+<p>『Desktop Environment / 桌面环境』: 桌面环境是依靠于窗口管理器的的扩展实现。如 KDE、GNOME、Xfce、DDE 。</p>
+<p><strong>Windows 的 shell</strong></p>
+<p>『Explorer / 文件资源管理器』: 此操作系统中浏览电脑中文件与文件夹结构的基本工具，win + E 快捷键呼出。</p>
+<p>『开始菜单』: 屏幕的左下角菜单， win 键呼出。</p>
+<p>『DOS Shell』: 1998 年发布于 MS-DOS 的文件管理器，是终端里面生成的可视化界面。</p>
+<h4 id="cli-shell">命令行界面（CLI）的 shell</h4>
+<p><strong>MacOS / Linux 的 shell</strong></p>
+<p>『sh / Bourne shell』: 1977 在 Version 7 Unix 上的默认 shell。</p>
+<p>『Bash』: 名称由来 Bourne-Again SHell，在 GNU 计划中，于 1989 发布于第一个版本，是 sh 的兼容的开源的续作。亦是 Linux 和 MacOS （含10.14之前）的默认 shell。</p>
+<p>『Z shell / Zsh』: 是 sh + bash + 扩展功能。自2019 年起，MacOS 的默认 Shell 已从 『Bash 』改为『Zsh』。</p>
+<p><strong>Windows 的 shell</strong></p>
+<p>『命令提示符 / cmd.exe』：是 Win32 应用程序，取代『COMMAND.COM』。Windows命令提示符（cmd.exe） 是 Windows NT 下的一个用于运行 Windows 控制台程序或某些 DOS 程序的壳层程序；</p>
+<p>『PowerShell』 : 包括 ①Windows PowerShell + ②PowerShell Core ，基于 .NET 框架开发，自 2016 年后开源且跨平台。① 为前四年的版本，仅支持 Win 平台；② 则是其演进，支持跨平台 Linux 和 Mac。</p>
+<p>『COMMAND.COM』: 是一个16位的 DOS 应用程序。已经被 命令提示符(cmd.exe) 取代在 MS-DOS、Windows 95、Windows 98、Windows 98SE 和 Windows Me 上的默认命令行界面。</p>
+<h4 id="_9">总结</h4>
+<p>『Shell』 =『图形用户界面（GUI）shell』 + 『命令行界面（CLI）的 shell』</p>
+<h3 id="oh-my-zsh">Oh-My-zsh</h3>
+<h5 id="1-oh-my-zsh">1、安装 Oh-My-zsh</h5>
+<p><strong>第一步 → 把 oh-my-zsh 项目 Clone 下来：</strong></p>
+<pre><code class="language-bash">git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+</code></pre>
+<p><strong>第二步 → 复制 .zshrc</strong></p>
+<pre><code class="language-bash">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+</code></pre>
+<ul>
+<li><code>.zshrc</code> 是 zsh 的启动文件，里面描述了要 怎样启动 zsh。如使用 oh-my-zsh 包来启动 zsh</li>
+</ul>
+<p><strong>第三步 → 更改你的默认 Shell</strong></p>
+<pre><code class="language-bash">chsh -s /bin/zsh &lt;uesrname&gt;
+</code></pre>
+<h5 id="2-zsh-syntax-highlighting">2、安装代码高亮插件 <code>zsh-syntax-highlighting</code></h5>
+<h6 id="_10">安装</h6>
+<p>执行命令：</p>
+<pre><code class="language-zsh">cd ~/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+</code></pre>
+<h6 id="_11">配置</h6>
+<p>打开 <code>~/.zshrc</code> 文件</p>
+<p>找到 <code>plugins</code>，我们需要把高亮插件加上：</p>
+<p><img alt="" src="../media/01763697fab64b80873659f143df8de3.png" /></p>
+<p><strong>注意：zsh-syntax-highlighting 必须在最后一个。</strong></p>
+<p>然后在文件末尾添加：</p>
+<pre><code class="language-zsh">source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # 如果使用命令 brew 安装，则是添加这条命令语句
+</code></pre>
+<p>接着保存退出，然后执行下面的命令立即生效：</p>
+<pre><code class="language-zsh">source ~/.zshrc
+</code></pre>
+<h3 id="zsh">zsh 主题配置文件</h3>
+<pre><code class="language-zsh">sudo vim $ZSH/themes/&lt;ThemeName&gt;.zsh-theme
+</code></pre>
+<h2 id="_12">环境变量</h2>
+<h3 id="osx">OSX</h3>
+<h4 id="_13">环境变量配置文件</h4>
+<h5 id="_14">系统级别：</h5>
+<ol>
+<li>/etc/profile：为系统的每个用户设置环境信息和启动程序，其配置对所有登录的用户都有效，一般不建议修改该文件。</li>
+<li>/etc/paths ：任何用户登陆时都会读取该文件，全局建议修改这个文件 。</li>
+</ol>
+<p>以上是系统级别配置文件，系统启动就会加载，修改需要Root权限。</p>
+<h5 id="_15">用户级别：</h5>
+<ol>
+<li>~/.bash_profile：为当前用户设置专属的环境信息和启动程序，当用户登录时该文件执行一次。默认情况下，它用于设置环境变量，并执行当前用户的 .bashrc 文件，类似于 /etc/profile，一般用户级环境变量会放到这个文件。</li>
+<li>~/.bash_login</li>
+<li>~/.profile</li>
+</ol>
+<p>上面的文件也是依次执行的，如果bash_profile文件存在，则后面的几个文件就会被忽略不读了，如bash_profile文件不存在，才会以此类推读取后面的文件。</p>
+<h5 id="shell_2">shell打开时加载：</h5>
+<ol>
+<li>/etc/bashrc：系统级配置，为每个运行 bash shell 的用户执行该文件，当 bash shell 打开时，该文件被执行，其配置对所有使用bash的用户打开的每个bash都有效。</li>
+<li>~/.bashrc：用户级配置，作用同上。 bashrc没有上述规则，它是bash shell打开的时候载入的。</li>
+</ol>
+<h4 id="_16">配置方法</h4>
+<ol>
+<li>在.bash_profile文件中写入export PATH=$PATH:/opt/STM/STLinux-2.3/devkit/sh4/bin</li>
+<li>export 命令用于设置或显示环境变量，语法格式为export [变量名称]=[变量设置值] </li>
+<li>source .bash_profile，立即生效（source命令作用为,在当前bash环境下读取并执行file中的命令。）</li>
+</ol>
+<h4 id="_17">常用操作</h4>
+<p>env 查看当前所有环境变量</p>
+<p>cat /etc/shells 查看当前系统支持的shell程序</p>
+<p>echo $SHELL 查看当前系统正在使用的shell</p>
+<p>chsh -s /bin/bash 修改当前系统使用的Shell程序</p>
+<h4 id="_18">常用环境变量</h4>
+<p>PATH 系统指定可执行文件的搜索路径。
+SHELL 系统当前使用Shell程序
+常见问题</p>
+<p>如何系统默认shell使用的是zsh而不是(sh,bash),那么zsh是不加载.bash_profile文件的, 而是加载.zshrc.
+source .zshrc 在zsh环境下读取配置文件</p>
+<h2 id="_19">包管理器</h2>
+<h3 id="homebrew">Homebrew</h3>
+<h4 id="brew">关闭 brew 的自动更新和自动清理</h4>
+<p>我们可以（在 .zshrc 中）添加两个环境变量：</p>
+<pre><code class="language-javascript">export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+</code></pre>
+<ul>
+<li>其中，第一个环境变量的作用是防止Homebrew 擅自升级所有软件。第二个环境变量是防止自动清理。</li>
+</ul>
+<h4 id="homebrew_1">Homebrew 安装/升级应用的机制</h4>
+<p>例如：</p>
+<p>当我在 Homebrew 中升级 Python 版本时，它会把新版本的 Python 下载下来，安装到另一个文件夹里面。然后修改<code>/usr/local/bin/python</code>这个软连接，指向新的 Python 版本的可执行文件。但不改动老版本的 Python。这样一来，虚拟环境依然可以使用老版本的 Python，代码不受影响。</p>
+<h4 id="homebrew_2">Homebrew 安装软件的安装路径</h4>
+<pre><code>/opt/homebrew/Cellar
+</code></pre>
+<h4 id="homebrew-pin">Homebrew 的 pin 机制</h4>
+<p>brew pin is the way to go. It will pin the formula to the current version</p>
+<p><code>brew pin &lt;formula&gt;</code></p>
+<p>brew unpin can be used to reset this</p>
+<p><code>brew unpin &lt;formula&gt;</code></p>
+<p>To view all <em>pinned</em> formulae</p>
+<p><code>brew list --pinned</code></p>
+<ul>
+<li><strong>Note:</strong> <code>brew upgrade</code> will not upgrade pinned formulae.</li>
+</ul>
+<blockquote>
+<p>From <code>Stack overflow</code> ：<a href="https://stackoverflow.com/questions/10093918/ignore-formula-on-brew-upgrade">https://stackoverflow.com/questions/10093918/ignore-formula-on-brew-upgrade</a></p>
+</blockquote>
+<h2 id="_20">知识点本</h2>
+<h3 id="1_1">1、命令指向问题</h3>
+<p>一些命令指向一般分为两个过程：</p>
+<p>（1）环境变量直接指向</p>
+<p>（2）在 命令 的文件头部二次指向</p>
+<p>以 pip 为例：</p>
+<pre><code class="language-zsh">$ which pip
+/opt/homebrew/bin/pip # 这是 pip 的环境变量。运行 pip 时，指向 /opt/homebrew/bin/pip 这个文件
+$ vim /opt/homebrew/bin/pip
+</code></pre>
+<p>/opt/homebrew/bin/pip：</p>
+<p><img alt="" src="../media/%E6%88%AA%E5%B1%8F2024-03-05%20%E4%B8%8A%E5%8D%889.24.08.png" /></p>
+<ul>
+<li>第一行命令说明运行 pip 命令，在 环境变量 指向 <code>/opt/homebrew/bin/pip</code> 之后，<code>/opt/homebrew/bin/pip</code> 又说明要使用 python3.12 的 pip <code>/opt/homebrew/opt/python@3.12/bin/python3.12</code></li>
+</ul>
+<h3 id="2-osx">2、环境变量（适用于 OSX）</h3>
+<ul>
+<li>zsh 默认的环境变量在 <code>~/.zshrc</code></li>
+<li>bash 默认的环境变量在 <code>~/.bash_profil</code></li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>环境变量是 路径，而不是 文件。</li>
+<li>如我想把 bzmake 可执行文件加入到环境变量，我只需要将 bzmake 所在的 目录 添加到环境变量（如 <code>./zshrc</code> 中）即可</li>
+</ul>
+<p>查看本机环境变量：</p>
+<pre><code class="language-zsh">echo $PATH
+</code></pre>
+<ul>
+<li>注意：$PATH 中 路径 以 <code>:</code> 分隔</li>
+</ul>
+<h3 id="5mac-linux">5、Mac 的命令行工具和 Linux 的命令行工具有所不同</h3>
+<p>因为 Linux 使用的是 GUN 命令行工具，而 Mac 使用的很多都是 bsd 命令行工具</p>
+<h3 id="6osx">6、OSX设置登陆项源文件目录：</h3>
+<pre><code>/Library/LaunchDaemons
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      syxb2
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/syxb2" target="_blank" rel="noopener" title="GitHub | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/24550465" target="_blank" rel="noopener" title="Bilibili | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.xiaohongshu.com/user/profile/63caa3bd0000000026006cf2" target="_blank" rel="noopener" title="小红书 | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M160 32c-35.3 0-64 28.7-64 64v224c0 35.3 28.7 64 64 64h352c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zm236 106.7 96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84c4.5-6.6 12-10.6 20-10.6s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1-64 0zm-144-8c0-13.3-10.7-24-24-24S0 106.7 0 120v224c0 75.1 60.9 136 136 136h320c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>
