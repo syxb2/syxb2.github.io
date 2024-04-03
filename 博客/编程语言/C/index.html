@@ -679,7 +679,7 @@
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      *运算符
+      * 运算符
     </span>
   </a>
   
@@ -1446,6 +1446,42 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63c-n-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      63、C语言声明 n * m 二维矩阵
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64malloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      64、malloc 函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      65、对 C语言 中二维数组的理解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      66、链表的边界条件
+    </span>
+  </a>
   
 </li>
       
@@ -2278,7 +2314,7 @@
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      *运算符
+      * 运算符
     </span>
   </a>
   
@@ -3048,6 +3084,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#63c-n-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      63、C语言声明 n * m 二维矩阵
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64malloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      64、malloc 函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      65、对 C语言 中二维数组的理解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      66、链表的边界条件
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3166,7 +3238,7 @@ int main() {
 <h4 id="_1"><code>/</code>运算符</h4>
 <p>两个整数相除结果是商向下取整两个数相除</p>
 <p>任意一方是浮点型结果是商保留整数部分和小数部分</p>
-<h4 id="_2"><code>*</code>运算符</h4>
+<h4 id="_2"><code>*</code> 运算符</h4>
 <p>乘法运算和除法运算结果有一个不同之处就是，乘法运算的结果不会发生截断，两个数都是整数，结果则是整数。两个数任意一方是浮点数，结果则是浮点数，但是我们通常情况下会遇到类似下面的代码。</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
@@ -4036,6 +4108,50 @@ int main() {
 }
 </code></pre>
 <p>思路（以八转十进制为例）：从右边第一位开始，先求出目标进制的右边第一位，然后再对in做商，如此循环往复，直至求出目标进制的所有位，最后将数组倒序打印。即循环对<code>in</code>的取余与做商。</p>
+<h3 id="63c-n-m">63、C语言声明 n * m 二维矩阵</h3>
+<p><strong>c语言数组不能改变长度，所以要用malloc函数动态分配空间，用指针指向数组。</strong></p>
+<pre><code class="language-c">int n = 0, m = 0;
+scanf(&quot;%d %d&quot;, &amp;n, &amp;m);
+// c语言数组不能改变长度，所以要用malloc函数动态分配空间，用指针指向数组。
+int **arr = (int **) malloc(n * sizeof(int *));
+for (int i = 0; i &lt; n; ++i) {
+    arr[i] = (int *) malloc(m * sizeof(int));
+}
+
+for (int i = 0; i &lt; n; ++i) {
+    for (int j = 0; j &lt; m; ++j) {
+        scanf(&quot;%d&quot;, &amp;arr[i][j]);
+    }
+}
+</code></pre>
+<h3 id="64malloc">64、malloc 函数</h3>
+<ul>
+<li>malloc 函数返回的类型是 <code>void*</code>，所以我们使用 malloc 时要进行强制类型转换。</li>
+<li>malloc 函数长度默认单位是 Byte。</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-c">(CHAR*)malloc(s-&gt;len)
+</code></pre>
+<h3 id="65-c">65、对 C语言 中二维数组的理解</h3>
+<p>对于：</p>
+<pre><code class="language-c">int a[3][4]
+</code></pre>
+<p>它是由 3 个一维数组组成，每个一维数组的大小是 4 个整型元素。<em>而不是 4 个 三元素数组</em></p>
+<ul>
+<li>它的元素为一维数组的一维数组（两个维度分开）<code>int (a[4])[5]</code></li>
+<li>如：<code>a[0]</code> 是一个 1 维数组，它的长度是 4。</li>
+<li><code>a[i]</code> 是一个 1 维数组的名字，其类型为：<code>int [4]</code>。</li>
+</ul>
+<p>格式化：</p>
+<pre><code class="language-c">[[0, 0, 0, 0],
+ [0, 0, 0, 0],
+ [0, 0, 0, 0]]
+</code></pre>
+<h3 id="66">66、链表的边界条件</h3>
+<ol>
+<li>只有一个有数据的节点</li>
+<li>只有头节点</li>
+</ol>
 
 
 

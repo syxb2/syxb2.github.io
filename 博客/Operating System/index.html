@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#operating-system" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -626,8 +626,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -655,8 +653,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1162,6 +1158,15 @@
   <a href="#6osx" class="md-nav__link">
     <span class="md-ellipsis">
       6、OSX设置登陆项源文件目录：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7osx-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      7、OSX 14 关闭输入法下的图标提示
     </span>
   </a>
   
@@ -1710,8 +1715,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2221,6 +2224,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#7osx-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      7、OSX 14 关闭输入法下的图标提示
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2244,7 +2256,10 @@
   
 
 
-<h1 id="operating-system">Operating System</h1>
+  <h1>Operating System</h1>
+
+<pre><code># Operating System
+</code></pre>
 <p><em>主要是 Unix / Linux</em></p>
 <blockquote>
 <p>其它 Unix 知识：<a href="../../%E8%AF%BE%E7%A8%8B/%E7%BA%BF%E4%B8%8A%E8%AF%BE%E7%A8%8B/Notes%20of%20MIT-Missing-Semester/">Notes of MIT-Missing-Semester</a></p>
@@ -2498,6 +2513,11 @@ $ vim /opt/homebrew/bin/pip
 <h3 id="6osx">6、OSX设置登陆项源文件目录：</h3>
 <pre><code>/Library/LaunchDaemons
 </code></pre>
+<h3 id="7osx-14">7、OSX 14 关闭输入法下的图标提示</h3>
+<pre><code class="language-shell">sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist redesigned_text_cursor -dict-add Enabled -bool NO
+</code></pre>
+<p>然后终端需要你输入密码，在终端里输入密码</p>
+<p>最后重启电脑</p>
 
 
 

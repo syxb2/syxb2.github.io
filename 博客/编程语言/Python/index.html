@@ -2178,6 +2178,48 @@
         <li class="md-nav__item">
   <a href="#_98" class="md-nav__link">
     <span class="md-ellipsis">
+      虚拟环境
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="虚拟环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_99" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建虚拟环境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_100" class="md-nav__link">
+    <span class="md-ellipsis">
+      激活虚拟环境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_101" class="md-nav__link">
+    <span class="md-ellipsis">
+      退出虚拟环境
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_102" class="md-nav__link">
+    <span class="md-ellipsis">
       知识点本
     </span>
   </a>
@@ -2254,7 +2296,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_99" class="md-nav__link">
+  <a href="#_103" class="md-nav__link">
     <span class="md-ellipsis">
       注：
     </span>
@@ -4548,6 +4590,48 @@
         <li class="md-nav__item">
   <a href="#_98" class="md-nav__link">
     <span class="md-ellipsis">
+      虚拟环境
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="虚拟环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_99" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建虚拟环境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_100" class="md-nav__link">
+    <span class="md-ellipsis">
+      激活虚拟环境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_101" class="md-nav__link">
+    <span class="md-ellipsis">
+      退出虚拟环境
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_102" class="md-nav__link">
+    <span class="md-ellipsis">
       知识点本
     </span>
   </a>
@@ -4624,7 +4708,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_99" class="md-nav__link">
+  <a href="#_103" class="md-nav__link">
     <span class="md-ellipsis">
       注：
     </span>
@@ -5036,7 +5120,7 @@ print runoob._Runoob__site
         item_three
 </code></pre>
 <p>注意：语句中包含 <code>[]</code>, <code>{}</code> 或 <code>()</code> 括号就不需要使用多行连接符。如下实例：</p>
-<pre><code class="language-python">days = ['Monday', 'Tuesday', 'Wednesday',
+<pre><code class="language-python">days = ['Monday', Tuesday', 'Wednesday',
         'Thursday', 'Friday']
 </code></pre>
 <h3 id="_25">引号</h3>
@@ -5270,9 +5354,9 @@ oct(x )                 将一个整数转换为一个八进制字符串
 </ul>
 <h5 id="_34">截取字符串</h5>
 <p>可以使用 <code>[头下标:尾下标]</code> 来截取相应的字符串，可以是正数或负数，下标可以为空表示取到头或尾：</p>
-<pre><code class="language-python">&gt;&gt;&gt; s = 'abcdef'
+<pre><code class="language-python">&gt;&gt;&gt; s = &quot;abcdef&quot;
 &gt;&gt;&gt; s[1:5]
-'bcde'
+&quot;bcde&quot;
 </code></pre>
 <ul>
 <li><code>[1:5]</code> 对应截取字符串的第 2 到 5 个字符（第 6 个不截取）</li>
@@ -5281,7 +5365,7 @@ oct(x )                 将一个整数转换为一个八进制字符串
 <pre><code class="language-python">#!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-str = 'Hello World!'
+str = &quot;Hello World!&quot;
 
 print str           # 输出完整字符串
 print str[0]        # 输出字符串中的第一个字符
@@ -5324,12 +5408,12 @@ there
 </code></pre>
 <h5 id="unicode">Unicode 字符串</h5>
 <p>Python 中定义一个 Unicode 字符串和定义一个普通字符串一样简单：</p>
-<pre><code class="language-python">&gt;&gt;&gt; u'Hello World !'
-u'Hello World !'
+<pre><code class="language-python">&gt;&gt;&gt; u&quot;Hello World !&quot;
+u&quot;Hello World !&quot;
 </code></pre>
 <p>引号前小写的"u"表示这里创建的是一个 Unicode 字符串。如果你想加入一个特殊字符，可以使用 Python 的 Unicode-Escape 编码。如下例所示：</p>
-<pre><code class="language-python">&gt;&gt;&gt; u'Hello\u0020World !'
-u'Hello World !'
+<pre><code class="language-python">&gt;&gt;&gt; u&quot;Hello\u0020World !&quot;
+u&quot;Hello World !&quot;
 </code></pre>
 <p>被替换的 \u0020 标识表示在给定位置插入编码值为 0x0020 的 Unicode 字符（空格符）。</p>
 <h5 id="_39">内建字符串方法</h5>
@@ -5359,7 +5443,7 @@ u'Hello World !'
 <p>如：</p>
 <pre><code class="language-python">#!/usr/bin/python
 
-tup1 = ('physics', 'chemistry', 1997, 2000)
+tup1 = (&quot;physics&quot;, &quot;chemistry&quot;, 1997, 2000)
 tup2 = (1, 2, 3, 4, 5, 6, 7 )
 
 print &quot;tup1[0]: &quot;, tup1[0]
@@ -5379,7 +5463,7 @@ tup2[1:5]:  (2, 3, 4, 5)
 # -*- coding: UTF-8 -*-
 
 tup1 = (12, 34.56)
-tup2 = ('abc', 'xyz')
+tup2 = (&quot;abc&quot;, &quot;xyz&quot;)
 
 # 以下修改元组元素操作是非法的。
 # tup1[0] = 100
@@ -5395,7 +5479,7 @@ print tup3
 <p>如：</p>
 <pre><code class="language-python">#!/usr/bin/python
 
-tup = ('physics', 'chemistry', 1997, 2000)
+tup = (&quot;physics&quot;, &quot;chemistry&quot;, 1997, 2000)
 
 print tup
 del tup
@@ -5403,7 +5487,7 @@ print &quot;After deleting tup : &quot;
 print tup
 </code></pre>
 <p>输出（报错）：</p>
-<pre><code class="language-zsh">('physics', 'chemistry', 1997, 2000)
+<pre><code class="language-zsh">(&quot;physics&quot;, &quot;chemistry&quot;, 1997, 2000)
 After deleting tup :
 Traceback (most recent call last):
   File &quot;test.py&quot;, line 9, in &lt;module&gt;
@@ -5423,7 +5507,7 @@ NameError: name 'tup' is not defined
 <li>列表元素可以是字符，数字，字符串甚至可以包含列表（即嵌套）。</li>
 </ul>
 <p>例：</p>
-<pre><code class="language-python">list1 = ['physics', 'chemistry', 1997, 2000]
+<pre><code class="language-python">list1 = [&quot;physics&quot;, &quot;chemistry&quot;, 1997, 2000]
 list2 = [1, 2, 3, 4, 5 ]
 list3 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]
 </code></pre>
@@ -5435,7 +5519,7 @@ list3 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]
 <p>例：</p>
 <pre><code class="language-python">#!/usr/bin/python
 
-list1 = ['physics', 'chemistry', 1997, 2000]
+list1 = [&quot;physics&quot;, &quot;chemistry&quot;, 1997, 2000]
 list2 = [1, 2, 3, 4, 5, 6, 7 ]
 
 print &quot;list1[0]: &quot;, list1[0]
@@ -5446,13 +5530,13 @@ print &quot;list2[1:5]: &quot;, list2[1:5]
 list2[1:5]:  [2, 3, 4, 5]
 </code></pre>
 <p>例：</p>
-<pre><code class="language-python">&gt;&gt;&gt;L = ['Google', 'Runoob', 'Taobao']
+<pre><code class="language-python">&gt;&gt;&gt;L = [&quot;Google&quot;, &quot;Runoob&quot;, &quot;Taobao&quot;]
 &gt;&gt;&gt; L[2]
-'Taobao'
+&quot;Taobao&quot;
 &gt;&gt;&gt; L[-2]
-'Runoob'
+&quot;Runoob&quot;
 &gt;&gt;&gt; L[1:]
-['Runoob', 'Taobao']
+[&quot;Runoob&quot;, &quot;Taobao&quot;]
 &gt;&gt;&gt;
 </code></pre>
 <h5 id="_49">操作列表</h5>
@@ -5465,15 +5549,15 @@ list2[1:5]:  [2, 3, 4, 5]
 # -*- coding: UTF-8 -*-
 
 list = []          ## 空列表
-list.append('Google')   ## 使用 append() 添加元素
-list.append('Runoob')
+list.append(&quot;Google&quot;)   ## 使用 append() 添加元素
+list.append(&quot;Runoob&quot;)
 print list
 </code></pre>
 <h6 id="_51">删除列表元素</h6>
 <p>使用 <code>del</code> 语句来删除列表的元素：</p>
 <pre><code class="language-python">#!/usr/bin/python
 
-list1 = ['physics', 'chemistry', 1997, 2000]
+list1 = [&quot;physics&quot;, &quot;chemistry&quot;, 1997, 2000]
 
 print list1
 del list1[2]
@@ -5481,9 +5565,9 @@ print &quot;After deleting value at index 2 : &quot;
 print list1
 </code></pre>
 <p>输出：</p>
-<pre><code class="language-zsh">['physics', 'chemistry', 1997, 2000]
+<pre><code class="language-zsh">[&quot;physics&quot;, &quot;chemistry&quot;, 1997, 2000]
 After deleting value at index 2 :
-['physics', 'chemistry', 2000]
+[&quot;physics&quot;, &quot;chemistry&quot;, 2000]
 </code></pre>
 <h6 id="_52">列表运算符</h6>
 <p>列表对 + 和 * 的操作符与字符串相似。+ 号用于组合列表，* 号用于重复列表。</p>
@@ -5493,8 +5577,8 @@ After deleting value at index 2 :
 <pre><code class="language-python">#!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-list = [ 'runoob', 786 , 2.23, 'john', 70.2 ]
-tinylist = [123, 'john']
+list = [ &quot;runoob&quot;, 786 , 2.23, &quot;john&quot;, 70.2 ]
+tinylist = [123, &quot;john&quot;]
 
 print list               # 输出完整列表
 print tinylist * 2       # 输出列表两次
@@ -5511,8 +5595,8 @@ print list + tinylist    # 打印组合的列表
 </ul>
 <h5 id="_54">创建字典</h5>
 <p>例：</p>
-<pre><code class="language-python">tinydict1 = { 'abc': 456 }
-tinydict2 = { 'abc': 123, 98.6: 37 }
+<pre><code class="language-python">tinydict1 = { &quot;abc&quot;: 456 }
+tinydict2 = { &quot;abc&quot;: 123, 98.6: 37 }
 </code></pre>
 <h5 id="_55">访问字典</h5>
 <ul>
@@ -5521,7 +5605,7 @@ tinydict2 = { 'abc': 123, 98.6: 37 }
 <p>例：</p>
 <pre><code class="language-python">#!/usr/bin/python
 
-tinydict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+tinydict = {&quot;Name&quot;: &quot;Zara&quot;, &quot;Age&quot;: 7, &quot;Class&quot;: &quot;First&quot;}
 
 print &quot;tinydict['Name']: &quot;, tinydict['Name']
 print &quot;tinydict['Age']: &quot;, tinydict['Age']
@@ -6558,7 +6642,32 @@ os.chdir(&quot;/home/newdir&quot;)
 <ul>
 <li>参数是目录名称</li>
 </ul>
-<h2 id="_98">知识点本</h2>
+<h2 id="_98">虚拟环境</h2>
+<blockquote>
+<p>From：<a href="https://zhuanlan.zhihu.com/p/689181205?utm_id=0">https://zhuanlan.zhihu.com/p/689181205?utm_id=0</a></p>
+</blockquote>
+<p><em>这里使用 python3（3.3及以后） 内置虚拟环境管理工具 <code>venv</code> 创建虚拟环境</em></p>
+<h3 id="_99">创建虚拟环境</h3>
+<ul>
+<li>创建环境之前请先 cd 到要创建环境的目录</li>
+</ul>
+<p>语法：</p>
+<pre><code class="language-zsh">python3 -m venv &lt;name&gt;
+</code></pre>
+<p>这将在当前目录下生成一个名为 <code>&lt;name&gt;</code> 的文件夹，其中包含了独立的Python解释器和pip包管理器。</p>
+<h3 id="_100">激活虚拟环境</h3>
+<p>命令：</p>
+<pre><code class="language-bash">source &lt;name&gt;/bin/activate
+</code></pre>
+<p>激活后，终端前缀将显示虚拟环境名，表示当前正在使用该环境的Python解释器。</p>
+<p>如：</p>
+<pre><code class="language-bash">(paddlehub) &gt; aistudio [baijiale@Bais-Mac] $ 
+</code></pre>
+<h3 id="_101">退出虚拟环境</h3>
+<p>语法：</p>
+<pre><code class="language-bash">( &lt;name&gt; ) $ deactivate
+</code></pre>
+<h2 id="_102">知识点本</h2>
 <h3 id="1_2">1、错题</h3>
 <p><img alt="" src="../../media/%E6%88%AA%E5%B1%8F2024-02-27%20%E4%B8%8B%E5%8D%889.55.15.png" /></p>
 <h3 id="2-ascii">2、字符 和 ASCII码 转换函数</h3>
@@ -6629,7 +6738,7 @@ for name, age in zip(name_list, age_list):
 age = 24
 print(&quot;Hello %s, you are %d years old&quot; % (name, age))
 </code></pre>
-<h2 id="_99">注：</h2>
+<h2 id="_103">注：</h2>
 <p>index - n.索引</p>
 
 
