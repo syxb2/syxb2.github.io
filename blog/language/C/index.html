@@ -1,0 +1,4573 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="syxb2的主站">
+      
+      
+        <meta name="author" content="syxb2">
+      
+      
+        <link rel="canonical" href="https://syxb2.github.io/blog/language/C/">
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+        <link rel="next" href="../Python/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+    
+    
+      
+        <title>C - syxb2的主站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="syxb2的主站" class="md-header__button md-logo" aria-label="syxb2的主站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            syxb2的主站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/syxb2/syxb2.github.io/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    syxb2.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  欢迎
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  blog
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../course/Notes%20of%20Crash%20Course%20Computer%20Science/" class="md-tabs__link">
+          
+  
+    
+  
+  course
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="syxb2的主站" class="md-nav__button md-logo" aria-label="syxb2的主站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    syxb2的主站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/syxb2/syxb2.github.io/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    syxb2.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    欢迎
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    language
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            language
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1c" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、C语言中基本数据类型有：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、有符号数据类型和无符号数据类型。
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2、有符号数据类型和无符号数据类型。">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signed" class="md-nav__link">
+    <span class="md-ellipsis">
+      有符号类型要有关键字signed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsigned" class="md-nav__link">
+    <span class="md-ellipsis">
+      无符号数据类型要有关键字unsigned
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、 内存占用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3、 内存占用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      各种数据类型在64位系统下占用字节数大小：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      各种数据类型在32位系统下占用字节数大小：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、格式占位符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5c" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、c语言缓冲区
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5、c语言缓冲区">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      printf函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scanf" class="md-nav__link">
+    <span class="md-ellipsis">
+      scanf函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      getchar函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、运算符
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6、运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      * 运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      %运算符（取余）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7c" class="md-nav__link">
+    <span class="md-ellipsis">
+      7、c语言中对文件的操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7、c语言中对文件的操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      打开文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      删除文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      写文件，读文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      关闭（保存）文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8doublelf" class="md-nav__link">
+    <span class="md-ellipsis">
+      8、double的占位符是%lf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#910-printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      9、10 printf 函数格式化方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9、10 printf 函数格式化方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#float-double" class="md-nav__link">
+    <span class="md-ellipsis">
+      float, double保留两位小数的方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printf0" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用printf函数的格式化输出即可实现在数字前补0。
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11、!=表示不等于
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12euclids-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      12、求解两个整数的最大公因数的一种算法：Euclid's algorithm(欧几里得算法)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      13、数据类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14unsigned" class="md-nav__link">
+    <span class="md-ellipsis">
+      14、unsigned表示无符号的（即没有正负号）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15c" class="md-nav__link">
+    <span class="md-ellipsis">
+      15、C语言各数据类型所占字节数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16char" class="md-nav__link">
+    <span class="md-ellipsis">
+      16、char的用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17aascii" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.以下程序输出值为a的ascii码 :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18getchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      18、getchar()的用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#191d" class="md-nav__link">
+    <span class="md-ellipsis">
+      19、%1d表示按一位十进制格式输出
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20c-int-main-int-mainvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      20、C 语言 int main() 和 int main(void) 的区别
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      21、将二维数组传递到形式参数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-" class="md-nav__link">
+    <span class="md-ellipsis">
+      22、二维数组 - 先行后列
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      23、问号(和冒号)表达式（三元运算符）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      24、指向指针的指针
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25eofend-of-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      25、EOF，为End Of File的缩写，通常在文本的最后存在此字符表示资料结束。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      26、函数参数的双星号类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27c" class="md-nav__link">
+    <span class="md-ellipsis">
+      27、c语言的命令行参数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28c" class="md-nav__link">
+    <span class="md-ellipsis">
+      28、c语言判断条件在循环内的循环
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      29、运算符的优先级
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30switch-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      30、switch case语句注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31forwhile1" class="md-nav__link">
+    <span class="md-ellipsis">
+      31、for(;;){循环体}和while(1){循环体}是等价的。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      32、continue语句
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      33、前缀自加与后缀自加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34getchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      34、getchar 略测士换径免包做搜寻债景，看士换径跳初借企静测器件户染债景。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35const" class="md-nav__link">
+    <span class="md-ellipsis">
+      35、const 关键字
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="35、const 关键字">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、修饰局部变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、常量指针与指针常量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、修饰函数的参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、修饰函数的返回值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、修饰全局变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36cs0" class="md-nav__link">
+    <span class="md-ellipsis">
+      36、在C语言中求字符串s的长度时，字符串中所含字符的个数称为字符串的长度，结束标志字符\0'不参加计算。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37putchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      37、putchar的用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      38、整数的不同进制的表示、占位符以及转换
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      39、浮点数的阶码表示
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="39、浮点数的阶码表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ee10-e-e-e-e-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本形式：包含小数点的一个带符号的数字序列，接着是字母e或E，然后是一个代表10的指数的有符号值，且必须为整数。其中 e 或 E 被 称为阶码标志，e 或 E 后面的有符号整数被称为阶码。阶码代表 10 的阶码次方。
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40c" class="md-nav__link">
+    <span class="md-ellipsis">
+      40、c语言返回值类型为字符串的函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="40、c语言返回值类型为字符串的函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      先给出一个错误的例子：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      下面给出四种返回字符串的方法：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="下面给出四种返回字符串的方法：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法一：将字符串指针作为函数参数传入，并返回该指针。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mallocmalloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法二：使用malloc函数动态分配，但是一定要注意在主调函数中将其释放，应为malloc动态分配的内存位于堆区，而堆区的内存是要程序员自己释放的。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法三：返回一个静态局部变量。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法四： 使用全局变量。
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      41、数组的初始化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      42、字符数组（字符串）的初始化可以这么写：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      43、数组初始化中[]的两种不同情况
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44arrij-arr-i-j" class="md-nav__link">
+    <span class="md-ellipsis">
+      44、arr[i][j]表示数组 arr 的第 i 行第 j 列。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      45、表达式不会占用独立的存储单元，只有变量或常量占用独立的存储单元
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      46、有关函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      47、有关变量
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48static" class="md-nav__link">
+    <span class="md-ellipsis">
+      48、static（静态的）关键字
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="48、static（静态的）关键字">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1static" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、static修饰变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1、static修饰变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      全局变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      局部变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2static" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、static修饰函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49extern" class="md-nav__link">
+    <span class="md-ellipsis">
+      49、extern（外部的）关键字
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50scanfenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      50、当用scanf从键盘输入数据时，每行数据在没按下回车键（Enter键）前，可以任意修改。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      51、取地址运算符&amp;用于得到变量的地址；间接寻址运算符*用于访问指针所指向的对象。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52int-aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      52、int **a;、*a、**a都是什么？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="52、int **a;、*a、**a都是什么？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      从int* 和int 说起
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ppp" class="md-nav__link">
+    <span class="md-ellipsis">
+      那么p，*p，**p分别是什么？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53int-pint-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      53、int *p[];和int (*p)[];的区别
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      54、*在不同的语句中的大相径庭的作用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55char-s-123-char-s-12350" class="md-nav__link">
+    <span class="md-ellipsis">
+      55、对字符串数组的定义：char s[] = { "123" };是合法的。当然，也可以没有大括号：char s[] = "123"（这两个定义的数组长度均为5（有'\0'））
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      56、字符串数组的定义中，第二维长度（行的长度）必须要有，第一维长度（列的长度）可以省略
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    <span class="md-ellipsis">
+      57、预处理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    <span class="md-ellipsis">
+      58、小写字符转换为大写
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59c-qsort" class="md-nav__link">
+    <span class="md-ellipsis">
+      59、c语言的排序神器 - qsort函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="59、c语言的排序神器 - qsort函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、头文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、格式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#60c" class="md-nav__link">
+    <span class="md-ellipsis">
+      60、c语言中的强制类型转换
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61goto" class="md-nav__link">
+    <span class="md-ellipsis">
+      61、goto语句
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62c" class="md-nav__link">
+    <span class="md-ellipsis">
+      62、c语言的进制转换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="62、c语言的进制转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、任意进制转十进制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、十进制转任意进制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63c-n-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      63、C语言声明 n * m 二维矩阵
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64malloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      64、malloc 函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      65、对 C语言 中二维数组的理解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      66、链表的边界条件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67c" class="md-nav__link">
+    <span class="md-ellipsis">
+      67、C 语言数据存储区域
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-malloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      68、注意 malloc 函数的返回类型是 指针（指向所分配内存的头地址的指针）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69c" class="md-nav__link">
+    <span class="md-ellipsis">
+      69、C语言中的位移操作符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#70" class="md-nav__link">
+    <span class="md-ellipsis">
+      70、数组初始化时省略第一维的长度是合法的
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%20%26%20CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML & CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LaTeX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTeX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mathematica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operating%20System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operating System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Multipass.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multipass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Obsidian.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsidian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../利用Mkdocs与GitHub搭建个人blog.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    利用Mkdocs与GitHub搭建个人blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A9%BE%E8%80%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    驾考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../学习工作流.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习工作流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Others
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    course
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course/Notes%20of%20Crash%20Course%20Computer%20Science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes of Crash Course Computer Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course/Notes of MIT-Missing-Semester.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes of MIT-Missing-Semester
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course/%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E8%82%B2%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    中国计算机教育中缺失的一课 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course/BIT-0-C语言course 笔记.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIT-0-C语言course 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course/%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BDC%E8%AF%AD%E8%A8%80%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何学好C语言 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course/%E5%85%B3%E4%BA%8E%E5%A4%A7%E5%AD%A6%E7%9A%84%E4%B8%80%E5%88%87%20%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于大学的一切 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UESTC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            UESTC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course/UESTC/semester_1/程序设计与算法基础I 笔记.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    程序设计与算法基础I 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course/UESTC/semester_1/程序设计与项目实践（PBLF） 笔记.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    程序设计与项目实践 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1c" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、C语言中基本数据类型有：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、有符号数据类型和无符号数据类型。
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2、有符号数据类型和无符号数据类型。">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signed" class="md-nav__link">
+    <span class="md-ellipsis">
+      有符号类型要有关键字signed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsigned" class="md-nav__link">
+    <span class="md-ellipsis">
+      无符号数据类型要有关键字unsigned
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、 内存占用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3、 内存占用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      各种数据类型在64位系统下占用字节数大小：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      各种数据类型在32位系统下占用字节数大小：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、格式占位符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5c" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、c语言缓冲区
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5、c语言缓冲区">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      printf函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scanf" class="md-nav__link">
+    <span class="md-ellipsis">
+      scanf函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      getchar函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、运算符
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6、运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      * 运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      %运算符（取余）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7c" class="md-nav__link">
+    <span class="md-ellipsis">
+      7、c语言中对文件的操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7、c语言中对文件的操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      打开文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      删除文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      写文件，读文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      关闭（保存）文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8doublelf" class="md-nav__link">
+    <span class="md-ellipsis">
+      8、double的占位符是%lf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#910-printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      9、10 printf 函数格式化方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9、10 printf 函数格式化方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#float-double" class="md-nav__link">
+    <span class="md-ellipsis">
+      float, double保留两位小数的方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printf0" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用printf函数的格式化输出即可实现在数字前补0。
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11、!=表示不等于
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12euclids-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      12、求解两个整数的最大公因数的一种算法：Euclid's algorithm(欧几里得算法)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      13、数据类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14unsigned" class="md-nav__link">
+    <span class="md-ellipsis">
+      14、unsigned表示无符号的（即没有正负号）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15c" class="md-nav__link">
+    <span class="md-ellipsis">
+      15、C语言各数据类型所占字节数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16char" class="md-nav__link">
+    <span class="md-ellipsis">
+      16、char的用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17aascii" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.以下程序输出值为a的ascii码 :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18getchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      18、getchar()的用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#191d" class="md-nav__link">
+    <span class="md-ellipsis">
+      19、%1d表示按一位十进制格式输出
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20c-int-main-int-mainvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      20、C 语言 int main() 和 int main(void) 的区别
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      21、将二维数组传递到形式参数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-" class="md-nav__link">
+    <span class="md-ellipsis">
+      22、二维数组 - 先行后列
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      23、问号(和冒号)表达式（三元运算符）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      24、指向指针的指针
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25eofend-of-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      25、EOF，为End Of File的缩写，通常在文本的最后存在此字符表示资料结束。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      26、函数参数的双星号类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27c" class="md-nav__link">
+    <span class="md-ellipsis">
+      27、c语言的命令行参数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28c" class="md-nav__link">
+    <span class="md-ellipsis">
+      28、c语言判断条件在循环内的循环
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      29、运算符的优先级
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30switch-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      30、switch case语句注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31forwhile1" class="md-nav__link">
+    <span class="md-ellipsis">
+      31、for(;;){循环体}和while(1){循环体}是等价的。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      32、continue语句
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      33、前缀自加与后缀自加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34getchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      34、getchar 略测士换径免包做搜寻债景，看士换径跳初借企静测器件户染债景。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35const" class="md-nav__link">
+    <span class="md-ellipsis">
+      35、const 关键字
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="35、const 关键字">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、修饰局部变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、常量指针与指针常量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、修饰函数的参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、修饰函数的返回值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、修饰全局变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36cs0" class="md-nav__link">
+    <span class="md-ellipsis">
+      36、在C语言中求字符串s的长度时，字符串中所含字符的个数称为字符串的长度，结束标志字符\0'不参加计算。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37putchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      37、putchar的用法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      38、整数的不同进制的表示、占位符以及转换
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      39、浮点数的阶码表示
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="39、浮点数的阶码表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ee10-e-e-e-e-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本形式：包含小数点的一个带符号的数字序列，接着是字母e或E，然后是一个代表10的指数的有符号值，且必须为整数。其中 e 或 E 被 称为阶码标志，e 或 E 后面的有符号整数被称为阶码。阶码代表 10 的阶码次方。
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40c" class="md-nav__link">
+    <span class="md-ellipsis">
+      40、c语言返回值类型为字符串的函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="40、c语言返回值类型为字符串的函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      先给出一个错误的例子：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      下面给出四种返回字符串的方法：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="下面给出四种返回字符串的方法：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法一：将字符串指针作为函数参数传入，并返回该指针。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mallocmalloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法二：使用malloc函数动态分配，但是一定要注意在主调函数中将其释放，应为malloc动态分配的内存位于堆区，而堆区的内存是要程序员自己释放的。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法三：返回一个静态局部变量。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法四： 使用全局变量。
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      41、数组的初始化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      42、字符数组（字符串）的初始化可以这么写：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      43、数组初始化中[]的两种不同情况
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44arrij-arr-i-j" class="md-nav__link">
+    <span class="md-ellipsis">
+      44、arr[i][j]表示数组 arr 的第 i 行第 j 列。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      45、表达式不会占用独立的存储单元，只有变量或常量占用独立的存储单元
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      46、有关函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      47、有关变量
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48static" class="md-nav__link">
+    <span class="md-ellipsis">
+      48、static（静态的）关键字
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="48、static（静态的）关键字">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1static" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、static修饰变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1、static修饰变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      全局变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      局部变量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2static" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、static修饰函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49extern" class="md-nav__link">
+    <span class="md-ellipsis">
+      49、extern（外部的）关键字
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50scanfenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      50、当用scanf从键盘输入数据时，每行数据在没按下回车键（Enter键）前，可以任意修改。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      51、取地址运算符&amp;用于得到变量的地址；间接寻址运算符*用于访问指针所指向的对象。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52int-aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      52、int **a;、*a、**a都是什么？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="52、int **a;、*a、**a都是什么？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      从int* 和int 说起
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ppp" class="md-nav__link">
+    <span class="md-ellipsis">
+      那么p，*p，**p分别是什么？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53int-pint-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      53、int *p[];和int (*p)[];的区别
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      54、*在不同的语句中的大相径庭的作用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55char-s-123-char-s-12350" class="md-nav__link">
+    <span class="md-ellipsis">
+      55、对字符串数组的定义：char s[] = { "123" };是合法的。当然，也可以没有大括号：char s[] = "123"（这两个定义的数组长度均为5（有'\0'））
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      56、字符串数组的定义中，第二维长度（行的长度）必须要有，第一维长度（列的长度）可以省略
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    <span class="md-ellipsis">
+      57、预处理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    <span class="md-ellipsis">
+      58、小写字符转换为大写
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59c-qsort" class="md-nav__link">
+    <span class="md-ellipsis">
+      59、c语言的排序神器 - qsort函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="59、c语言的排序神器 - qsort函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、头文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、格式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#60c" class="md-nav__link">
+    <span class="md-ellipsis">
+      60、c语言中的强制类型转换
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61goto" class="md-nav__link">
+    <span class="md-ellipsis">
+      61、goto语句
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62c" class="md-nav__link">
+    <span class="md-ellipsis">
+      62、c语言的进制转换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="62、c语言的进制转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、任意进制转十进制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、十进制转任意进制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63c-n-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      63、C语言声明 n * m 二维矩阵
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64malloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      64、malloc 函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      65、对 C语言 中二维数组的理解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      66、链表的边界条件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67c" class="md-nav__link">
+    <span class="md-ellipsis">
+      67、C 语言数据存储区域
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-malloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      68、注意 malloc 函数的返回类型是 指针（指向所分配内存的头地址的指针）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69c" class="md-nav__link">
+    <span class="md-ellipsis">
+      69、C语言中的位移操作符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#70" class="md-nav__link">
+    <span class="md-ellipsis">
+      70、数组初始化时省略第一维的长度是合法的
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="c">C</h1>
+<h3 id="1c">1、C语言中基本数据类型有：</h3>
+<p>字符型：char</p>
+<p>短整型：short</p>
+<p>整型：int</p>
+<p>长整型：long</p>
+<p>单精度浮点型：float</p>
+<p>双精度浮点型：double</p>
+<p>无类型：void</p>
+<h3 id="2">2、有符号数据类型和无符号数据类型。</h3>
+<h4 id="signed">有符号类型要有关键字signed</h4>
+<p>有符号数据类型有：</p>
+<p>有符号字符型：signed char和char（默认情况下char是有符号类型）</p>
+<p>有符号短整型：signed short和short（默认情况下short是有符号类型）</p>
+<p>有符号整型：signed int和int（默认情况下int是有符号类型）</p>
+<p>有符号长整型：signed long和long（默认情况下long是有符号型）</p>
+<p>有符号单精度浮点型：float（默认情况下float是有符号型）</p>
+<p>有符号双精度浮点型：double（默认情况下double是有符号型）</p>
+<h4 id="unsigned">无符号数据类型要有关键字unsigned</h4>
+<p>无符号数据类型有：</p>
+<p>无符号字符型：unsigned char</p>
+<p>无符号短整型：unsigned short</p>
+<p>无符号整型：unsigned int</p>
+<p>无符号长整型：unsigned long</p>
+<h3 id="3">3、 内存占用</h3>
+<p><em>在C语言里，同一数据类型的无符号型和有符号型占用字节数都是一样的，区别就是是否有符号能表示负数，我们用sizeof关键字获取各种数据类型占用字节数。</em></p>
+<h4 id="64">各种数据类型在64位系统下占用字节数大小：</h4>
+<p>字符型：char 占用1个字节</p>
+<p>短整型：short  占用2个字节</p>
+<p>整型：int  占用4个字节</p>
+<p>长整型：long 占用8字节</p>
+<p>单精度浮点型：float 占用4字节</p>
+<p>双精度浮点型：double 占用8字节</p>
+<p>无类型：void 占用1个字节</p>
+<h4 id="32">各种数据类型在32位系统下占用字节数大小：</h4>
+<p>字符型：char 占用1个字节</p>
+<p>短整型：short  占用2个字节</p>
+<p>整型：int  占用4个字节</p>
+<p>长整型：long 占用4字节</p>
+<p>单精度浮点型：float 占用4字节</p>
+<p>双精度浮点型：double 占用8字节</p>
+<p>无类型：void 占用1个字节</p>
+<h3 id="4">4、格式占位符</h3>
+<p>字符型：char打印格式%c</p>
+<p>短整型：short打印格式%d，unsigned short打印格式%u</p>
+<p>整型：int打印格式%d，unsigned int打印格式%u</p>
+<p>长整型：long打印格式%ld，unsigned log打印格式%lu</p>
+<p>单精度浮点型：float打印格式%f</p>
+<p>双精度浮点型：double打印格式%lf</p>
+<h3 id="5c">5、c语言缓冲区</h3>
+<h4 id="printf">printf函数</h4>
+<p>默认是行缓冲，当输出字符串里有\n或者行缓冲区被填满或者手动调用fflush函数或者程序结束时才会一次性将数据输出（并清空缓冲区）。现在你只要加上一条语句输出换行符，就能在标准输出输出字符串了。</p>
+<p>或者我们手动调用fflush也可以强制刷新缓冲区，输出字符串。</p>
+<h4 id="scanf">scanf函数</h4>
+<p>scanf函数会从缓冲区顺序读取参数中格式化的内容</p>
+<p>如：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+  int a;
+  // scanf(&quot;%d&quot;, &amp;a);
+
+  for (int i = 0; i &lt; 5; i++) {
+    scanf(&quot;%d&quot;, &amp;a);
+    printf(&quot;%d\n&quot;, a);
+  }
+
+  return 0;
+}
+</code></pre>
+<p>当(一次性)输入</p>
+<pre><code>123 123 324 345 232
+</code></pre>
+<p>时</p>
+<p>程序输出</p>
+<pre><code>123
+123
+324
+345
+232
+</code></pre>
+<p>当输入</p>
+<pre><code>3.2
+</code></pre>
+<p>时</p>
+<p>程序输出</p>
+<pre><code>3
+3
+3
+3
+3
+</code></pre>
+<p>（？）</p>
+<h4 id="getchar">getchar函数</h4>
+<p>从缓冲区顺序读取<code>一个</code>字符并返回到getchar()调用处</p>
+<p>缓冲区的字符一旦被读取就会自动从缓冲区离开</p>
+<h3 id="6">6、运算符</h3>
+<h4 id="_1"><code>/</code>运算符</h4>
+<p>两个整数相除结果是商向下取整两个数相除</p>
+<p>任意一方是浮点型结果是商保留整数部分和小数部分</p>
+<h4 id="_2"><code>*</code> 运算符</h4>
+<p>乘法运算和除法运算结果有一个不同之处就是，乘法运算的结果不会发生截断，两个数都是整数，结果则是整数。两个数任意一方是浮点数，结果则是浮点数，但是我们通常情况下会遇到类似下面的代码。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    float num1 = 5.1;
+    int num2 = 2;
+    int num3 = num1 * num2; 
+    printf(&quot;num3 = %d\n&quot;, num3);    
+               
+    return 0；
+}
+</code></pre>
+<p>输出num3=10</p>
+<p>其实这是发生了截断，但不是乘法运算的截断，而是在C语言里浮点型强制转换成整型会发生数据截断，小数部分被丢弃了。那么我们怎么知道数据发生了截断呢？看看下面这段代码我们就知道了。</p>
+<h4 id="_3"><code>%</code>运算符（取余）</h4>
+<p>在C语言里%只能对整型进行求余，任意一方是浮点型时，语法错误。</p>
+<h3 id="7c">7、c语言中对文件的操作</h3>
+<h4 id="_4">打开文件</h4>
+<pre><code class="language-c">FILE *fp = fopen(&quot;/Users/baijiale/Documents/VisualStudioCode/c/CUnderline/Homework/icoding/Experience6/goodsinfo.txt&quot;, &quot;r&quot;);
+</code></pre>
+<p>fp为指向文件（开头）的指针</p>
+<h4 id="_5">删除文件</h4>
+<p>remove() 函数</p>
+<h4 id="_6">写文件，读文件</h4>
+<ul>
+<li>fprintf() 函数</li>
+</ul>
+<pre><code class="language-c">char name[20] = &quot;Mary&quot;;
+FILE *out;
+out = fopen(&quot;output.txt&quot;, &quot;w&quot;);
+if (out != NULL)
+    fprintf(out, &quot;Hello %s\n&quot;, name);
+</code></pre>
+<ul>
+<li>fscanf() 函数</li>
+</ul>
+<p><img alt="350" src="../media/ba29545ed3b6ca6ab8ef5331f890c0ca.png" /></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+{
+    FILE *fp = fopen(&quot;/home/xs/test.txt&quot;,&quot;r&quot;);
+    int i,j;    
+    for (i = 0; i &lt; 7; i++)
+    {
+        fscanf(fp,&quot;%d&quot;,&amp;j);
+        printf(&quot;%d\n&quot;,j);
+    }
+    fclose(fp);
+    return 0;
+}
+</code></pre>
+<p>输出：</p>
+<pre><code class="language-sh">5
+12
+123
+1234
+12
+21
+80
+</code></pre>
+<h4 id="_7">关闭（保存）文件</h4>
+<p>对文件操作完之后要使用 fclose() 函数关闭文件，这样文件才能保存</p>
+<p>fclose() 中，唯一参数是指向所要关闭文件的指针</p>
+<p>TODO</p>
+<h3 id="8doublelf">8、<code>double</code>的占位符是<code>%lf</code></h3>
+<h3 id="910-printf">9、10 printf 函数格式化方法</h3>
+<ul>
+<li><code>%m.ns</code> m, n 是整数，m表示域宽，n表示精度。默认在左侧补空格</li>
+<li><code>%-m.ns</code> <code>-</code> 表示在右侧补空格</li>
+</ul>
+<h4 id="float-double">float, double保留两位小数的方法</h4>
+<p>占位符<code>%f</code>/<code>%lf</code>写成<code>%.2f</code>/<code>%.2lf</code></p>
+<h4 id="printf0">使用printf函数的格式化输出即可实现在数字前补0。</h4>
+<p>例如： <code>printf("a=%06d\n", a);</code> //输出6位 十进制 整数 左边补0，显示 a=001234；这里%06d的0就是指在前面补0占位，6代表 位宽 。</p>
+<p>TODO</p>
+<h3 id="11">11、<code>!=</code>表示不等于</h3>
+<h3 id="12euclids-algorithm">12、求解两个整数的最大公因数的一种算法：Euclid's algorithm(欧几里得算法)</h3>
+<p>分别让变量 m 和 n 存储两个整数。如果 n 为 0，那么停止操作，m 中的值是 GCD ；否则计算 m 除以 n 的余数，把 n 保存到 m 中，并把余数保存到 n 中；重复上述操作，每次都先判断n是否为 0。</p>
+<h3 id="13">13、数据类型</h3>
+<ul>
+<li>float - 单精度浮点数 - 4 byte</li>
+<li>double - 双精度浮点数 - 8 byte
+    // 小数 - 浮点数（因为小数点可以左右浮动15.6=1.56*10^1）</li>
+<li>int - 整型 - 4 byte</li>
+<li>short - 短整形 - 2 byte</li>
+<li>long - 长整型 - 4 byte
+    // 规定sizeof(long) &gt;= sizeof(int) 即可</li>
+<li>long long - 更长的整型 - 8 byte</li>
+<li>char - 字符数据类型 - 1 byte</li>
+</ul>
+<h3 id="14unsigned">14、unsigned表示无符号的（即没有正负号）</h3>
+<p>如int储存的范围为-32768~32767，而unsigned int储存的范围为0~65535（没有负值）</p>
+<h3 id="15c">15、C语言各数据类型所占字节数</h3>
+<p><img alt="350" src="../../media/%E6%88%AA%E5%B1%8F2023-10-11%20%E4%B8%8B%E5%8D%8810.14.39.png" /></p>
+<h3 id="16char">16、char的用法</h3>
+<p>char 类型 只能存放单个字符或字符常量( ASCII 值): char c='A'(必须用单引号将<code>字符</code>引起来) 或者 char=65</p>
+<p>字符型在其本质上就是整形，所以当我们遇到97时我们有两种读出方式，第一种以整数形式读出就是97，另一种就是以字符型读出，使用%c指定读出形式，则对照表则为a。</p>
+<h3 id="17aascii">17.以下程序输出值为a的ascii码 :</h3>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 'a';
+    printf(&quot;%d\n&quot;, a);
+
+    return 0;
+}
+</code></pre>
+<h3 id="18getchar">18、<code>getchar()</code>的用法</h3>
+<p><strong><code>getchar()</code>是在输入缓冲区顺序读入一个字符(包括空格、回车和Tab)</strong></p>
+<p>第一次<code>getchar()</code>时，确实需要人工的输入，但是如果你输了多个字符，以后的getchar()再执行时就会直接从缓冲区中读取了。</p>
+<p>键盘输入的字符都存到缓冲区内,一旦键入回车,getchar就进入缓冲区读取字符,一次只返回第一个字符作为getchar函数的值,如果有循环或足够多的getchar语句,就会依次读出缓冲区内的所有字符直到'\n'.</p>
+<p>之所以你输入的一系列字符被依次读出来,是因为循环的作用使得反复利用getchar在缓冲区里读取字符,而不是getchar可以读取多个字符,事实上getchar每次只能读取一个字符。</p>
+<p>使用下面的语句清除回车：<code>while (getchar() != '\n');</code></p>
+<h3 id="191d">19、<code>%1d</code>表示按一位十进制格式输出</h3>
+<p>如：</p>
+<pre><code class="language-c">scanf(&quot;%1d%1d%1d%1d%1d&quot;, &amp;j1, &amp;j2, &amp;j3, &amp;j4, &amp;j5);
+</code></pre>
+<p>中，当输入12345时分别将1存入j1，将2存入j2...</p>
+<h3 id="20c-int-main-int-mainvoid">20、C 语言 int main() 和 int main(void) 的区别</h3>
+<p>int main(void) 指的是此函数的参数为空，不能传入参数，如果你传入参数，就会出错。</p>
+<p>int main() 表示可以传入参数。</p>
+<p>在 C++ 中 int main() 和 int main(void) 是等效的，但在 C 中让括号空着代表编译器对是否接受参数保持沉默。c</p>
+<h3 id="21">21、将二维数组传递到形式参数</h3>
+<p>假设把二维数组 array 传进函数，可以这样写 int (<em>array)[10]，注意这里的 </em>array 必须用括号括起来，否则 int *array[10] 参数相当于是声明了一个数组，该数组有10个元素，其中每个元素都是一个指向整型对象的指针。</p>
+<p>但是不能把第二维或者更高维的大小省略，如下面的定义是不合法的：</p>
+<pre><code class="language-c">void Func(int array[][10]);
+</code></pre>
+<p>而要写成：</p>
+<pre><code class="language-c">
+void Func(int (*array)[10]);
+</code></pre>
+<h3 id="22-">22、二维数组 - 先行后列</h3>
+<p>如：<code>a[1][2]</code>是二维数组的第2行第3列的元</p>
+<h3 id="23">23、问号(和冒号)表达式（三元运算符）</h3>
+<pre><code class="language-c">(表达式1)？(表达式2):(表达式3)
+</code></pre>
+<p>如果表达式1成立则执行表达式2，否则执行表达式3</p>
+<p>如：</p>
+<pre><code class="language-c">int a = 5,b = 3;
+printf(&quot;%d&quot;, a &gt; b? a : b);
+</code></pre>
+<p>即：如果a &gt; b，就打印a；如果a &lt; b，就打印b。</p>
+<p><strong>问号左侧条件成立时执行冒号左侧表达式，问号左侧条件不成立时执行冒号右侧表达式</strong></p>
+<p>注意：</p>
+<p>问号表达式是从右向左运行</p>
+<p>例如  </p>
+<pre><code class="language-c">int a = 8, b = 3, c = 7;
+printf(&quot;%d&quot;, a &gt; b ? a &gt; c ? a : c : b &gt; c ? b : c);
+// 即printf(&quot;%d&quot;, a &gt; b ? (a &gt; c ? a : c) : (b &gt; c ? b : c));
+</code></pre>
+<p>可以分成三步完成</p>
+<p>第一步：b&gt;c?b:c 结果为c</p>
+<p>第二步：a&gt;c?a:c 结果为a</p>
+<p>第三步：前两步的结果分别对应表达式3和表达式2 即a&gt;b?a:c</p>
+<p>最终输出结果为a即8</p>
+<h3 id="24">24、指向指针的指针</h3>
+<pre><code class="language-c">int **p;
+</code></pre>
+<h3 id="25eofend-of-file">25、EOF，为End Of File的缩写，通常在文本的最后存在此字符表示资料结束。</h3>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main(){
+    int n;
+  while(scanf(&quot;%d&quot;,&amp;n) != EOF){ 
+    ?
+  }
+    return 0;
+}
+</code></pre>
+<h3 id="26">26、函数参数的双星号类型</h3>
+<p>如：</p>
+<pre><code class="language-c">void init_list(GoodsList** L) {
+  FILE *fp = fopen(&quot;/Users/baijiale/Documents/VisualStudioCode/c/CUnderline/Homework/ICODING/Experience6/goodsinfo.txt&quot;, &quot;r&quot;);
+  *L = (GoodsList*) malloc(sizeof(GoodsList));
+  (*L)-&gt;next = NULL;
+  GoodsList *temp = (GoodsList*) malloc(sizeof(GoodsList));
+  GoodsList *pre;
+  temp-&gt;next = NULL;
+  (*L)-&gt;data = temp-&gt;data;
+  (*L)-&gt;next = temp;
+  pre = *L;
+  temp = (GoodsList*) malloc(sizeof(GoodsList));
+  while (fscanf(fp, &quot;%s %s %d %s %d %d\n&quot;, temp-&gt;data.goods_id, temp-&gt;data.goods_name, &amp;temp-&gt;data.goods_price, temp-&gt;data.goods_discount, &amp;temp-&gt;data.goods_amount, &amp;temp-&gt;data.goods_remain) != EOF) {
+
+  }
+  temp-&gt;next = (*L)-&gt;next;
+  (*L) = temp;
+}
+
+int main() {
+  GoodsList* p;
+  init_list(&amp;p);
+
+  return 0;
+}
+</code></pre>
+<p><strong>双星号的目的就是使函数能够改变（main函数中的）实际参数p（指针）；如为使函数结束后p指针变为NULL，则函数必须使用双星号，要不没法改变p本身</strong></p>
+<p>这里的<code>(*L)</code>完全等价于main函数中的<code>p</code>（而没有形式参数和实际参数的区别）。</p>
+<p>这样做可以用函数改变变量p（指针）的值。（p的基类型是GoodsList*，所以参数列表中<code>GoodList**</code>实际是<code>(GoodList*)*</code>，当调用时函数传进来的是p（p本身是一个指针（地址））的地址，为的是可以用函数改变p的值）</p>
+<p><strong>如果单独来看这个函数，<code>L</code>就是指针p的地址，<code>*L</code>就是指针p，<code>**L</code>就是指针p指向的对象。并且<code>*L</code>和<code>**L</code>都不遵从形式参数的规则，它们都相当于实际参数</strong> -- 记住这个就行了</p>
+<p>类比单星号：</p>
+<pre><code class="language-c">void a (int *t) {
+  *t = 1;
+}
+
+int main() {
+  int n = 0;
+  a(&amp;n);
+
+  return 0;
+}
+</code></pre>
+<p>这样做可以用<code>函数</code>改变变量n的值</p>
+<h3 id="27c">27、c语言的命令行参数</h3>
+<p>之前曾经使用过很多次c语言的命令行参数了，但是总是每次使用的时候都不太确定，需要重新查资料，这次来个总结。c语言的命令行参数非常简单，只需要一个简单的例子就可以说明：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+void main(int argc,char** argv)
+{
+    printf(&quot;%d\n&quot;,argc);
+    printf(&quot;%s\n&quot;,argv[0]);
+    printf(&quot;%s\n&quot;,argv[1]);
+    printf(&quot;%s\n&quot;,argv[2]);
+}
+</code></pre>
+<p>在上面的例子中，我们给main函数传递两个参数，argc和argv。argc是<code>int</code>类型的，它表示的是命令行参数的个数。不许要用户传递，它会根据用户从命令行输入的参数个数，自动确定。argv是<code>char**</code>类型的，它的作用是用一个二维数组存储用户从命令行传递进来的多个参数。它的第一个成员是用户运行的程序名字。</p>
+<p>对于上面的例子，我们将其保存为test.c，用gcc编译生成目标文件为test，测试如下：</p>
+<p>（1）我们值在命令行下直接运行程序，没有传递其它任何参数：</p>
+<pre><code>./test
+</code></pre>
+<p>运行结果如下：</p>
+<pre><code>1
+./test
+</code></pre>
+<p>第一个输出的是argc，因为我们只输入了./test，所以argc为1，即只有一个命令行参数。后面输出的第一个命令行参数也是./test。接着程序就出错了，因为后面已经没有第二个和第三个参数了，在写实际的应用时，应注意对这一部分进行容错处理。</p>
+<p>（2）我们在命令行下输入：</p>
+<pre><code>./test hello world
+</code></pre>
+<p>结果：</p>
+<pre><code>3
+./test
+hello
+world
+</code></pre>
+<p>可以看到argc为3，第一个参数为./test，第二个参数为hello，第三个参数为world。</p>
+<p>（3）我们继续输入：</p>
+<pre><code>./test hello world hello world
+</code></pre>
+<p>结果：</p>
+<pre><code>5
+./test
+hello
+world
+</code></pre>
+<p>可以看到这时，argc变为5，argv指数出了前面三个参数(因为main函数中只写了三个printf)，当然还可以把后面的两个参数也进行输出。</p>
+<p>如果命令行中传递的一个参数包括空格，就需要用用“”将参数扩起来例如：</p>
+<pre><code>./test &quot;hello world&quot; &quot;hello world&quot;
+</code></pre>
+<p>我们将hello world整体当作一个参数传递，就需要使用“hello  world”。</p>
+<p>需要注意的是argv的类型可以是char ** argv，char argv[ ][ ]，char* argv[ ]。</p>
+<p><strong>下面再举一个例子，对于C语言的文件操作，可以用到命令行传参的方式来控制用什么方式打开什么文件：</strong></p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+int main(int argc,char *argv[])
+{
+    int ch;
+    FILE *fp;
+    if(argc!=3)
+    {
+        printf(&quot;Error&quot;);
+        return -1;
+    }
+    if((fp=fopen(argv[1],argv[2])) == NULL)
+    {
+        printf(&quot;Error&quot;);
+        return -1;
+    }
+    ch = fgetc(fp);
+    while(ch!=EOF)
+    {
+        putchar(ch);
+        ch = fgetc(fp);
+    }
+    fclose(fp);
+    return 0;
+}
+</code></pre>
+<p>以read的方式打开名字为test.txt的文本:</p>
+<pre><code>a.exe test.txt r
+</code></pre>
+<h3 id="28c">28、c语言判断条件在循环内的循环</h3>
+<p>写成：</p>
+<pre><code class="language-c">while (1) {
+  ...
+  if () {
+    break;
+  }
+  ...
+}
+</code></pre>
+<p>即可</p>
+<h3 id="29">29、运算符的优先级</h3>
+<p>赋值运算符&lt;逻辑运算符&lt;关系运算符&lt;算术运算符</p>
+<h3 id="30switch-case">30、switch case语句注意事项</h3>
+<ul>
+<li>当switch后面括号内“表达式”的值与某个case后面的“常量表达式”的值相等时，就执行此case后面的语句。执行完一个case后面的语句后，流程控制转移到下一个case继续执行。如果你只想执行这一个case语句，不想执行其他case，那么就需要在这个case语句后面加上break，跳出switch语句。</li>
+<li>“case常量表达式”只是起语句标号的作用，并不是在该处进行判断。<strong>在执行 switch 语句时，根据 switch 后面表达式的值找到匹配的入口标号，就从此标号开始执行下去，不再进行判断。</strong></li>
+<li>当然你也可以不要 default 语句，就跟 if…else 最后不要 else 语句一样。但最好是加上，后面可以什么都不写。这样可以避免别人误以为你忘了进行 default 处理，而且可以提醒别人 switch 到此结束了。</li>
+<li>但是需要注意的是，default 后面可以什么都不写，但是后面的冒号和分号千万不能省略，省略了就是语法错误。很多新手在这个地方很容易出错，要么忘了分号，要么忘了冒号，所以要注意！</li>
+</ul>
+<h3 id="31forwhile1">31、<code>for(;;){循环体}</code>和<code>while(1){循环体}</code>是等价的。</h3>
+<h3 id="32continue">32、continue语句</h3>
+<p>continue语句的作用是跳过本次循环体中余下尚未执行的语句，立即进行下一次的循环条件判定，可以理解为仅结束本次循环。</p>
+<p>注意：continue语句并没有使整个循环终止。</p>
+<h3 id="33">33、前缀自加与后缀自加</h3>
+<p>前缀自加表达式的值是自加之后的值，而后缀自加表达式的值是自加前的值。</p>
+<p>如</p>
+<pre><code class="language-c">int main() {
+  int a = 0;
+
+  printf(&quot;%d\n&quot;, ++a);
+  printf(&quot;%d\n&quot;, a);
+
+  return 0;
+}
+</code></pre>
+<p>输出：</p>
+<pre><code>1
+1
+</code></pre>
+<p>而</p>
+<pre><code class="language-c">int main() {
+  int a = 0;
+
+  printf(&quot;%d\n&quot;, a++);
+  printf(&quot;%d\n&quot;, a);
+
+  return 0;
+}
+</code></pre>
+<p>输出：</p>
+<pre><code>0
+1
+</code></pre>
+<h3 id="34getchar">34、getchar 略测士换径免包做搜寻债景，看士换径跳初借企静测器件户染债景。</h3>
+<h3 id="35const">35、const 关键字</h3>
+<p>关键字const用来定义常量，如果一个变量被const修饰，那么它的值就不能再被改变，我想一定有人有这样的疑问，C语言中不是有#define吗，干嘛还要用const呢，我想事物的存在一定有它自己的道理，所以说const的存在一定有它的合理性，与预编译指令相比，const修饰符有以下的优点：</p>
+<ol>
+<li>预编译指令只是对值进行简单的替换，不能进行类型检查</li>
+<li>可以保护被修饰的东西，防止意外修改，增强程序的健壮性</li>
+<li>编译器通常不为普通const常量分配存储空间，而是将它们保存在符号表中，这使得它成为一个编译期间的常量，没有了存储与读内存的操作，使得它的效率也很高。</li>
+</ol>
+<p>下面我们从几个方面来说一下const的用法：</p>
+<h4 id="_8">一、修饰局部变量</h4>
+<pre><code class="language-c">const int n=5;
+int const n=5;
+</code></pre>
+<p>这两种写法是一样的，都是表示变量n的值不能被改变了，需要注意的是，用const修饰变量时，一定要给变脸初始化，否则之后就不能再进行赋值了。</p>
+<p>接下来看看const用于修饰常量静态字符串，例如：</p>
+<pre><code class="language-c">const char* str=&quot;fdsafdsa&quot;;
+</code></pre>
+<p><strong>如果没有const的修饰，我们可能会在后面有意无意的写 <code>str[4]=’x’</code> 这样的语句，这样会导致对只读内存区域的赋值，然后程序会立刻异常终止。有了const，这个错误就能在程序被编译的时候就立即检查出来，这就是const的好处。让逻辑错误在编译期被发现。</strong></p>
+<h4 id="_9">二、常量指针与指针常量</h4>
+<p>常量指针是指针指向的内容是常量，可以有一下两种定义方式。</p>
+<pre><code class="language-c">const int * n;
+int const * n;
+</code></pre>
+<p>需要注意的是一下两点：</p>
+<p>1、常量指针说的是不能通过这个指针改变变量的值，但是还是可以通过其他的引用来改变变量的值的。</p>
+<pre><code class="language-c">int a=5;
+const int* n=&amp;a;
+a=6;
+</code></pre>
+<p>2、常量指针指向的值不能改变，但是这并不是意味着指针本身不能改变，常量指针可以指向其他的地址。</p>
+<pre><code class="language-c">int a=5;
+int b=6;
+const int* n=&amp;a;
+n=&amp;b;
+</code></pre>
+<p>指针常量是指指针本身是个常量，不能在指向其他的地址，写法如下：</p>
+<pre><code class="language-c">int *const n;
+</code></pre>
+<p>需要注意的是，指针常量指向的地址不能改变，但是地址中保存的数值是可以改变的，可以通过其他指向改地址的指针来修改。</p>
+<pre><code class="language-c">int a=5;
+int *p=&amp;a;
+int* const n=&amp;a;
+*p=8;
+</code></pre>
+<p><em>区分<code>(指向)常量(的)指针</code>和<code>指针(是)常量</code>的关键就在于星号的位置，我们以星号为分界线，如果const在星号的左边，则为常量指针，如果const在星号的右边则为指针常量。</em> <strong>如果我们将星号读作‘指针’，将const读作‘常量’的话，内容正好符合。</strong>int const * n；是常量指针，int *const n；是指针常量。</p>
+<p>3、指向常量的常指针</p>
+<p>是以上两种的结合，指针指向的位置不能改变并且也不能通过这个指针改变变量的值，但是依然可以通过其他的普通指针改变变量的值。</p>
+<pre><code class="language-c">const int* const p;
+</code></pre>
+<h4 id="_10">三、修饰函数的参数</h4>
+<p>根据常量指针与指针常量，const修饰函数的参数也是分为三种情况</p>
+<p>1、防止修改指针指向的内容</p>
+<pre><code class="language-c">void StringCopy(char *strDestination, const char *strSource);
+</code></pre>
+<p>其中 strSource 是输入参数，strDestination 是输出参数。给 strSource 加上 const 修饰后，如果函数体内的语句试图改动 strSource 的内容，编译器将指出错误。</p>
+<p>2、防止修改指针指向的地址</p>
+<pre><code class="language-c">void swap ( int * const p1 , int * const p2 )
+</code></pre>
+<p>指针p1和指针p2指向的地址都不能修改。</p>
+<p>3、以上两种的结合。</p>
+<h4 id="_11">四、修饰函数的返回值</h4>
+<p>如果给以“指针传递”方式的函数返回值加 const 修饰，那么函数返回值（即指针）的内容不能被修改，<strong>该返回值只能被赋给加const 修饰的同类型指针。</strong></p>
+<p>例如函数</p>
+<pre><code class="language-c">const char * GetString(void);
+</code></pre>
+<p>如下语句将出现编译错误：</p>
+<pre><code class="language-c">char *str = GetString();
+</code></pre>
+<p>正确的用法是</p>
+<pre><code class="language-c">const char *str = GetString();
+</code></pre>
+<h4 id="_12">五、修饰全局变量</h4>
+<p>全局变量的作用域是整个文件，我们应该尽量避免使用全局变量，因为一旦有一个函数改变了全局变量的值，它也会影响到其他引用这个变量的函数，导致除了bug后很难发现，如果一定要用全局变量，我们应该尽量的使用const修饰符进行修饰，这样防止不必要的人为修改，使用的方法与局部变量是相同的。</p>
+<h3 id="36cs0">36、在C语言中求字符串s的长度时，字符串中所含字符的个数称为字符串的长度，结束标志字符\0'不参加计算。</h3>
+<h3 id="37putchar">37、putchar的用法</h3>
+<pre><code class="language-c">char a = 'A';
+
+putchar(a);
+printf(&quot;\n&quot;);
+
+return 0;
+</code></pre>
+<p>输出</p>
+<pre><code>A
+</code></pre>
+<h3 id="38">38、整数的不同进制的表示、占位符以及转换</h3>
+<ul>
+<li>八进制必须以0开头，如：012，-012</li>
+<li>十六进制必须以0x或0X开头，如：0x12，-0x12</li>
+<li>注：标准的c语言不支持二进制，但有些编译器进行了扩展，这之中的二进制必须以0b或0B开头，如：0b0010，-0b0010</li>
+</ul>
+<pre><code class="language-c">int main() {
+
+  print(&quot;%d %x %o\n&quot;, 125, 125, 125);
+
+  return 0;
+}
+</code></pre>
+<ul>
+<li>%d - 十进制</li>
+<li>%x - 十六进制</li>
+<li>%o - 八进制</li>
+</ul>
+<p>输出：</p>
+<pre><code>125 7d 175
+</code></pre>
+<h3 id="39">39、浮点数的阶码表示</h3>
+<h4 id="ee10-e-e-e-e-10">基本形式：<code>包含小数点的一个带符号的数字序列</code>，接着是字母<code>e或E</code>，然后是一个<code>代表10的指数的有符号值，且必须为整数</code>。其中 e 或 E 被 称为阶码标志，e 或 E 后面的有符号整数被称为阶码。阶码代表 10 的阶码次方。</h4>
+<p>例如：</p>
+<pre><code>-1.56E+12；
+2.87e-3；
+-8e1.0；错
+</code></pre>
+<p><strong>浮点型常量可以省略正号，可以没有小数点或指数部分。</strong></p>
+<p>例如：</p>
+<pre><code>2E5；
+19.28；
+</code></pre>
+<p><strong>但是不能同时没有二者。</strong></p>
+<p>例如：</p>
+<pre><code>19；错
+</code></pre>
+<p><strong>浮点型常量可以省略小数或者整数部分，但不能同时省略。</strong></p>
+<p>例如：</p>
+<pre><code>e3；错
+</code></pre>
+<p><strong>注意：e前后的实数和整数不能省略。</strong></p>
+<pre><code>-80.0e;错
+</code></pre>
+<p><strong>注意：浮点型常量中不能有空格！例如：</strong></p>
+<pre><code>3.21e -12 /* 有空格，错！ */
+3.14e5 /* 有空格，错！ */
+</code></pre>
+<p><strong>注意：浮点型常量有阶码的小数点前面只能有一位非0的数字。</strong></p>
+<p>例如：</p>
+<pre><code>1.81e7;//对
+18.1e6;//错
+</code></pre>
+<p><strong>另外阶码后面只能是整数，不能是整数表达式。</strong></p>
+<pre><code>5.0e(1+4);//错
+</code></pre>
+<h3 id="40c">40、c语言返回值类型为字符串的函数</h3>
+<p>在讨论着四种方法之前，首先要对函数有一个简单的认识，无论是在形实结合时，还是在return语句返回时，都有一个拷贝的过程。你传进来的参数是个值，自然函数在工作之前要把这个值拷贝一份供自己使用，你传进来的是个地址，函数也就会拷贝该地址供自己使用。同样return返回时，如果返回一个值，函数会将该值拷贝一份以提供给主调函数使用，返回的是一个指针（也就是地址），自然拷贝的就是一个地址，供主调函数使用。</p>
+<h4 id="_13">先给出一个错误的例子：</h4>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+char * retstring();
+int main()
+{
+    char * name2;
+    name2 = retstring();
+    printf(&quot;%s\n&quot;,name2);
+    return 0;
+}
+
+char * retstring()
+{
+    char name[10]; 
+    strcpy(name,&quot;汉青&quot;);
+    return name;
+}
+</code></pre>
+<p>编译一下代码，会发现提示一个警告，大概意思就是说返回了一个局部变量的地址。这个程序的输出结果是不确定的，因为我们都知道，局部变量的生存期是就在块内部，这里也就是在函数retstring()的内部，在main函数中，name的内存空间已经被回收。</p>
+<p>所以不能返回一个自动变量的字符串。。。</p>
+<h4 id="_14">下面给出四种返回字符串的方法：</h4>
+<ol>
+<li>将字符串指针作为函数参数传入，并返回该指针。</li>
+<li>使用malloc函数动态分配内存，注意在主调函数中释放。</li>
+<li>返回一个静态局部变量。</li>
+<li>使用全局变量。</li>
+</ol>
+<p>下面是详细解释：</p>
+<h5 id="_15">方法一：将字符串指针作为函数参数传入，并返回该指针。</h5>
+<p>典型的strcpy()函数应该就是采用的这种方法，第一个参数为指向目的字符串的指针,返回值也为这个指针。</p>
+<pre><code class="language-c">char* strcpy(char* des,const char* source) {
+  char* r=des; 
+  assert((des != NULL) &amp;&amp; (source != NULL));
+　while((*r++ = *source++)!='\0');
+　return des;
+}
+</code></pre>
+<h5 id="mallocmalloc">方法二：使用malloc函数动态分配，但是一定要注意在主调函数中将其释放，应为malloc动态分配的内存位于堆区，而堆区的内存是要程序员自己释放的。</h5>
+<p>一个例子如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+char * retstring();
+int main()
+{
+    char * name2;
+    name2 = retstring();
+    printf(&quot;%s\n&quot;,name2);
+    //记住一定要用free释放，否则会造成内存泄露
+    free(name2);
+    return 0;
+}
+
+char * retstring()
+{
+    char * name;
+    name = (char *)malloc(10); 
+    strcpy(name,&quot;张汉青&quot;);
+    return name;
+}
+</code></pre>
+<h5 id="_16">方法三：返回一个静态局部变量。</h5>
+<p>一个例子如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+char * retstring();
+int main()
+{
+    char * name2;
+    name2 = retstring();
+    printf(&quot;%s\n&quot;,name2);
+    return 0;
+}
+
+char * retstring()
+{
+    static char name[10];
+    strcpy(name,&quot;张汉青&quot;);
+    return name;
+}
+</code></pre>
+<p>这种方法有一个问题： 由于采用了静态局部变量（位于静态区，程序结束时由系统进行释放），这就导致，如果多次调用这个函数，下一次调用会将上一次调用的结果覆盖掉。</p>
+<p>C语言中的库函数，tmpnam()函数、getenv()函数等应该都是采用的这种方法，这也就是为什么，使用这样的函数的时候应该立即将返回结果拷贝一份的原因。</p>
+<h5 id="_17">方法四： 使用全局变量。</h5>
+<p>一个例子如下：</p>
+<pre><code class="language-c">char   g_s[100]; 
+char*   fun() 
+{ 
+        strcpy(g_s,   &quot;abc &quot;); 
+        return   s; 
+} 
+</code></pre>
+<h3 id="41">41、数组的初始化</h3>
+<ul>
+<li>数组的初始化遵循零初始化原则</li>
+<li>数组的初始化不可以是空</li>
+<li>
+<p>在多维数组的初始化式中忽略掉内层的大括号是可以的</p>
+</li>
+<li>
+<p>这种写法是合法的：</p>
+</li>
+</ul>
+<pre><code class="language-c">int arr[] = 
+{
+  [10] = 10, [23] = 3, [2] = 1
+};
+</code></pre>
+<p>数组中包括24个元素</p>
+<h3 id="42">42、字符数组（字符串）的初始化可以这么写：</h3>
+<pre><code class="language-c">int main() {
+  char a[256];
+
+  a = &quot;baijiale&quot;
+  printf(&quot;%s\n&quot;, a);
+
+  return 0;
+}
+</code></pre>
+<p>这会自动在 baijiale 后边加入 分尾0</p>
+<p>输出：</p>
+<pre><code>baijiale
+</code></pre>
+<h3 id="43">43、数组初始化中<code>[]</code>的两种不同情况</h3>
+<pre><code class="language-c">int main() {
+  int arr[10] = { 0 };
+  // 这里的[10]表示数组的长度为10个元素
+
+  arr[1] = 1;
+  // 这里的[1]表示数组的索引，指的是数组的第二个元。（arr[0]表示数组的第一个元）
+
+  return 0;
+}
+</code></pre>
+<p>C语言中数组元素是由数组下标的索引值进行标注的，第一个元素的索引值是0。</p>
+<h3 id="44arrij-arr-i-j">44、<code>arr[i][j]</code>表示数组 arr 的第 i 行第 j 列。</h3>
+<h3 id="45">45、表达式不会占用独立的存储单元，只有变量或常量占用独立的存储单元</h3>
+<h3 id="46">46、有关函数</h3>
+<ul>
+<li>C语言中函数的定义都是相互平行、相互独立的，也就是说在函数定义时，函数体内不能包含另一个函数的定义，即函数不能嵌套定义，但可以嵌套调用。</li>
+<li>如果函数改变了数组型形式参数的元素，那么这个改变会在相应的实际参数中体现出来。</li>
+<li>函数定义：</li>
+</ul>
+<pre><code class="language-c">double average(double, double);
+</code></pre>
+<p>是被允许的</p>
+<ul>
+<li>函数名不允许用数字开头</li>
+<li>函数名要区分函数名称的大小写</li>
+<li>C语言源程序的基本单位是：函数</li>
+<li>C语言要求函数先定义后调用，将主调函数放在被调函数的后面，就像变量先定义后使用一样。（若函数定义在main函数的下面，则必须在main函数的上面写上函数的<code>原形声明</code>。）如果不声明，编译时会默认调用函数是int类型。</li>
+</ul>
+<h3 id="47">47、有关变量</h3>
+<ul>
+<li>形式参数拥有和局部变量一样的性质：<code>自动存储期限</code>和<code>块作用域</code>。</li>
+<li>定义在函数外部的变量称为全局变量，它定义在函数外边，不属于任何函数和代码块，而属于整个源文件。</li>
+</ul>
+<h3 id="48static">48、static（静态的）关键字</h3>
+<p><strong>static能够延长变量的生命周期，延长为整个程序的运行过程</strong></p>
+<p><em>static关键字在 c语言中比较常用，使用恰当能够大大提高程序的模块化特性，有利于扩展和维护</em></p>
+<h4 id="1static">1、static修饰变量</h4>
+<h5 id="_18">全局变量</h5>
+<p>全局变量定义在函数体外部，在<code>全局数据区</code>分配存储空间，且编译器会自动对其初始化，当我们没有赋值是编译器自动优化为0</p>
+<p>对于普通全局变量对整个工程可见，其他文件可以使用extern外部声明后直接使用。也就是说其他文件不能再定义一个与其相同名字的变量了（否则编译器会认为它们是同一个变量）。</p>
+<pre><code class="language-c">//file1.c
+#include &lt;stdio.h&gt;
+extern int a;
+int main()
+{
+    printf(&quot;a = %d\n&quot;,a); //a = 10
+    return 0;
+}
+
+//file2.c
+#include &lt;stdio.h&gt;
+int a = 10;
+int fun();
+</code></pre>
+<p>对于 static 修饰的全局变量，仅对当前文件可见，其他文件不可访问，其他文件可以定义与其同名的变量，两者互不影响</p>
+<pre><code class="language-c">//file1.c
+#include &lt;stdio.h&gt;
+static int a;
+int main()
+{
+    printf(&quot;a = %d\n&quot;,a); //a = 0
+    return 0;
+}
+
+//file2.c
+#include &lt;stdio.h&gt;
+int a = 10; //这是完全可以的
+int fun();
+</code></pre>
+<p>在定义不需要与其他文件共享的全局变量时，加上static关键字能够有效地降低程序模块之间的耦合，避免不同文件同名变量的冲突，且不会误使用。</p>
+<h5 id="_19">局部变量</h5>
+<p>普通局部变量是再熟悉不过的变量了，在任何一个函数内部定义的变量（不加static修饰符）都属于这个范畴,编译器也不会为其初始化化</p>
+<p><strong>普通的局部变量存储在栈空间内</strong>，使用完毕后会立即被释放</p>
+<p>静态局部变量使用static修饰符定义，即使在声明时未赋初值，编译器也会把它初始化为0。且<strong>静态局部变量存储于进程的全局数据区</strong>，即使函数返回，它的值也会保持不变。</p>
+<p>示例</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int fun1()
+{
+    int a = 1;
+    printf(&quot;a = %d\n&quot;,a);
+    a++;
+    printf(&quot;a++ = %d\n&quot;,a);
+}
+
+int fun2()
+{
+    static int a = 1;
+    printf(&quot;static a = %d\n&quot;,a);
+    a++;
+    printf(&quot;a++ = %d\n&quot;,a);
+}
+
+int main()
+{
+    fun1();
+    printf(&quot;========\n&quot;);
+    fun1();
+    printf(&quot;********\n&quot;);
+    fun2();
+    printf(&quot;========\n&quot;);
+    fun2();
+
+    return 0;
+}
+</code></pre>
+<p>运行结果</p>
+<pre><code class="language-sh">a = 1
+a++ = 2
+========
+a = 1
+a++ = 2
+********
+static a = 1
+a++ = 2
+========
+static a = 2
+a++ = 3
+</code></pre>
+<h4 id="2static">2、static修饰函数</h4>
+<p>函数的使用方式与全局变量类似，在函数的返回类型前加上static，就是静态函数。其特性如下：</p>
+<ul>
+<li>静态函数只能在声明它的文件中可见，其他文件不能引用该函数</li>
+<li>不同的文件可以使用相同名字的静态函数，互不影响</li>
+<li>非静态函数可以在另一个文件中直接引用，甚至不必使用extern声明</li>
+</ul>
+<p>示例</p>
+<pre><code class="language-c">//file1.c 
+#include &lt;stdio.h&gt;
+
+static void fun(void)
+{
+    printf(&quot;hello from fun\n&quot;);
+}
+
+int main(void)
+{
+    fun(); //只能在本文件中调用
+    fun1(); //不同文件的普通函数可以直接调用
+    //fun2(); //这里就不能调用另一个文件static修饰的fun2();
+    return 0;
+}
+
+//file2.c
+#include &lt;stdio.h&gt;
+
+void fun1(void)
+{
+    printf(&quot;hello from static fun1\n&quot;);
+}
+static void fun2(void)
+{
+    printf(&quot;hello from static fun1\n&quot;);
+}
+</code></pre>
+<h3 id="49extern">49、extern（外部的）关键字</h3>
+<ul>
+<li>extern 外部变量，在同一个文件内，为了使全局变量在定义点之前的函数中也能使用，在函数中用extern加以声明。</li>
+</ul>
+<h3 id="50scanfenter">50、当用scanf从键盘输入数据时，每行数据在没按下回车键（Enter键）前，可以任意修改。</h3>
+<h3 id="51">51、取地址运算符<code>&amp;</code>用于得到变量的地址；间接寻址运算符<code>*</code>用于访问指针所指向的对象。</h3>
+<h3 id="52int-aaa">52、<code>int **a;</code>、<code>*a</code>、<code>**a</code>都是什么？</h3>
+<h4 id="int-int">从int* 和int 说起</h4>
+<p>“int** 是什么” 这个问题其实不难。</p>
+<p>我们可以递归分析，先看下int* 是什么，嗯？好像还可以继续递归到int</p>
+<p>我们都知道，int 是 C 的基础数据类型整型 ，而多了个<em> 的int</em> 是指向整型变量的指针，那么int** 是什么就不言自明了，列个表：</p>
+<p><img alt="350" src="../../media/v2-3faa5855ec5d4ae4e3b25c4ff041cddc_1440w.jpg" /></p>
+<p>看到这里，你对int**应该有了个初步的认识，但你可能觉得有点绕，没关系，下面我们写一段代码看看：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main()
+{
+  int i = 418;
+  int* pi;
+  // 根据上面的表格，我们知道 int* 是指向“整型”的指针，
+  // 那么 pi 可以保存的是 int 类型的变量 i 的地址：
+  pi = &amp;i;
+  int** ppi;
+  // ppi 可以保存的是 int* 类型的变量 pi 的地址：
+  ppi = π
+  // 恭喜你，现在你已经知道了怎么定义 int** 类型的变量和给它赋值
+  // 我们先写到这里
+  return 0;
+}
+</code></pre>
+<h4 id="ppp">那么<code>p</code>，<code>*p</code>，<code>**p</code>分别是什么？</h4>
+<p>先看最指针自身</p>
+<p>乍一看有点多，开始有点慌是吧，没关系，我们先看不带加法运算的前三个：<code>p</code>，<code>*p</code>以及<code>**p</code></p>
+<p>从上面的代码我们已经知道p就是存放int*类型变量的地址的变量</p>
+<pre><code class="language-c">// 从上面暂停下来的地方我们继续
+// 我们都知道，在指针前面加个 * 就是“取得这个指针指向的地址里的值”
+// 因为 pi 存放的是 i 的地址，那么 *pi 就是取得 i 存放的值，类型是 int
+// 同理，*ppi 取得的是 pi 存放的值，类型是 int*
+printf(&quot;*pi = %d, *ppi = %p\n&quot;, *pi， *ppi);
+// 输出 *pi = 418, *ppi = 0000002D6FF2FD58 （*pi = 后面的值在每台机器上都可能不一样）
+// 既然 *ppi 是 int*，那也就是说我们还可以对它再做一次「解引用」
+// 拿到 *ppi 这个地址里存放的值，类型是 int
+printf(&quot;**ppi = %d\n&quot;, **ppi);
+// 输出 **pi = 418
+</code></pre>
+<p>这时，你已经掌握p，<em>p以及</em>*p分别是什么了</p>
+<h3 id="53int-pint-p">53、<code>int *p[];</code>和<code>int (*p)[];</code>的区别</h3>
+<p>对于<code>int *p[]</code>：</p>
+<p>先找到声明符p，然后向右看，有<code>[]</code>说明a是个数组，再向左看，是<code>int *</code>，说明数组中的每个元素是<code>int *</code>。所以这是一个存放int指针的数组。</p>
+<p>对于<code>int (*p)[]</code>：</p>
+<p>先找到声明符a，被括号括着，先看括号内的(优先级高)，然后向右看，没有，向左看,是<code>*</code>，说明s是个指针，什么指针？在看括号外面的，先向右看，有<code>[]</code>，是个数组，说明a是个志向数组的指针，再向左看，是<code>int</code>，说明数组的每个元素是int。所以，这是一个指向存放int的数组的指针。</p>
+<p>更详细地说：</p>
+<p>前: 指针数组;是一个元素全为指针的数组.</p>
+<p>后: 数组指针;可以直接理解是指针,只是这个指针类型不是int也不是char而是 int [4]类型的数组.(可以结合函数指针一并看看......)</p>
+<p>int* p[4]------p是一个指针数组，每一个指向一个int型的</p>
+<p>int (*q)[4]---------q是一个指针，指向int[4]的数组。</p>
+<p><strong>定义涉及两个运算符：<code>*</code>（间接引用）、<code>[]</code>（下标），<code>[]</code>的优先级别大于<code>*</code>的优先级别。</strong></p>
+<p>首先看<code>int *p[4]</code>，<code>[]</code>的优先级别高，所以它首先是个大小为4的数组，即<code>p[4]</code>；剩下的<code>int *</code>作为补充说明，即说明该数组的每一个元素为指向一个整型类型的指针。</p>
+<p>再看<code>int (*q)[4]</code>。它首先是个指针，即<code>*q</code>，剩下的<code>int [4]</code>作为补充说明，即说明指针q指向一个长度为4的数组。</p>
+<h3 id="54">54、<code>*</code>在不同的语句中的<strong>大相径庭</strong>的作用</h3>
+<ul>
+<li><code>*</code>在定义变量（如p）时只有一个作用，那就是，说明所定义的变量p是一个指针！！！</li>
+<li><code>*</code>在非定义指针变量的时候的作用是对地址<code>解引用</code></li>
+<li>还有就是乘法运算符</li>
+</ul>
+<h3 id="55char-s-123-char-s-12350">55、对字符串数组的定义：<code>char s[] = { "123" };</code>是合法的。当然，也可以没有大括号：<code>char s[] = "123"</code>（这两个定义的数组长度均为5（有'\0'））</h3>
+<h3 id="56">56、字符串数组的定义中，第二维长度（行的长度）必须要有，第一维长度（列的长度）可以省略</h3>
+<p>如：</p>
+<pre><code class="language-c">char ca[][5] = {&quot;A&quot;, &quot;BB&quot;, &quot;CCC&quot;};
+char *ca[3] = {&quot;A&quot;, &quot;BB&quot;, &quot;CCC&quot;};
+</code></pre>
+<p>均是正确定义</p>
+<p>这里解释一下第二条语句：ca是一个指针数组，数组中的三（每）个元保存的分别是三个字符串常量的首地址。</p>
+<h3 id="57">57、预处理</h3>
+<ul>
+<li>在“文件包含”预处理语句的使用形式中,当#include后面的文件名用""括起时,寻找被包含文件的方式是：先在源程序所在目录搜索,再按照系统设定的标准方式搜索。</li>
+<li>在“文件包含”预处理语句的使用形式中，当#include后面的文件名用&lt;&gt;括起时，寻找被包含文件的方式是：直接按系统设定的标准方式搜索目录。</li>
+<li>在c程序中凡是以#开头的语句行都是预处理命令行。</li>
+<li>宏替换不占用运行时间，只占用编译时间。</li>
+<li>程序的一行只允许一个有效的预处理命令。</li>
+</ul>
+<h3 id="58">58、小写字符转换为大写</h3>
+<pre><code class="language-c">if ('a' &lt;= ch &amp;&amp; ch &lt;= 'z') {
+  ch = ch - 'a' + 'A';
+}
+</code></pre>
+<p>运算式中字符都用ASCII码来表示</p>
+<h3 id="59c-qsort">59、c语言的排序神器 - qsort函数</h3>
+<h4 id="_20">一、头文件</h4>
+<p>qsort是stdlib.h中的函数，因此使用前需要声明：</p>
+<pre><code class="language-c">#include&lt;stdlib.h&gt;
+</code></pre>
+<h4 id="_21">二、格式</h4>
+<p>1、参数</p>
+<p>qsort函数包含四个参数，分别是：</p>
+<ol>
+<li>
+<p>数组名</p>
+</li>
+<li>
+<p>元素个数（从前往后计算）</p>
+</li>
+<li>
+<p>数组元素所占字节（int，double，char等所占字节）</p>
+</li>
+<li>
+<p>排序原则（递增，递减，奇偶交叉等）</p>
+</li>
+</ol>
+<pre><code class="language-c">int cmp(const void *a,const void *b) {
+    return *(int*)a-*(int*)b;
+}
+qsort(num, n, sizeof(int), cmp);
+</code></pre>
+<p>前三个大概没什么好说的，非常简单。主要介绍下第四个的排序原则。</p>
+<p>我们通过定义一个函数<code>cmp</code>，通过<code>cmp</code>返回的参数来确定排序规则，需要注意的是：cmp函数的参数需要以<code>const void *a</code>, <code>const void *b</code>的形式来定义，表示a和b的类型是未确定的，在<code>return</code>中进行强制类型转换为<code>int</code>型。<code>*(int*)a-*(int*)b</code>表示以递增顺序，若想以递减只需将a和b换位。</p>
+<p>2、不同类型排序</p>
+<p><strong>对于不同类型的数组排序，qsort函数的格式都是相同的，唯一不同在于cmp函数中的返回值类型(即需要强制类型转换成的类型)。</strong></p>
+<p>1）整型（int）</p>
+<pre><code class="language-c">int cmp(const void *a,const void *b) {
+    return *(int*)a-*(int*)b;
+}
+</code></pre>
+<p>2）浮点数（double） </p>
+<p>需要注意浮点数会存在精度损失的问题，所以我们需要通过比较，来返回1或-1，以确定是增序还是降序。</p>
+<pre><code class="language-c">int cmp(const void *a,const void *b) {
+    return *(double*)a&gt;*(double*)b?1:-1;
+}
+</code></pre>
+<p>3）字符（char）</p>
+<pre><code class="language-c">int cmp(const void *a,const void *b) {
+    return *(char*)a-*(char*)b;
+}
+</code></pre>
+<p>4）结构体</p>
+<pre><code class="language-c">struct node {
+    int i;
+    double j;
+    char k;
+};
+
+int cmp(const void *a,const void *b) {
+    return (*(node*)a).i-(*(node*)b).i;
+}
+</code></pre>
+<p>以int为例，其他遵循相同原则；若是要逐级比较，只需增加判断即可。</p>
+<h3 id="60c">60、c语言中的强制类型转换</h3>
+<p>强制类型转换是把变量从一种类型转换为另一种数据类型。例如，如果您想存储一个 long 类型的值到一个简单的整型中，您需要把 long 类型强制转换为 int 类型。您可以使用强制类型转换运算符来把值显式地从一种类型转换为另一种类型，如下所示：</p>
+<pre><code class="language-c">(type_name) expression
+</code></pre>
+<p>请看下面的实例，使用强制类型转换运算符把一个整数变量除以另一个整数变量，得到一个浮点数：</p>
+<p>实例：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+  int sum = 17, count = 5;
+  double mean;
+
+  mean = (double) sum / count;
+  printf(&quot;Value of mean : %f\n&quot;, mean);
+
+  return 0;
+}
+</code></pre>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre><code>Value of mean : 3.400000
+</code></pre>
+<p><strong>这里要注意的是强制类型转换运算符的优先级大于除法，因此 sum 的值首先被转换为 double 型，然后除以 count，得到一个类型为 double 的值。</strong></p>
+<p>类型转换可以是隐式的，由编译器自动执行，也可以是显式的，通过使用强制类型转换运算符来指定。在编程时，有需要类型转换的时候都用上强制类型转换运算符，是一种良好的编程习惯。</p>
+<h3 id="61goto">61、goto语句</h3>
+<p>C 语言中的 goto 语句允许把控制无条件转移到同一函数内的被标记的语句。</p>
+<p><strong>注意：在任何编程语言中，都不建议使用 goto 语句。因为它使得程序的控制流难以跟踪，使程序难以理解和难以修改。任何使用 goto 语句的程序可以改写成不需要使用 goto 语句的写法。</strong></p>
+<p>C 语言中 goto 语句的语法：</p>
+<pre><code class="language-c">goto label;
+...;
+..;
+.;
+label: statement;
+</code></pre>
+<p><img alt="350" src="../../media/%E6%88%AA%E5%B1%8F2023-12-30%20%E4%B8%8B%E5%8D%8810.17.43.png" /></p>
+<p>在这里，label 可以是任何除 C 关键字以外的纯文本，它可以设置在 C 程序中 goto 语句的前面或者后面。</p>
+<p>实例：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+  /* 局部变量定义 */
+  int a = 10;
+
+  /* do 循环执行 */
+  LOOP: do {
+    if(a == 15) {
+     /* 跳过迭代 */
+     a = a + 1;
+     goto LOOP;
+    }
+    printf(&quot;a 的值： %d\n&quot;, a);
+    a++;
+  } while (a &lt; 20);
+
+  return 0;
+}
+</code></pre>
+<p>运行结果：</p>
+<pre><code>a 的值： 10
+a 的值： 11
+a 的值： 12
+a 的值： 13
+a 的值： 14
+a 的值： 16
+a 的值： 17
+a 的值： 18
+a 的值： 19
+</code></pre>
+<h3 id="62c">62、c语言的进制转换</h3>
+<h4 id="_22">一、任意进制转十进制</h4>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main() {
+    int x, p;   //x输入数字  p该数的进制数  
+    scanf(&quot;%d&quot;, &amp;x);
+    scanf(&quot;%d&quot;, &amp;p);
+    int y = 0, product = 1;
+    while(x != 0) {
+        y = y + (x % 10) * product;
+        x = x / 10;
+        product = product * p;
+    }
+    printf(&quot;%d&quot;, y);
+    return 0;
+} 
+</code></pre>
+<p>思路（以十转八进制为例）：从个位开始，取每一位数，乘以8的n次方（n是取到的位数），将所得数依次求和，得到结果。（循环）</p>
+<h4 id="_23">二、十进制转任意进制</h4>
+<p><strong>注意：这里只能用do...while（原因：如果输入的是0，那么我们希望a[0]=0）</strong></p>
+<pre><code class="language-c">int main() {
+  int in, p;
+  int arr[256] = { 0 }; // 存放余数（存放目标进制每位的数字）
+  scanf(&quot;%d%d&quot;, &amp;in, &amp;p); // p为目标进制
+  int count = 0; // 这里count++这个式子的值为count自加前的值
+  do {
+    arr[count++] = in % p;
+    in /= p;
+  } while (in != 0); // 当商不为0时进行循环
+
+  for (int i = count - 1; i != -1; --i) {
+    printf(&quot;%d&quot;, arr[i]);
+  }
+  printf(&quot;\n&quot;);
+
+  return 0;
+}
+</code></pre>
+<p>思路（以八转十进制为例）：从右边第一位开始，先求出目标进制的右边第一位，然后再对in做商，如此循环往复，直至求出目标进制的所有位，最后将数组倒序打印。即循环对<code>in</code>的取余与做商。</p>
+<h3 id="63c-n-m">63、C语言声明 n * m 二维矩阵</h3>
+<p><strong>c语言数组不能改变长度，所以要用malloc函数动态分配空间，用指针指向数组。</strong></p>
+<pre><code class="language-c">int n = 0, m = 0;
+scanf(&quot;%d %d&quot;, &amp;n, &amp;m);
+// c语言数组不能改变长度，所以要用malloc函数动态分配空间，用指针指向数组。
+int **arr = (int **) malloc(n * sizeof(int *));
+for (int i = 0; i &lt; n; ++i) {
+    arr[i] = (int *) malloc(m * sizeof(int));
+}
+
+for (int i = 0; i &lt; n; ++i) {
+    for (int j = 0; j &lt; m; ++j) {
+        scanf(&quot;%d&quot;, &amp;arr[i][j]);
+    }
+}
+</code></pre>
+<h3 id="64malloc">64、malloc 函数</h3>
+<ul>
+<li>malloc 函数返回的类型是 <code>void*</code>，所以我们使用 malloc 时要进行强制类型转换。</li>
+<li>malloc 函数长度默认单位是 Byte。</li>
+</ul>
+<p>如：</p>
+<pre><code class="language-c">(CHAR*)malloc(s-&gt;len)
+</code></pre>
+<h3 id="65-c">65、对 C语言 中二维数组的理解</h3>
+<p>对于：</p>
+<pre><code class="language-c">int a[3][4]
+</code></pre>
+<p>它是由 3 个一维数组组成，每个一维数组的大小是 4 个整型元素。<em>而不是 4 个 三元素数组</em></p>
+<ul>
+<li>它的元素为一维数组的一维数组（两个维度分开）<code>int (a[4])[5]</code></li>
+<li>如：<code>a[0]</code> 是一个 1 维数组，它的长度是 4。</li>
+<li><code>a[i]</code> 是一个 1 维数组的名字，其类型为：<code>int [4]</code>。</li>
+</ul>
+<p>格式化：</p>
+<pre><code class="language-c">[[0, 0, 0, 0],
+ [0, 0, 0, 0],
+ [0, 0, 0, 0]]
+</code></pre>
+<h3 id="66">66、链表的边界条件</h3>
+<ol>
+<li>只有一个有数据的节点</li>
+<li>只有头节点</li>
+</ol>
+<h3 id="67c">67、C 语言数据存储区域</h3>
+<ul>
+<li><strong>寄存器</strong>：寄存器是位于CPU内部的特殊存储区域，用于存储变量值或操作数。寄存器的使用由编译器和硬件决定，通常用于高频访问的变量或计算中间结果。</li>
+<li><strong>栈</strong>：栈是一种线性的数据结构，用于存储局部变量、函数调用信息和临时数据等。栈的大小在程序编译时确定，并通过栈指针进行管理。栈是一种快速分配和释放内存的机制，并在函数调用时自动创建和销毁。</li>
+<li><strong>堆</strong>：堆是一块动态分配的内存区域，用于存储动态分配的变量、数据结构和对象。堆的大小和生命周期由程序员手动管理，通过malloc()、calloc()、realloc()等函数来申请和释放堆内存。</li>
+<li><strong>全局存储区</strong>：全局存储区也被称为<strong>数据段</strong>，用于存储全局变量和静态变量，它在程序加载时分配，并一直存在于程序的整个生命周期。全局变量是在任何函数之外声明的，静态变量可以是全局范围（文件作用域）或局部范围（函数作用域）。</li>
+<li><strong>常量存储区</strong>：常量存储区用于存储字符串常量和其他常量值（如const修饰的变量）。常量存储区在程序加载时分配，并且在整个程序的生命周期内都存在。</li>
+<li><strong>代码区</strong>：代码区（文本区）用于存储程序的执行代码，包括函数体和指令。代码区通常是只读的，保存了已编译的程序指令。</li>
+</ul>
+<p>这张图很好的表现了各存储区域：</p>
+<p><img alt="350" src="../media/5367e09729734b90aa2b629c3784d59c.png" /></p>
+<ul>
+<li><code>.init</code> （系统代码段）：类似于 <code>#include</code> 头文件中代码</li>
+<li><code>.text</code> （用户代码段）：程序员自己写的代码编译后的指令</li>
+<li><code>.rodata</code> （常量区）：存放常量， 可读不可写 ，编译之后地址确定。</li>
+<li><code>.data</code> （初始化静态（全局）区）：存放初始化的全局变量和静态变量，可写可读，运行前地址确定</li>
+<li><code>.bss</code> （未初始化静态（全局）区）：存放未初始化的全局变量和静态变量，可写可读，运行前地址确定</li>
+<li><code>.heap</code>（堆区）：由用户自己申请、释放</li>
+<li><code>.stack</code>（栈区）：由系统分配，栈空间的变量都是代码块私有的，只能在代码块中使用</li>
+</ul>
+<p><em>注意：在main函数里面的数组是开在栈区(stack)，在函数外面的是开在数据区的。栈区的内存比较小，所以当数组非常大的时候，就会报错。假如把数组放在数据区就不会出现这个问题，因为数据区的内存很大。这也是为什么很多博客和OJ题解将数组开到主函数外面！！！</em></p>
+<h3 id="68-malloc">68、注意 malloc 函数的返回类型是 指针（指向所分配内存的头地址的指针）</h3>
+<h3 id="69c">69、C语言中的位移操作符</h3>
+<ul>
+<li><code>&lt;&lt;</code> 和 <code>&gt;&gt;</code> 是 位移操作符</li>
+</ul>
+<p>位移位运算符的优先级如下：</p>
+<ul>
+<li>算术运算符　优先于　位移位运算符 优先于 关系运算符</li>
+<li>位移位运算符是同级别的，结合性是自左向右</li>
+</ul>
+<p>例如，设无符号短整型变量 a 为 73 (对应二进制数为0000000001001001)，则</p>
+<ul>
+<li>a&lt;&lt;3 结果为 584 (对应二进制数为0000001001001000)，a不变</li>
+<li>a&gt;&gt;4 结果为 4 (对应二进制数为0000000000000100)，a不变</li>
+</ul>
+<h3 id="70">70、数组初始化时省略第一维的长度是合法的</h3>
+<p>将二维数组当作参数的时候，必须指明所有维数大小或者省略第一维的，但是不能省略第二维或者更高维的大小，这是由编译器原理限制的。事实上，编译器是这样处理数组的：
+ 
+ 设有数组 <code>int a[m][n]</code>，如果要访问 <code>a[i][j]</code> 的值，编译器的寻址方式为：  </p>
+<pre><code class="language-c">&amp;a[i][j] = &amp;a[0][0] + (i * sizeof(int) * n) + (j * sizeof(int)); // 注意 n 为第二维的维数，
+</code></pre>
+<p>因此，可以省略第一维的维数，不能省略其他维的维数。</p>
+<p>在定义二维数组的时候对其进行初始化，也可以省略第一维，编译器会根据你的初始化语句自动决定第一维度。</p>
+<p><img alt="350" src="../media/%E6%88%AA%E5%B1%8F2024-06-11%20%E4%B8%8B%E5%8D%8810.01.59.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      syxb2
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/syxb2" target="_blank" rel="noopener" title="GitHub | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/24550465" target="_blank" rel="noopener" title="Bilibili | syxb2" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      
+    
+  </body>
+</html>
