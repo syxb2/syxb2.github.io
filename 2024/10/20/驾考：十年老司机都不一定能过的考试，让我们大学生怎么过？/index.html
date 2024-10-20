@@ -515,6 +515,29 @@
 
 
 
+  <div id="gitalk-container"></div>
+
+  <script>
+    function loadGitalkSuc() {
+      const gitalk = new Gitalk({
+        clientID: 'Ov23liuRhVuMeQzAzPpL',
+        clientSecret: '12772625af0381b52061c8f372dc116037f0e45e',
+        repo: 'https://github.com/syxb2/syxb2.github.io.comment.git',
+        owner: 'syxb2',
+        admin: ['syxb2'],
+        id: location.pathname,
+        distractionFreeMode: false
+      })
+
+      gitalk.render('gitalk-container')
+    }
+  </script>
+  
+    <link rel="stylesheet" href="/plugins/gitalk.css">
+    <script type="text/javascript" src="/plugins/gitalk.min.js" onload="loadGitalkSuc(this)"></script>
+  
+
+
 
       </div>
     
