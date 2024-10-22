@@ -15,8 +15,8 @@
   
   <title>
     
-      Tag 
-       : ✏️Tutorial
+      今日多云？☁️ 
+      
       
       |
     
@@ -87,7 +87,7 @@
         </li>
       
         <li class="nav-item" data-path="/archives/">
-          <a href="/archives/">📋Archives</a>
+          <a href="/archives/">📋List</a>
         </li>
       
         <li class="nav-item" data-path="/tags/">
@@ -108,30 +108,149 @@
 
 
       <div class="flex-container">
-        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container tag-details">
-  <div class="content-title">
-    <h2>
-      <span>✏️Tutorial</span>
-    </h2>
-  </div>
+
+  <!-- LaTex Display -->
+
   
-    <div class="post-list">
-      <div class="post-item" title="✏️牢学生拿什么过驾考？当然是看教程！">
-        <span class="time-m-d">2024-10-20</span>
-        <a href="/2024/10/20/%E2%9C%8F%EF%B8%8F%E7%89%A2%E5%AD%A6%E7%94%9F%E6%8B%BF%E4%BB%80%E4%B9%88%E8%BF%87%E9%A9%BE%E8%80%83%EF%BC%9F%E5%BD%93%E7%84%B6%E6%98%AF%E7%9C%8B%E6%95%99%E7%A8%8B%EF%BC%81/">
-          <span>✏️牢学生拿什么过驾考？当然是看教程！</span>
-        </a>
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">今日多云？☁️</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2024-10-22 21:13:08
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E2%9C%92%EF%B8%8F%E9%9A%8F%E7%AC%94/" title="✒️随笔">
+                    #✒️随笔
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
+      <div class="markdown-body">
+        <p>今日多云。</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2024/10/21/%F0%9F%93%B8Blue%20is%20a%20kind%20of%20mood./" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2024-10-22 21:13:08
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E2%9C%92%EF%B8%8F%E9%9A%8F%E7%AC%94/" title="✒️随笔">
+                        #✒️随笔
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
     </div>
+    
+
+    
+      <div class="comments-container">
+        
+
+
+
+
   
-  <nav class="post-navigation">
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'dFmqivC9roLbTO35Db2qkEti-gzGzoHsz',
+        appKey: 'UWSbiIkyPJvQIE4vNHPl8RgF',
+        placeholder: '“每一段留言都是一段新故事的开始...”',
+        avatar: '',
+        lang: 'zh'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
+      </div>
     
-    <span class="page-num">1 / 1</span>
-    
-  </nav>
-</div>
+  </div>
+
 
         
 <div class="footer">
@@ -398,6 +517,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E4%BB%8A%E6%97%A5%E5%A4%9A%E4%BA%91%EF%BC%9F%E2%98%81%EF%B8%8F + '&url=' + https%3A%2F%2Fsyxb2.github.io%2F2024%2F10%2F22%2F%25E4%25BB%258A%25E6%2597%25A5%25E5%25A4%259A%25E4%25BA%2591%25EF%25BC%259F%25E2%2598%2581%25EF%25B8%258F%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://syxb2.github.io/2024/10/22/%E4%BB%8A%E6%97%A5%E5%A4%9A%E4%BA%91%EF%BC%9F%E2%98%81%EF%B8%8F/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
