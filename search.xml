@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>关于 Oh-My-Zsh 自动补全字母重复问题</title>
+      <link href="/2024/12/13/%E5%85%B3%E4%BA%8E%20Oh-My-Zsh%20%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E5%AD%97%E6%AF%8D%E9%87%8D%E5%A4%8D%E9%97%AE%E9%A2%98/"/>
+      <url>/2024/12/13/%E5%85%B3%E4%BA%8E%20Oh-My-Zsh%20%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E5%AD%97%E6%AF%8D%E9%87%8D%E5%A4%8D%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>问题大概是这样的：</p><p><img src="https://images2015.cnblogs.com/blog/664925/201612/664925-20161222175154792-455773867.png"></p><ul><li>补全多出了一个 ls，并且前面一部分字母怎么也删不掉。</li></ul><p>我从网上看了好几篇文章，大部分都是说是因为编码问题，但是尝试里面的解决方法也无效。</p><p>然后我就看到了出现这个问题的原理：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">主题配置文件中 % 的用法会导致 zsh 没能准确计算 prefix 的长度，所以在错误的位置输出了补全后的命令。</span><br></pre></td></tr></table></figure><p>于是我打开了自己主题的配置文件：</p><ul><li>注：oh-my-zsh 的主题配置文件在 <code>your-install-path/.oh-my-zsh/theme</code></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PROMPT</span>=<span class="string">&quot;%(?:%&#123;$fg_bold[green]%&#125;%1&#123;%&#125;:%&#123;$fg_bold[red]%&#125;%1&#123;✗%&#125;)%&#123;$fg[cyan]%&#125;%c %&#123;$reset_color%&#125;&quot;</span></span><br></pre></td></tr></table></figure><p>发现了问题所在：</p><p>这里的 <code>%1</code> 实际是指 <code>%n&#123; ... %&#125;</code> 中的字符长度。而我的 PROMPT 中第一个 <code>%1</code> 后面大括号中没有字符，所以问题就很明朗了。</p><p><strong>将第一处 <code>%1&#123;%&#125;` 改为 `%&#123;%&#125;</code>：</strong></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PROMPT</span>=<span class="string">&quot;%(?:%&#123;$fg_bold[green]%&#125;%&#123;%&#125;:%&#123;$fg_bold[red]%&#125;%1&#123;✗%&#125;)%&#123;$fg[cyan]%&#125;%c %&#123;$reset_color%&#125;&quot;</span></span><br></pre></td></tr></table></figure><p>问题解决。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ✏️教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我要快乐，不必正常</title>
       <link href="/2024/12/09/%E6%88%91%E8%A6%81%E5%BF%AB%E4%B9%90%EF%BC%8C%E4%B8%8D%E5%BF%85%E6%AD%A3%E5%B8%B8/"/>
       <url>/2024/12/09/%E6%88%91%E8%A6%81%E5%BF%AB%E4%B9%90%EF%BC%8C%E4%B8%8D%E5%BF%85%E6%AD%A3%E5%B8%B8/</url>
       
-        <content type="html"><![CDATA[<p><em>“This is the venting place for my absurd mind.”</em></p><h2 id="2024年"><a href="#2024年" class="headerlink" title="2024年"></a>2024年</h2><h3 id="10月"><a href="#10月" class="headerlink" title="10月"></a>10月</h3><p>–</p><p>每次在 zlib 上找书的时候都会发自内心的敬佩维护 zlib 的那些人。</p><p>记于2024年10月26日。</p><p>–</p><h3 id="11月"><a href="#11月" class="headerlink" title="11月"></a>11月</h3><p>–</p><p>我们对于事物的看法随我们经历的丰富而变化。至于各个时期（以前 or 现在？）的对错，我也不知道。但我果然还是更喜欢前些年那个略带理想主义色彩的自己。</p><p>记于2024年11月5日晚8:46二教106，复习计组神游。<a href="https://s2.loli.net/2024/11/05/C4FhV1GXNAI8HW5.jpg">图1</a></p><!-- 啊啊啊啊啊我这辈子一定是被八奈见杏菜害了八奈见杏菜你到底给我下了什么药啊 --><p>–</p><p>再听很久以前喜欢的音乐好像能带我回到那时的日子…</p><p>记于2024年11月11日晚9:30二教108，重听《沙发上的白日梦》有感。</p><p>–</p><p>我将一些矫情的想法，隐秘的现实，迂腐的天真杂糅在一起，擅自称其为浪漫。</p><p>记于2024年11月11日。</p><p>–</p><p>uestc 软件工程这门课让我知道了课与课之间的差距能有多大。。。</p><p>记于2024年11月22日凌晨12:27。<a href="https://csdiy.wiki/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/6031/">MIT 6.031: Software Construction</a></p><p>–</p><p>发现了一个神奇的现象：听同一首歌听很多遍是会听腻的；但是哼同一首歌哼很多遍却不会腻。</p><!-- 记得高中的时候，连续一个月的在校生活，就靠着每次放假回家学的几首歌度日，印象比较深的有生如夏花，星星点灯，沙发上的白日梦，还有最开始的几首日语歌，打上花火之类的。天天哼也哼不腻，但现在有了手机，同一首歌听几遍也就不想再听了。 --><p>记于2024年11月25日晚11:01。</p><p>–</p><h3 id="12月"><a href="#12月" class="headerlink" title="12月"></a>12月</h3><p>–</p><!--哭吧，至少你还有流泪的权利。哭够了吗？眼泪流尽了吗？流尽了就睡觉吧。世界并不会因为你的痛苦而改变。太阳还会照常升起。新的一天仍会降临。记于2024年12月5日凌晨2:59。--><p>比起直接看文档，我还是喜欢听别人讲出来的学习方式。</p><p>记于2024年12月9日中午11:45。</p><p>–</p><h3 id="12月-1"><a href="#12月-1" class="headerlink" title="12月"></a>12月</h3><p>–</p><p>记得 2016 年大街小巷还都是音响放小苹果什么的，现在再看好像都消失了。</p><p>记于2024年12月10日。</p><p>–</p><p>⏳</p>]]></content>
+        <content type="html"><![CDATA[<p><em>“This is the venting place for my absurd mind.”</em></p><h2 id="2024年"><a href="#2024年" class="headerlink" title="2024年"></a>2024年</h2><h3 id="10月"><a href="#10月" class="headerlink" title="10月"></a>10月</h3><p>–</p><p>每次在 zlib 上找书的时候都会发自内心的敬佩维护 zlib 的那些人。</p><p>记于2024年10月26日。</p><p>–</p><h3 id="11月"><a href="#11月" class="headerlink" title="11月"></a>11月</h3><p>–</p><p>我越发的意识到：我们真的应该记录，记录当下的情绪，记录当下的思考，记录当下的环境与发生的事。</p><p>记于1日。</p><p>–</p><p>我们对于事物的看法随我们经历的丰富而变化。至于各个时期（以前 or 现在？）的对错，我也不知道。但我果然还是更喜欢前些年那个略带理想主义色彩的自己。</p><p>记于2024年11月5日晚8:46二教106，复习计组神游。<a href="https://s2.loli.net/2024/11/05/C4FhV1GXNAI8HW5.jpg">图1</a></p><!-- 啊啊啊啊啊我这辈子一定是被八奈见杏菜害了八奈见杏菜你到底给我下了什么药啊 --><p>–</p><p>火锅怎么能没有麻酱呢？？<a href="https://s2.loli.net/2024/11/12/phtADN9zM4Z51We.jpg">图</a></p><p>记于2024年11月10日。</p><p>–</p><p>再听很久以前喜欢的音乐好像能带我回到那时的日子…</p><p>记于2024年11月11日晚9:30二教108，重听《沙发上的白日梦》有感。</p><p>–</p><p>我将一些矫情的想法，隐秘的现实，迂腐的天真杂糅在一起，擅自称其为浪漫。</p><p>记于2024年11月11日。</p><p>–</p><p>灵魂沙发真是宝藏乐队！快去听！！！</p><p>记于2024年11月12日。</p><p>–</p><p>uestc 软件工程这门课让我知道了课与课之间的差距能有多大。。。</p><p>记于2024年11月22日凌晨12:27。<a href="https://csdiy.wiki/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/6031/">MIT 6.031: Software Construction</a></p><p>–</p><p>发现了一个神奇的现象：听同一首歌听很多遍是会听腻的；但是哼同一首歌哼很多遍却不会腻。</p><!-- 记得高中的时候，连续一个月的在校生活，就靠着每次放假回家学的几首歌度日，印象比较深的有生如夏花，星星点灯，沙发上的白日梦，还有最开始的几首日语歌，打上花火之类的。天天哼也哼不腻，但现在有了手机，同一首歌听几遍也就不想再听了。 --><p>记于2024年11月25日晚11:01。</p><p>–</p><h3 id="12月"><a href="#12月" class="headerlink" title="12月"></a>12月</h3><p>–</p><!--哭吧，至少你还有流泪的权利。哭够了吗？眼泪流尽了吗？流尽了就睡觉吧。世界并不会因为你的痛苦而改变。太阳还会照常升起。新的一天仍会降临。记于2024年12月5日凌晨2:59。--><p>比起直接看文档，我还是喜欢听别人讲出来的学习方式。</p><p>记于2024年12月9日中午11:45。</p><p>–</p><p>记得 2016 年大街小巷还都是音响放小苹果什么的，现在再看好像都消失了。</p><p>记于2024年12月10日。</p><p>–</p><p>⏳</p>]]></content>
       
       
       
@@ -46,7 +65,7 @@
       <link href="/2024/11/22/%E6%88%91%E5%B7%B2%E4%B8%8E%E4%B8%80%E4%B8%87%E4%BA%BF%E6%A0%AA%E7%99%BD%E6%A1%A6%E7%9B%B8%E9%80%A2%F0%9F%8C%B3/"/>
       <url>/2024/11/22/%E6%88%91%E5%B7%B2%E4%B8%8E%E4%B8%80%E4%B8%87%E4%BA%BF%E6%A0%AA%E7%99%BD%E6%A1%A6%E7%9B%B8%E9%80%A2%F0%9F%8C%B3/</url>
       
-        <content type="html"><![CDATA[<p><em>加油！</em></p><hr><h2 id="2024年"><a href="#2024年" class="headerlink" title="2024年"></a>2024年</h2><h3 id="11月"><a href="#11月" class="headerlink" title="11月"></a>11月</h3><p>–</p><p>而这一切，没有学分，没有绩点，没有老师，没有同学，只有一个信念—-你在变强。</p><p>PKUFlyingPig</p><p>–</p><p>Do Not Compare!</p><p>–</p><p>⏳</p>]]></content>
+        <content type="html"><![CDATA[<p><em>加油！</em></p><hr><h2 id="2024年"><a href="#2024年" class="headerlink" title="2024年"></a>2024年</h2><p>–</p><p>而这一切，没有学分，没有绩点，没有老师，没有同学，只有一个信念—-你在变强。</p><p>PKUFlyingPig</p><p>–</p><p>Do Not Compare!</p><p>–</p><p>我们每个阶段无法理解的失去与获得，迷茫与坚定，其实在末来都标好了价格。</p><p>折木楠</p><p>–</p><p>当自己有了自己的追求且有明确的思路和行动之后，周围的环境都会来迎合你。</p><p>思维实验室</p><p>–</p><p>只有非功利性的读书才能抵制成功主义的读书，才能够坦然的接受自己的失败，才能够给我们提供一种真正的人生勇气，才能够真正的让你去意识到我们的渺小，才能培育我们的谦卑。但关键在乎在你挫折的时候，在你低迷的时候，你是不是依然有勇气继续的前行。</p><p>这个世界上有许许多人都很聪明，但是聪明人不一定有智慧。</p><p>罗翔</p><p>–</p><p>真诚的不懂比不真诚的懂还叫人好受些，最可厌的莫如自以为是自作解人，有了真诚才会虚心，有了虚心才肯丢开自己去了解别人，也才能放下虚伪的自尊心去了解自己。建筑在了解自己了解别人上的爱才不是盲目的爱。</p><p>探究你的禀赋之所在，在你的禀赋中努力做到最好，并且能帮助你身边的人。</p><p>拣尽南枝</p><p>–</p><p>⏳</p>]]></content>
       
       
       
