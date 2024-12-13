@@ -157,7 +157,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2024-12-13 09:13:52
+          2024-12-13 09:19:45
         </span>
         
               <span class="post-tags">
@@ -174,7 +174,7 @@
       </div>
       <div class="markdown-body">
         <p>问题大概是这样的：</p>
-<p><img src="https://images2015.cnblogs.com/blog/664925/201612/664925-20161222175154792-455773867.png"></p>
+<p><img src="https://s2.loli.net/2024/12/13/2B3eGDzavt45swI.png"></p>
 <ul>
 <li>补全多出了一个 ls，并且前面一部分字母怎么也删不掉。</li>
 </ul>
@@ -184,16 +184,17 @@
 
 <p>于是我打开了自己主题的配置文件：</p>
 <ul>
-<li>注：oh-my-zsh 的主题配置文件在 <code>your-install-path/.oh-my-zsh/theme</code></li>
+<li>注：oh-my-zsh 的主题配置文件在<code>your-install-path/.oh-my-zsh/theme</code></li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PROMPT</span>=<span class="string">&quot;%(?:%&#123;$fg_bold[green]%&#125;%1&#123;%&#125;:%&#123;$fg_bold[red]%&#125;%1&#123;✗%&#125;)%&#123;$fg[cyan]%&#125;%c %&#123;$reset_color%&#125;&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>发现了问题所在：</p>
-<p>这里的 <code>%1</code> 实际是指 <code>%n&#123; ... %&#125;</code> 中的字符长度。而我的 PROMPT 中第一个 <code>%1</code> 后面大括号中没有字符，所以问题就很明朗了。</p>
-<p><strong>将第一处 <code>%1&#123;%&#125;` 改为 `%&#123;%&#125;</code>：</strong></p>
+<p>这里的<code>%1</code>实际是指<code>%n&#123; ... %&#125;</code>中的字符长度。而我的 PROMPT 中第一个<code>%1</code>后面大括号中没有字符，所以问题就很明朗了。</p>
+<p><strong>将第一处<code>%1&#123;%&#125;`改为`%&#123;%&#125;</code>：</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PROMPT</span>=<span class="string">&quot;%(?:%&#123;$fg_bold[green]%&#125;%&#123;%&#125;:%&#123;$fg_bold[red]%&#125;%1&#123;✗%&#125;)%&#123;$fg[cyan]%&#125;%c %&#123;$reset_color%&#125;&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>问题解决。</p>
+<p><img src="https://s2.loli.net/2024/12/13/lStzFCf8TYog2M7.png"></p>
 
       </div>
       
@@ -209,7 +210,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2024-12-13 09:13:52
+              2024-12-13 09:19:45
             </span>
             
                   <span class="post-tags">
