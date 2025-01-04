@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>与时序逻辑除法器结合的 UART 串口 Verilog 设计</title>
+      <link href="/2025/01/04/%E4%B8%8E%E6%97%B6%E5%BA%8F%E9%80%BB%E8%BE%91%E9%99%A4%E6%B3%95%E5%99%A8%E7%BB%93%E5%90%88%E7%9A%84%20UART%20%E4%B8%B2%E5%8F%A3%20Verilog%20%E8%AE%BE%E8%AE%A1/"/>
+      <url>/2025/01/04/%E4%B8%8E%E6%97%B6%E5%BA%8F%E9%80%BB%E8%BE%91%E9%99%A4%E6%B3%95%E5%99%A8%E7%BB%93%E5%90%88%E7%9A%84%20UART%20%E4%B8%B2%E5%8F%A3%20Verilog%20%E8%AE%BE%E8%AE%A1/</url>
+      
+        <content type="html"><![CDATA[<p><em>这篇文章记录了我在实现 uart 串口发送接收数据这一项目的一些精巧的设计和踩过的坑。</em></p><blockquote><p>项目原码：<a href="https://github.com/syxb2/fpga-design-uestc/tree/main/stage1/task6_uart">Github</a></p></blockquote><h3 id="rx-uart-模块"><a href="#rx-uart-模块" class="headerlink" title="rx_uart 模块"></a>rx_uart 模块</h3><p>单次接收 1 个 Byte（8 bits）</p><p><img src="https://s2.loli.net/2025/01/04/65HVrExiadzkoQO.png"></p><ul><li>rx：输入串行数据线。</li><li>bps_cnt：波特率计数，记满 5208 个周期后，波特率计数器清零。<ul><li>计满后 end_bps_cnt 会出现一个持续一周期的脉冲信号，表示波特率计数器计满一位。</li></ul></li></ul><h4 id="特色设计："><a href="#特色设计：" class="headerlink" title="特色设计："></a>特色设计：</h4><p><img src="https://s2.loli.net/2025/01/04/29r1QznUeXTDufv.png"></p><ul><li><strong>bit_cnt：位计数，这里我们并没有使用常量 10 作为计数最大值，我们的 bit 级数最大值会在状态切换时改变。表示当前状态下要接收的位数。</strong><ul><li>当状态 state 为 START 时，bit_cnt 最大值为 1</li><li>当状态 state 为 DATA 时，bit_cnt 最大值为 8</li><li>当状态 state 为 STOP 时，bit_cnt 最大值为 1。</li><li>最大值保存在 bit_max 寄存器中。</li><li>计满后，end_bit_cnt 会出现一个持续一周期的脉冲信号。</li></ul></li></ul><p><img src="https://s2.loli.net/2025/01/04/S29mWInCvcDGAbu.png"></p><ul><li><strong>bit_cnt_take：取位记数器，目的是要在每个周期的 1&#x2F;2 处取样数据线，采样更加稳定</strong><ul><li>bit_cnt_take 的初始值（initial 块）即为 1&#x2F;2 个周期，这样就可以使 end_bit_cnt_take 的脉冲早于 end_bps_cnt 脉冲 1&#x2F;2 个周期。</li></ul></li></ul><p><img src="https://s2.loli.net/2025/01/04/KpCFbV8SgirR7wI.png"></p><ul><li><strong>rx_data 和 rx_ready 同步变化：当 rx_ready 为高电平即表明 8 bits 数据已经被放到了 8 位的数据线上。</strong></li></ul><h4 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h4><ul><li>最初 end_bit_cnt 和 end_bps_cnt 都是线网数据类型，并且我使用它们的上升沿作为 always 块的触发条件，这就导致微时序问题非常严重，后来我把它们改为了寄存器类型，并使用 if 条件判断和计数器产生脉冲，这样问题也就解决了</li></ul><h4 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h4><ul><li>这里遇到的问题就是位取样的问题，最开始我们在每个周期末取样，但是发现这样取样的数据有错，后来我们干脆放弃微调时序，直接改为每个周期的 1&#x2F;2 处取样，问题也就随之解决。</li></ul><h3 id="ctrl-uart-模块"><a href="#ctrl-uart-模块" class="headerlink" title="ctrl_uart 模块"></a>ctrl_uart 模块</h3><ul><li>主要的控制模块，实现：<ol><li>逐 Byte 调用 rx_uart 模块接收数据，共接收 4 Bytes</li><li>接收完成后进行除法运算</li><li>后依次向 tx_uart 模块发送 4 Bytes 数据。</li></ol></li></ul><p><img src="https://s2.loli.net/2025/01/04/UJjyqngBi2eN736.png"></p><ul><li>rx_done, d_done, tx_done：接收、除法、发送所有位全部完成信号。</li><li>rx_data, d_data, tx_data：接收、除法、发送数据。</li><li>rx_ready, tx_ready：每位的接收、发送完成信号。</li><li>y_to_led：发送给 led_encoder 模块的除发器的运算结果</li></ul><h4 id="特色设计：-1"><a href="#特色设计：-1" class="headerlink" title="特色设计："></a>特色设计：</h4><p><img src="https://s2.loli.net/2025/01/04/zrS7maAxWUfHouD.png"></p><ul><li>tx_state：为实现逐 Byte 发送 4 Bytes 数据，我们使用了一个状态机 tx_state，每发送完成一 Byte 数据后，状态机会自动切换到下一个状态，表明下一发送周期中要发送下一位。<ul><li>这里要发送的数据为 02 00 8D 00</li></ul></li></ul><h4 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h4><ul><li>应该先单独测试 UART 串口部分，即不加除法器，只测试输入输出模块的联动。也就是把输入的数据直接传送出去，测试是否能接受到正确的数据。</li></ul><h3 id="tx-uart-模块"><a href="#tx-uart-模块" class="headerlink" title="tx_uart 模块"></a>tx_uart 模块</h3><p><img src="https://s2.loli.net/2025/01/04/TUvsq9jn3CaA8M7.png"></p><ul><li>思路和 rx_uart 模块大致相同，bit_max 同样可变。这里不做过多解释。</li></ul><h3 id="led-encoder-模块"><a href="#led-encoder-模块" class="headerlink" title="led_encoder 模块"></a>led_encoder 模块</h3><p><img src="https://s2.loli.net/2025/01/04/EBRMtbfXwcmhNZ1.png"></p><ul><li>晶体管编码模块，将传递的数据显示到 6 位每位 7 个晶体管上。</li><li>out：输出 7 位数据，用于驱动单位（7 个）晶体管。</li><li>dig：位选信号。</li></ul><h4 id="特色设计：-2"><a href="#特色设计：-2" class="headerlink" title="特色设计："></a>特色设计：</h4><p><img src="https://s2.loli.net/2025/01/04/TepIRr2qj3P4EYn.png"></p><ul><li>此模块内聚性极好，只需要将 6 个 4 bits 数据，共 24 bits，传递到 in[23:0]，数据即可显示。</li></ul><h3 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h3><ul><li>操作串口使用的是 Python 库 pyserial。</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ✏️教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于 Oh-My-Zsh 自动补全字母重复问题</title>
       <link href="/2024/12/13/%E5%85%B3%E4%BA%8E%20Oh-My-Zsh%20%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E5%AD%97%E6%AF%8D%E9%87%8D%E5%A4%8D%E9%97%AE%E9%A2%98/"/>
       <url>/2024/12/13/%E5%85%B3%E4%BA%8E%20Oh-My-Zsh%20%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E5%AD%97%E6%AF%8D%E9%87%8D%E5%A4%8D%E9%97%AE%E9%A2%98/</url>
