@@ -15,7 +15,7 @@
   
   <title>
     
-      Tag 
+      关于 Oh-My-Zsh 自动补全字母重复问题 
       
       
       |
@@ -146,21 +146,141 @@
 
 
 
-  <!-- 标签页 url形式：https://yoursite/tags/ -->
-  <div class="container tag-index">
-    <div>
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E2%9C%8F%EF%B8%8F%E6%95%99%E7%A8%8B/" rel="tag">✏️教程</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E2%9C%92%EF%B8%8F%E9%9A%8F%E7%AC%94/" rel="tag">✒️随笔</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%F0%9F%93%9D%E6%91%98%E6%8A%84/" rel="tag">📝摘抄</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%F0%9F%93%B8Plog/" rel="tag">📸Plog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%F0%9F%99%8B%F0%9F%8F%BB%E5%85%B3%E4%BA%8E%E6%88%91/" rel="tag">🙋🏻关于我</a><span class="tag-list-count">1</span></li></ul>
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">关于 Oh-My-Zsh 自动补全字母重复问题</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2025-04-14 12:23:00
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E2%9C%8F%EF%B8%8F%E6%95%99%E7%A8%8B/" title="✏️教程">
+                    #✏️教程
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>问题大概是这样的：</p>
+<p><img src="https://s2.loli.net/2024/12/13/2B3eGDzavt45swI.png"></p>
+<ul>
+<li>python3 前面补全多出了一个 p，并且这个 p 怎么也删不掉。<del>oh-my-zsh 在我的 shell 里放 p</del></li>
+</ul>
+<p>我从网上看了好几篇文章，大部分都是说是因为编码问题，但是尝试里面的解决方法也无效。</p>
+<p>然后我就看到了出现这个问题的原理：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">主题配置文件中 % 的用法会导致 zsh 没能准确计算 PROMPT 的长度，所以在错误的位置输出了补全后的命令。</span><br></pre></td></tr></table></figure>
+
+<p>于是我打开了自己主题的配置文件：</p>
+<ul>
+<li>注：oh-my-zsh 的主题配置文件在<code>your-install-path/.oh-my-zsh/theme</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PROMPT</span>=<span class="string">&quot;%(?:%&#123;$fg_bold[green]%&#125;%1&#123;%&#125;:%&#123;$fg_bold[red]%&#125;%1&#123;✗%&#125;)%&#123;$fg[cyan]%&#125;%c %&#123;$reset_color%&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>发现了问题所在：</p>
+<p>这里的<code>%1</code>实际是指<code>%n&#123; ... %&#125;</code>中的字符长度。而我的 PROMPT 中第一个<code>%1</code>后面大括号中没有字符，所以问题就很明朗了。</p>
+<p><strong>将第一处<code>%1&#123;%&#125;`改为`%&#123;%&#125;</code>：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PROMPT</span>=<span class="string">&quot;%(?:%&#123;$fg_bold[green]%&#125;%&#123;%&#125;:%&#123;$fg_bold[red]%&#125;%1&#123;✗%&#125;)%&#123;$fg[cyan]%&#125;%c %&#123;$reset_color%&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>问题解决。</p>
+<p><img src="https://s2.loli.net/2024/12/13/lStzFCf8TYog2M7.png"></p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2024/11/25/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D%F0%9F%8C%99/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2025-04-14 12:23:00
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E2%9C%8F%EF%B8%8F%E6%95%99%E7%A8%8B/" title="✏️教程">
+                        #✏️教程
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2025/01/04/%E4%B8%8E%E6%97%B6%E5%BA%8F%E9%80%BB%E8%BE%91%E9%99%A4%E6%B3%95%E5%99%A8%E7%BB%93%E5%90%88%E7%9A%84%20UART%20%E4%B8%B2%E5%8F%A3%20Verilog%20%E8%AE%BE%E8%AE%A1/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
     </div>
+    
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'dFmqivC9roLbTO35Db2qkEti-gzGzoHsz',
+        appKey: 'UWSbiIkyPJvQIE4vNHPl8RgF',
+        placeholder: '“每一段留言都是一段新故事的开始...”',
+        avatar: '',
+        lang: 'zh'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
+      </div>
+    
   </div>
-  
 
-  
-
-  
-
-  
-
-  
 
         
 <div class="footer">
@@ -434,12 +554,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + tags + '&url=' + https%3A%2F%2Fsyxb2.github.io%2Ftags%2Findex.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%85%B3%E4%BA%8E%20Oh-My-Zsh%20%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E5%AD%97%E6%AF%8D%E9%87%8D%E5%A4%8D%E9%97%AE%E9%A2%98 + '&url=' + https%3A%2F%2Fsyxb2.github.io%2F2024%2F12%2F13%2F%25E5%2585%25B3%25E4%25BA%258E%2520Oh-My-Zsh%2520%25E8%2587%25AA%25E5%258A%25A8%25E8%25A1%25A5%25E5%2585%25A8%25E5%25AD%2597%25E6%25AF%258D%25E9%2587%258D%25E5%25A4%258D%25E9%2597%25AE%25E9%25A2%2598%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://syxb2.github.io/tags/index.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://syxb2.github.io/2024/12/13/%E5%85%B3%E4%BA%8E%20Oh-My-Zsh%20%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E5%AD%97%E6%AF%8D%E9%87%8D%E5%A4%8D%E9%97%AE%E9%A2%98/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
