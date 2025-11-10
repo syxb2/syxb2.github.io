@@ -15,11 +15,6 @@
   
   <title>
     
-      archive_a: 2025/10 
-      
-      
-      |
-    
      syxb2&#39;s blog
   </title>
 
@@ -112,120 +107,126 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2025</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title"></div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2025-11-10 20:39:03
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2025/10/13/Rereminder%20APP%20Privacy%20Policy/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2025-11-10 20:39:03
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="">
-        <div class="time-m-d">11-10</div>
-        <div class="title">
-          <a href="/2025/11/10/%E8%B0%88%E8%B0%88%E4%BA%BA%E7%B1%BB%E5%8F%8D%E9%A6%88%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%20RLHF%20%E5%9C%A8%20LLM%20%E9%A2%86%E5%9F%9F%E5%BA%94%E7%94%A8%E7%9A%84%E5%8F%91%E5%B1%95/">
-            <span></span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="Rereminder APP Privacy Policy">
-        <div class="time-m-d">10-13</div>
-        <div class="title">
-          <a href="/2025/10/13/Rereminder%20APP%20Privacy%20Policy/">
-            <span>Rereminder APP Privacy Policy</span>
-          </a>
-        </div>
-      </div>
+
     
-      <div class="post-item" title="与时序逻辑除法器结合的 UART 串口 Verilog 设计">
-        <div class="time-m-d">01-04</div>
-        <div class="title">
-          <a href="/2025/01/04/%E4%B8%8E%E6%97%B6%E5%BA%8F%E9%80%BB%E8%BE%91%E9%99%A4%E6%B3%95%E5%99%A8%E7%BB%93%E5%90%88%E7%9A%84%20UART%20%E4%B8%B2%E5%8F%A3%20Verilog%20%E8%AE%BE%E8%AE%A1/">
-            <span>与时序逻辑除法器结合的 UART 串口 Verilog 设计</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2024</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="关于 Oh-My-Zsh 自动补全字母重复问题">
-        <div class="time-m-d">12-13</div>
-        <div class="title">
-          <a href="/2024/12/13/%E5%85%B3%E4%BA%8E%20Oh-My-Zsh%20%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E5%AD%97%E6%AF%8D%E9%87%8D%E5%A4%8D%E9%97%AE%E9%A2%98/">
-            <span>关于 Oh-My-Zsh 自动补全字母重复问题</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="人月神话🌙">
-        <div class="time-m-d">11-25</div>
-        <div class="title">
-          <a href="/2024/11/25/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D%F0%9F%8C%99/">
-            <span>人月神话🌙</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="我已与一万亿株白桦相逢🌳">
-        <div class="time-m-d">11-22</div>
-        <div class="title">
-          <a href="/2024/11/22/%E6%88%91%E5%B7%B2%E4%B8%8E%E4%B8%80%E4%B8%87%E4%BA%BF%E6%A0%AA%E7%99%BD%E6%A1%A6%E7%9B%B8%E9%80%A2%F0%9F%8C%B3/">
-            <span>我已与一万亿株白桦相逢🌳</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="漫长告白❄️">
-        <div class="time-m-d">11-11</div>
-        <div class="title">
-          <a href="/2024/11/11/%E6%BC%AB%E9%95%BF%E5%91%8A%E7%99%BD%E2%9D%84%EF%B8%8F/">
-            <span>漫长告白❄️</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="今日多云？☁️">
-        <div class="time-m-d">10-22</div>
-        <div class="title">
-          <a href="/2024/10/22/%E4%BB%8A%E6%97%A5%E5%A4%9A%E4%BA%91%EF%BC%9F%E2%98%81%EF%B8%8F/">
-            <span>今日多云？☁️</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Blue is a kind of mood">
-        <div class="time-m-d">10-21</div>
-        <div class="title">
-          <a href="/2024/10/21/Blue%20is%20a%20kind%20of%20mood/">
-            <span>Blue is a kind of mood</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="驾考：十年老司机都不一定过的考试，让我们牢学生拿什么过？">
-        <div class="time-m-d">10-20</div>
-        <div class="title">
-          <a href="/2024/10/20/%E9%A9%BE%E8%80%83%EF%BC%9A%E5%8D%81%E5%B9%B4%E8%80%81%E5%8F%B8%E6%9C%BA%E9%83%BD%E4%B8%8D%E4%B8%80%E5%AE%9A%E8%BF%87%E7%9A%84%E8%80%83%E8%AF%95%EF%BC%8C%E8%AE%A9%E6%88%91%E4%BB%AC%E7%89%A2%E5%AD%A6%E7%94%9F%E6%8B%BF%E4%BB%80%E4%B9%88%E8%BF%87%EF%BC%9F/">
-            <span>驾考：十年老司机都不一定过的考试，让我们牢学生拿什么过？</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'dFmqivC9roLbTO35Db2qkEti-gzGzoHsz',
+        appKey: 'UWSbiIkyPJvQIE4vNHPl8RgF',
+        placeholder: '“每一段留言都是一段新故事的开始...”',
+        avatar: '',
+        lang: 'zh'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -492,6 +493,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' +  + '&url=' + https%3A%2F%2Fsyxb2.github.io%2F2025%2F11%2F10%2F%25E8%25B0%2588%25E8%25B0%2588%25E4%25BA%25BA%25E7%25B1%25BB%25E5%258F%258D%25E9%25A6%2588%25E5%25BC%25BA%25E5%258C%2596%25E5%25AD%25A6%25E4%25B9%25A0%2520RLHF%2520%25E5%259C%25A8%2520LLM%2520%25E9%25A2%2586%25E5%259F%259F%25E5%25BA%2594%25E7%2594%25A8%25E7%259A%2584%25E5%258F%2591%25E5%25B1%2595%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://syxb2.github.io/2025/11/10/%E8%B0%88%E8%B0%88%E4%BA%BA%E7%B1%BB%E5%8F%8D%E9%A6%88%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%20RLHF%20%E5%9C%A8%20LLM%20%E9%A2%86%E5%9F%9F%E5%BA%94%E7%94%A8%E7%9A%84%E5%8F%91%E5%B1%95/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
