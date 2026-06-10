@@ -75,7 +75,7 @@ body.hidden {
   line-height: 2;
   word-wrap: break-word;
   color: var(--color-text-md-content);
-  font-family: "Tiempos Text", "Noto Serif SC", Georgia, serif;
+  font-family: "Tiempos Text", "Noto Serif SC", "Georgia", "serif", "Songti SC", "SimSun";
 }
 
 @media (max-width: 768px) {
