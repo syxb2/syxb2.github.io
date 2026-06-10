@@ -36,6 +36,10 @@
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
   <!-- 代码块风格 -->
   
+    
+<link rel="stylesheet" href="/css/figcaption/mac-block.css">
+
+  
 
   <!-- jquery3.3.1 -->
   
@@ -53,6 +57,8 @@
 
   
 
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
 
   <script>
@@ -72,10 +78,10 @@
     <a href="/">
       <!-- 头像取消懒加载，添加no-lazy -->
       
-        <img src="/images/avatar.png" alt="">
+        <img src="/images/avatar.jpg" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Oranges</a></div>
+    <div class="nickname"><a href="/">syxb2</a></div>
   </div>
   <div class="navbar">
     <ul>
@@ -90,10 +96,6 @@
       
         <li class="nav-item" data-path="/tags/">
           <a href="/tags/">Tags</a>
-        </li>
-      
-        <li class="nav-item" data-path="/friends/">
-          <a href="/friends/">Friends</a>
         </li>
       
         <li class="nav-item" data-path="/about/">
@@ -325,6 +327,31 @@
 
 
 
+  
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'dFmqivC9roLbTO35Db2qkEti-gzGzoHsz',
+        appKey: 'UWSbiIkyPJvQIE4vNHPl8RgF',
+        placeholder: 'Welcome!',
+        avatar: 'retro',
+        lang: 'zh'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
 
 
 
@@ -340,10 +367,18 @@
       
         <li>
           
-              <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/syxb2/syxb2.github.io/">
                 <i class="iconfont icon-github"></i>
               </a>
               
+        </li>
+        
+        <li>
+          
+            <a title="email" href="mailto:syxb2@qq.com">
+              <i class="iconfont icon-envelope"></i>
+            </a>
+            
         </li>
         
     </ul>
@@ -352,17 +387,23 @@
     
     <div class="footer-more">
       
-        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2026 Oranges</a>
+        <a target="_blank" rel="noopener" href="https://github.com/syxb2/syxb2.github.io">Copyright © 2026 Carol White</a>
         
     </div>
   
-    
-    <div class="footer-more">
+  
+    <div class="footer-views">
       
-        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
         
+      
+          本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        
+      
+          本站访客数<span id="busuanzi_value_site_uv"></span>人
+        
+      
     </div>
-  
   
 </div>
 
