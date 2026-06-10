@@ -3,54 +3,6 @@
   padding: 0;
 }
 
-@font-face {
-  font-family: 'Tiempos Text';
-  src: url('/fonts/TiemposText-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Tiempos Text';
-  src: url('/fonts/TiemposText-RegularItalic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Tiempos Text';
-  src: url('/fonts/TiemposText-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Tiempos Text';
-  src: url('/fonts/TiemposText-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Noto Serif SC';
-  src: url('/fonts/NotoSerifSC-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Noto Serif SC';
-  src: url('/fonts/NotoSerifSC-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 html, body {
   font-size: 10px;
   letter-spacing: 0.01rem;
@@ -72,8 +24,7 @@ body.hidden {
   font-size: 1.6rem;
   line-height: 2;
   word-wrap: break-word;
-  color: var(--color-text-md-content);
-  font-family: "Tiempos Text", "Noto Serif SC", "Source Han Serif SC", "Noto Serif CJK SC", Georgia, serif;
+  color: var(--color-text-md-content)
 }
 
 @media (max-width: 768px) {
