@@ -3,6 +3,56 @@
   padding: 0;
 }
 
+/* Tiempos Text 字体 */
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('/fonts/Tiempos Text/TiemposText-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('/fonts/Tiempos Text/TiemposText-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('/fonts/Tiempos Text/TiemposText-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('/fonts/Tiempos Text/TiemposText-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Noto Serif SC 字体 */
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('/fonts/Noto Serif SC/NotoSerifSC-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('/fonts/Noto Serif SC/NotoSerifSC-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 html, body {
   font-size: 10px;
   letter-spacing: 0.01rem;
@@ -24,7 +74,8 @@ body.hidden {
   font-size: 1.6rem;
   line-height: 2;
   word-wrap: break-word;
-  color: var(--color-text-md-content)
+  color: var(--color-text-md-content);
+  font-family: "Tiempos Text", "Noto Serif SC", Georgia, serif;
 }
 
 @media (max-width: 768px) {
