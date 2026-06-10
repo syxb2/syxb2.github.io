@@ -1073,9 +1073,10 @@ figure .pin-copy {
   padding: 0;
 }
 
+/* Tiempos Text 字体 */
 @font-face {
   font-family: 'Tiempos Text';
-  src: url('/fonts/TiemposText-Regular.ttf') format('truetype');
+  src: url('/fonts/Tiempos%20Text/TiemposText-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -1083,7 +1084,7 @@ figure .pin-copy {
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: url('/fonts/TiemposText-RegularItalic.ttf') format('truetype');
+  src: url('/fonts/Tiempos%20Text/TiemposText-RegularItalic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -1091,7 +1092,7 @@ figure .pin-copy {
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: url('/fonts/TiemposText-Bold.ttf') format('truetype');
+  src: url('/fonts/Tiempos%20Text/TiemposText-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -1099,15 +1100,16 @@ figure .pin-copy {
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: url('/fonts/TiemposText-BoldItalic.ttf') format('truetype');
+  src: url('/fonts/Tiempos%20Text/TiemposText-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 
+/* Noto Serif SC 字体 */
 @font-face {
   font-family: 'Noto Serif SC';
-  src: url('/fonts/NotoSerifSC-Regular.otf') format('opentype');
+  src: url('/fonts/Noto%20Serif%20SC/NotoSerifSC-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -1115,7 +1117,7 @@ figure .pin-copy {
 
 @font-face {
   font-family: 'Noto Serif SC';
-  src: url('/fonts/NotoSerifSC-Bold.otf') format('opentype');
+  src: url('/fonts/Noto%20Serif%20SC/NotoSerifSC-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -1143,7 +1145,7 @@ body.hidden {
   line-height: 2;
   word-wrap: break-word;
   color: var(--color-text-md-content);
-  font-family: "Tiempos Text", "Noto Serif SC", "Source Han Serif SC", "Noto Serif CJK SC", Georgia, serif;
+  font-family: "Tiempos Text", "Georgia", "Times New Roman", "Noto Serif SC", "SimSun", "STSong";
 }
 
 @media (max-width: 768px) {
@@ -2201,41 +2203,41 @@ a:hover {
   margin-left: 30px;
 }
 .v[data-class="v"] .vwrap .vheader .vinput:focus {
-  border-bottom-color: #fcb57e !important;
+  border-bottom-color: #808080 !important;
 }
 .v[data-class="v"] .vbtn:active,
 .v[data-class="v"] .vbtn:hover {
-  border-color: #fcb57e !important;
+  border-color: #808080 !important;
 }
 .v[data-class="v"] .vcards .vcard .vh .vmeta .vat {
-  color: #fcb57e !important;
+  color: #808080 !important;
 }
 .v[data-class="v"] a {
-  color: #fcb57e !important;
+  color: #808080 !important;
 }
 .fancybox-progress {
-  background: #fcb57e !important;
+  background: #808080 !important;
 }
 .markdown-body code {
-  color: #fcb57e;
+  color: #808080;
 }
 .markdown-body a:hover {
-  border-bottom: 2px solid #fcb57e;
+  border-bottom: 2px solid #808080;
 }
 .markdown-body blockquote {
-  border-color: #fcb57e;
+  border-color: #808080;
 }
 .toc-link:hover::after {
-  background-color: #fcb57e;
+  background-color: #808080;
 }
 .toc-link.active::after {
-  background-color: #fcb57e;
+  background-color: #808080;
 }
 .navbar ul li a:hover::after {
-  background-color: #fcb57e;
+  background-color: #808080;
 }
 .navbar ul li.active a::after {
-  background-color: #fcb57e;
+  background-color: #808080;
 }
 .markdown-body h1 .headerlink::before,
 .markdown-body h2 .headerlink::before,
@@ -2243,5 +2245,5 @@ a:hover {
 .markdown-body h4 .headerlink::before,
 .markdown-body h5 .headerlink::before,
 .markdown-body h6 .headerlink::before {
-  color: #fcb57e;
+  color: #808080;
 }
